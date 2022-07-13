@@ -3,6 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "@inertiajs/inertia-react";
 import bgheader from "@/img/bg-header.png";
+import digilibrary from "@/img/layanan-online/digilibrary.png";
+import buletin from "@/img/layanan-online/buletin.png";
+import jurnal from "@/img/layanan-online/jurnal.png";
+import sptmj from "@/img/layanan-online/sptmj.png";
 import React from "react";
 
 const Index = ({ title }) => {
@@ -43,7 +47,7 @@ const Index = ({ title }) => {
                                 className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="light"
-                                href="#!"
+                                href="#"
                                 role="button"
                             >
                                 Baca Selengkapnya
@@ -58,6 +62,7 @@ const Index = ({ title }) => {
                     </div>
                 </div>
             </header>
+            {/* asdasd */}
             <article className="">
                 <div className="w-full h-20 mb-6 flex">
                     <div className=" flex justify-center items-center w-full collapse multi-collapse gap-1">
@@ -112,10 +117,82 @@ const Index = ({ title }) => {
                     </div>
                 </div>
             </article>
-            <article className="">
-                <div className="w-full h-20 mb-6 flex">
-                    <div className=" bg-slate-50 flex justify-center items-center w-full collapse multi-collapse gap-1">
-                        hello
+            {/* Layanan Online */}
+            <article className="mb-6">
+                <div className="flex items-center w-full flex-col">
+                    <div className="flex w-full justify-between p-[20px_100px]">
+                        <span className="text-black dark:text-white font-bold text-[19px]">
+                            Layanan Online
+                        </span>
+                        <Link href="#" className="text-[13px] text-blue-600">
+                            Selengkapnya{" "}
+                            <span className="pl-1">
+                                <FontAwesomeIcon
+                                    icon={faArrowRightLong}
+                                    className="text-[10px]"
+                                />
+                            </span>
+                        </Link>
+                    </div>
+                    <div className="w-[85%]">
+                        <div className="flex justify-center flex-wrap gap-2">
+                            {LayananOnline.map((data, i) => (
+                                <img
+                                    key={i}
+                                    className="hover:-translate-y-1 duration-[150ms] ease-in-out rounded-md shadow-md"
+                                    style={{
+                                        backgroundPosition: "50%",
+                                        height: "130px",
+                                        backgroundSize: "auto",
+                                        objectFit: "cover",
+                                        background: "#eaea",
+                                    }}
+                                    src={data.title}
+                                    alt=""
+                                />
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </article>
+            {/* Layanan Kami */}
+            <article className="mb-6">
+                <div className="flex items-center w-full flex-col">
+                    <div className="flex w-full justify-between p-[20px_100px]">
+                        <span className="text-black dark:text-white font-bold text-[19px]">
+                            Layanan Kami
+                        </span>
+                        <Link href="#" className="text-[13px] text-blue-600">
+                            Selengkapnya{" "}
+                            <span className="pl-1">
+                                <FontAwesomeIcon
+                                    icon={faArrowRightLong}
+                                    className="text-[10px]"
+                                />
+                            </span>
+                        </Link>
+                    </div>
+                    <div className="w-[80%]">
+                        <div className="flex justify-center flex-row flex-wrap gap-2">
+                            <div className="bg-white shadow-[1px_1px_35px_-12px_rgba(0,0,0,0.75)] mb-2 rounded-[3px] p-1 text-sm text-black w-[50%]">
+                                awd
+                            </div>
+                            <div className="bg-white shadow-[1px_1px_35px_-12px_rgba(0,0,0,0.75)] mb-2 rounded-[3px] p-1 text-sm text-black w-[50%]">
+                                awd
+                            </div>
+                            <div className="bg-white shadow-[1px_1px_35px_-12px_rgba(0,0,0,0.75)] mb-2 rounded-[3px] p-1 text-sm text-black w-[50%]">
+                                awd
+                            </div>
+                            <div className="bg-white shadow-[1px_1px_35px_-12px_rgba(0,0,0,0.75)] mb-2 rounded-[3px] p-1 text-sm text-black w-[50%]">
+                                awd
+                            </div>
+                            <div className="bg-white shadow-[1px_1px_35px_-12px_rgba(0,0,0,0.75)] mb-2 rounded-[3px] p-1 text-sm text-black w-[50%]">
+                                awd
+                            </div>
+                            <div className="bg-white shadow-[1px_1px_35px_-12px_rgba(0,0,0,0.75)] mb-2 rounded-[3px] p-1 text-sm text-black w-[50%]">
+                                awd
+                            </div>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -124,3 +201,57 @@ const Index = ({ title }) => {
 };
 
 export default Index;
+
+const LayananOnline = [
+    {
+        id: 1,
+        title: digilibrary,
+    },
+    {
+        id: 2,
+        title: buletin,
+    },
+    {
+        id: 3,
+        title: jurnal,
+    },
+    {
+        id: 4,
+        title: sptmj,
+    },
+];
+
+const LayananKami = [
+    {
+        id: 1,
+        title: "Validasi Ijasah Bagi PTS Yang Sudah Tidak Beroprasi Atau Tutup",
+    },
+    {
+        id: 2,
+        title: "Standar Layanan Mutasi Mahasiswa",
+    },
+    {
+        id: 3,
+        title: "Penilaian Angka Kredit Jabatan Akademik Dosen Asisten Ahli dan Lektor",
+    },
+    {
+        id: 4,
+        title: "Rekomendasi Usulan Jabatan Akademik Dosen Lektor Kepala dan Profesor",
+    },
+    {
+        id: 5,
+        title: "Rekomendasi Perubahan Nama Badan Penyelenggara PTS",
+    },
+    {
+        id: 6,
+        title: "Rekomendasi Alih Kelola Perguruan Tinggi Swasta",
+    },
+    {
+        id: 7,
+        title: "Rekomendasi Pendirian Perguruan Tinggi Swasta Baru",
+    },
+    {
+        id: 8,
+        title: "Rekomendasi Pembukaan Program Studi Baru PTS",
+    },
+];

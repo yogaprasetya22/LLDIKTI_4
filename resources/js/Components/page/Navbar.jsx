@@ -4,28 +4,24 @@ import { useState } from "react";
 import { Link } from "@inertiajs/inertia-react";
 import { useContext } from "react";
 import { ThemeContext } from "@/Layouts/ThemeProvider";
-import { AnimatePresence, motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = ({ title }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenMobile, setOpenMobile] = useState(false);
-    const isNavbar = (rout, parent) => {
-        if (!parent)
-            return `${
-                "/" + title === rout ? "dark:text-white text-base-100" : ""
-            }`;
-        return `${"/" + title === rout ? "text-yellow-500" : ""}`;
-    };
+
     const isNavbarMobile = (rout) => {
         return ` ${"/" + title === rout ? "text-yellow-500" : ""}`;
     };
+
     const toggle = () => {
         setOpenMobile(!isOpenMobile);
     };
     return (
         <>
             <div
-                className="navbar bg-[#fffffff1] dark:bg-[#2a303ccc] md:pr-[50px] md:pl-[50px] fixed z-40 top-0 text-black dark:text-white text-[12px]"
+                className="navbar bg-[#ffffffdb] dark:bg-[#2a303ccc] md:pr-[50px] md:pl-[50px] fixed z-40 top-0 text-black dark:text-white text-[12px]"
                 style={{ backdropFilter: "blur(2px)" }}
             >
                 <div className="flex-1">
@@ -38,58 +34,97 @@ const Navbar = ({ title }) => {
                             className="w-[130px]"
                         />
                     </Link>
-                    <div className="hidden md:flex justify-end w-full pr-10">
-                        <ul className="menu menu-horizontal p-0">
-                            <li>
-                                <Link
-                                    href="/"
-                                    className={isNavbar("/Homepage")}
-                                >
-                                    Home
-                                </Link>
-                            </li>
+                    <div className="hidden md:flex justify-end w-full">
+                        <ul className="menu menu-horizontal ">
                             <li tabIndex="0">
-                                <Link
-                                    href="/profil"
-                                    className={isNavbar("/Profile")}
-                                >
-                                    Profil
-                                </Link>
+                                <NextLink
+                                    href="profil"
+                                    title={title}
+                                    name="Profile"
+                                />
                                 <ul className="p-2 z-10 bg-[#fffffff1] dark:bg-[#2a303c] text-black dark:text-white delay-75">
                                     <li>
-                                        <Link
-                                            href="/about"
-                                            className={isNavbar(
-                                                "/About",
-                                                "parent"
-                                            )}
-                                        >
-                                            About
-                                        </Link>
+                                        <NextLink
+                                            href="profil-lidikti-4"
+                                            title={title}
+                                            name="Profil LIDIKTI 4"
+                                        />
                                     </li>
                                     <li>
-                                        <Link>Submenu 2</Link>
+                                        <NextLink
+                                            href="profil-kepala-lldikti-4"
+                                            title={title}
+                                            name="Profil Kepala LLDIKTI 4"
+                                        />
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <Link>Item 3</Link>
+                                <NextLink
+                                    href="info"
+                                    title={title}
+                                    name="Info"
+                                />
+                            </li>
+                            <li>
+                                <Link>Akuntabilitas</Link>
+                            </li>
+                            <li>
+                                <Link>Berita</Link>
+                            </li>
+                            <li tabIndex="0">
+                                <NextLink
+                                    href="layanan"
+                                    title={title}
+                                    name="Layanan"
+                                />
+                                <ul className="p-2 z-10 bg-[#fffffff1] dark:bg-[#2a303c] text-black dark:text-white delay-75">
+                                    <li>
+                                        <NextLink
+                                            href="layanan-online"
+                                            title={title}
+                                            name="Layanan Online"
+                                        />
+                                    </li>
+                                    <li>
+                                        <Link>Layanan kami</Link>
+                                    </li>
+                                    <li>
+                                        <Link>Profil Kepala LIDIKTI 4</Link>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <Link>Informasi Publik</Link>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div className="flex-none gap-6 hidden md:flex pr-10">
+                <div className="flex-none gap-3 hidden md:flex">
                     <button className=" text-red-100">
                         <svg
-                            style={isOpen ? { fill: "#fff" } : {}}
+                            // fill="currentColor"
+                            style={{
+                                dark: { fill: "#ffffff" },
+                                light: { fill: "#2a303c" },
+                            }}
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 30 30"
-                            width="30px"
-                            height="30px"
+                            width="20px"
+                            height="20px"
                         >
                             <path d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z" />
                         </svg>
                     </button>
+                    <Link
+                        className="inline-block px-3 py-1.5 bg-blue-600 text-white font-medium text-[11px] leading-tight rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                        data-mdb-ripple="true"
+                        data-mdb-ripple-color="light"
+                        href="#"
+                        role="button"
+                    >
+                        Kontak & Pengaduan
+                    </Link>
                     <DarkModeToggle />
                 </div>
 
@@ -237,55 +272,47 @@ const DarkModeToggle = () => {
     };
 
     return (
-        <AnimatePresence exitBeforeEnter initial={false}>
-            <motion.div
-                style={{ display: "inline-block" }}
-                initial={{ y: -20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: 20, opacity: 0 }}
-                transition={{ duration: 0.2 }}
-            >
-                <button
-                    onClick={toggle}
-                    id="theme-toggle"
-                    type="button"
-                    className="p-2 rounded-full text-gray-400 hover:text-white focus:outline-none  focus:ring-offset-gray-800  border-white border-[1px] dark:bg-white bg-base-100 "
-                    aria-controls="mobile-menu"
-                    aria-expanded="false"
+        <button
+            onClick={toggle}
+            id="theme-toggle"
+            type="button"
+            className="p-2 rounded-full text-gray-400 hover:text-white focus:outline-none  focus:ring-offset-gray-800  border-white border-[1px] dark:bg-white bg-base-100"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+        >
+            {!isDarkMode ? (
+                <svg
+                    className="block h-[0.7rem] w-[0.7rem]  "
+                    width="18px"
+                    height="18px"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
                 >
-                    {!isDarkMode ? (
-                        <svg
-                            className="block h-4 w-4  "
-                            width="20px"
-                            height="20px"
-                            viewBox="0 0 32 32"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <g id="Lager_94" data-name="Lager 94">
-                                <path
-                                    id="Path_70"
-                                    data-name="Path 70"
-                                    d="M12.516,4.509A12,12,0,0,0,22.3,19.881,12.317,12.317,0,0,0,24,20a11.984,11.984,0,0,0,3.49-.514,12.1,12.1,0,0,1-9.963,8.421A12.679,12.679,0,0,1,16,28,12,12,0,0,1,12.516,4.509M16,0a16.5,16.5,0,0,0-2.212.15A16,16,0,0,0,16,32a16.526,16.526,0,0,0,2.01-.123A16.04,16.04,0,0,0,31.85,18.212,16.516,16.516,0,0,0,32,15.944,1.957,1.957,0,0,0,30,14a2.046,2.046,0,0,0-1.23.413A7.942,7.942,0,0,1,24,16a8.35,8.35,0,0,1-1.15-.08,7.995,7.995,0,0,1-5.264-12.7A2.064,2.064,0,0,0,16.056,0Z"
-                                    fill="#eaea"
-                                />
-                            </g>
-                        </svg>
-                    ) : (
-                        <svg
-                            className="block h-4 w-4 origin-center duration-500 "
-                            width="20px"
-                            height="20px"
-                            version="1.1"
-                            id="Capa_1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            x="0px"
-                            y="0px"
-                            // transform="translate(100% , 60%)"
-                            viewBox="0 0 108.336 108.336"
-                        >
-                            <g>
-                                <path
-                                    d="M54.168,0C24.3,0,0,24.3,0,54.168c0,29.869,24.3,54.168,54.168,54.168s54.168-24.299,54.168-54.168
+                    <g id="Lager_94" data-name="Lager 94">
+                        <path
+                            id="Path_70"
+                            data-name="Path 70"
+                            d="M12.516,4.509A12,12,0,0,0,22.3,19.881,12.317,12.317,0,0,0,24,20a11.984,11.984,0,0,0,3.49-.514,12.1,12.1,0,0,1-9.963,8.421A12.679,12.679,0,0,1,16,28,12,12,0,0,1,12.516,4.509M16,0a16.5,16.5,0,0,0-2.212.15A16,16,0,0,0,16,32a16.526,16.526,0,0,0,2.01-.123A16.04,16.04,0,0,0,31.85,18.212,16.516,16.516,0,0,0,32,15.944,1.957,1.957,0,0,0,30,14a2.046,2.046,0,0,0-1.23.413A7.942,7.942,0,0,1,24,16a8.35,8.35,0,0,1-1.15-.08,7.995,7.995,0,0,1-5.264-12.7A2.064,2.064,0,0,0,16.056,0Z"
+                            fill="#eaea"
+                        />
+                    </g>
+                </svg>
+            ) : (
+                <svg
+                    className="block h-[0.7rem] w-[0.7rem] origin-center duration-500 "
+                    width="18px"
+                    height="18px"
+                    version="1.1"
+                    id="Capa_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    // transform="translate(100% , 60%)"
+                    viewBox="0 0 108.336 108.336"
+                >
+                    <g>
+                        <path
+                            d="M54.168,0C24.3,0,0,24.3,0,54.168c0,29.869,24.3,54.168,54.168,54.168s54.168-24.299,54.168-54.168
 		C108.336,24.3,84.036,0,54.168,0z M83.828,22.145c-0.037,0.033-0.068,0.071-0.102,0.108c-1.049-1.956-2.203-3.851-3.476-5.677
 		c-0.675-0.968-1.366-1.875-2.065-2.753c0.006,0.003,0.014,0.003,0.019,0.006c0.385,0.227,0.709,0.541,1.228,0.523
 		c0.188-0.006,0.538,0.128,0.483,0.572c-0.047,0.369,0.594,0.341,0.619,0.751l0.002,0.001c0.44-0.042,0.709,0.244,0.983,0.518
@@ -316,28 +343,42 @@ const DarkModeToggle = () => {
 		c-0.018,0.712-0.182,1.383,0.14,2.14c0.271,0.642,0.779,0.712,1.205,0.947c0.799,0.441,1.08,0.835,0.858,1.712
 		c-0.086,0.341-0.09,0.64,0.011,0.974c0.145,0.485,0.409,0.963,0.127,1.5c-0.078,0.152,0.062,0.318,0.194,0.433
 		c0.623,0.536,0.625,1.19,0.363,1.896C94.754,44.659,94.713,44.7,94.656,44.726z"
-                                    fill="#ccc"
-                                />
-                            </g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                            <g></g>
-                        </svg>
-                    )}
-                </button>
-            </motion.div>
-        </AnimatePresence>
+                            fill="#ccc"
+                        />
+                    </g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                </svg>
+            )}
+        </button>
+    );
+};
+
+const NextLink = ({ href, title, name }) => {
+    const isNavbar = (rout, parent) => {
+        if (!parent)
+            return `${
+                "/" + title === rout ? "dark:text-white text-base-100" : ""
+            }`;
+        return `${"/" + title === rout ? "text-yellow-500" : ""}`;
+    };
+
+    return (
+        <Link href={`/${href}`} className={isNavbar(`/${href}`, true)}>
+            {name}
+        </Link>
     );
 };

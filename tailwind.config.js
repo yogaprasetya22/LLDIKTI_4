@@ -17,7 +17,6 @@ module.exports = {
         },
         container: {
             center: true,
-
             padding: {
                 DEFAULT: "1rem",
                 sm: "2rem",
@@ -27,6 +26,6 @@ module.exports = {
             },
         },
     },
-    darkMode: "class",
+    darkMode:"class",
     plugins: [require("@tailwindcss/forms"), require("daisyui")],
 };

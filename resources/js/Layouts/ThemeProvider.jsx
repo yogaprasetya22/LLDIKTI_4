@@ -9,11 +9,11 @@ const getInitialTheme = () => {
 
         const userMedia = window.matchMedia("(prefers-color-scheme: dark)");
         if (userMedia.matches) {
-            return "dark";
+            return "light";
         }
     }
 
-    return "light"; // light theme as the default;
+    return "dark"; // light theme as the default;
 };
 
 export const ThemeProvider = ({ initialTheme, children }) => {

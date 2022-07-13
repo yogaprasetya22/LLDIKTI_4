@@ -19,14 +19,12 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('index', [
         'title' => 'LLDIKTI Wilayah 4',
-        'message' => 'Hello World!'
     ]);
 });
 
 Route::get('/profil', function () {
     return Inertia::render('profil', [
         'title' => 'Profil',
-        'message' => 'Hello World!'
     ]);
 });
 
