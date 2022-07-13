@@ -27,7 +27,7 @@ const Index = ({ title }) => {
                             <h1 className=" text-3xl font-bold mb-3">
                                 <span className="text-[#2654a4]">
                                     Jawa Barat
-                                </span>
+                                </span>{" "}
                                 dan{" "}
                                 <span className="text-[#eaa43b]">Banten</span>
                             </h1>
@@ -109,6 +109,13 @@ const Index = ({ title }) => {
                                 Komunikasi
                             </span>
                         </div>
+                    </div>
+                </div>
+            </article>
+            <article className="">
+                <div className="w-full h-20 mb-6 flex">
+                    <div className=" bg-slate-50 flex justify-center items-center w-full collapse multi-collapse gap-1">
+                        hello
                     </div>
                 </div>
             </article>
