@@ -10,7 +10,8 @@ import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 const appName = "LLDIKTI Wilayah 4";
 
 createInertiaApp({
-    title: (title) => `${title} - ${appName}`,
+    title: (title) =>
+        title === appName ? `${appName} - Lembaga` : `${title} - ${appName}`,
     resolve: (name) =>
         resolvePageComponent(
             `./Pages/${name}.jsx`,

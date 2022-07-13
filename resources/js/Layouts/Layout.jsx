@@ -1,5 +1,5 @@
-import Footer from "@/Components/Footer";
-import Navbar from "@/Components/Navbar";
+import Footer from "@/Components/page/Footer";
+import Navbar from "@/Components/page/Navbar";
 import { Head } from "@inertiajs/inertia-react";
 import React from "react";
 import { ThemeProvider } from "./ThemeProvider";
@@ -27,7 +27,9 @@ const Layout = ({ children, title }) => {
                         transition={{ duration: 0.4, type: "easeInOut" }}
                         style={{ position: "relative" }}
                     >
-                        <div className="pt-[65px]">{children}</div>
+                        <div className="pt-[65px]">
+                            {children}
+                        </div>
                         <Footer />
                     </motion.article>
                 </div>

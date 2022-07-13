@@ -25,7 +25,7 @@ const Navbar = ({ title }) => {
     return (
         <>
             <div
-                className="navbar bg-[#fffffff1] dark:bg-[#2a303ccc] md:pr-[50px] md:pl-[50px] fixed z-40 top-0 text-grey-600"
+                className="navbar bg-[#fffffff1] dark:bg-[#2a303ccc] md:pr-[50px] md:pl-[50px] fixed z-40 top-0 text-black dark:text-white text-[12px]"
                 style={{ backdropFilter: "blur(2px)" }}
             >
                 <div className="flex-1">
@@ -38,7 +38,7 @@ const Navbar = ({ title }) => {
                             className="w-[130px]"
                         />
                     </Link>
-                    <div className="flex-none  hidden md:flex">
+                    <div className="hidden md:flex justify-end w-full pr-10">
                         <ul className="menu menu-horizontal p-0">
                             <li>
                                 <Link
@@ -50,12 +50,12 @@ const Navbar = ({ title }) => {
                             </li>
                             <li tabIndex="0">
                                 <Link
-                                    href="/profile"
+                                    href="/profil"
                                     className={isNavbar("/Profile")}
                                 >
-                                    Profile
+                                    Profil
                                 </Link>
-                                <ul className="p-2 z-10 bg-base-100 text-grey-400 delay-75">
+                                <ul className="p-2 z-10 bg-[#fffffff1] dark:bg-[#2a303c] text-black dark:text-white delay-75">
                                     <li>
                                         <Link
                                             href="/about"
@@ -78,14 +78,18 @@ const Navbar = ({ title }) => {
                         </ul>
                     </div>
                 </div>
-                <div className="flex-none gap-2 hidden md:flex ">
-                    <div className="form-control max-h-6 justify-center ">
-                        <input
-                            type="text"
-                            placeholder="Search"
-                            className="input input-bordered dark:bg-white bg-base-100"
-                        />
-                    </div>
+                <div className="flex-none gap-6 hidden md:flex pr-10">
+                    <button className=" text-red-100">
+                        <svg
+                            style={isOpen ? { fill: "#fff" } : {}}
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 30 30"
+                            width="30px"
+                            height="30px"
+                        >
+                            <path d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z" />
+                        </svg>
+                    </button>
                     <DarkModeToggle />
                 </div>
 
