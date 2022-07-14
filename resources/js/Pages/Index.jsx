@@ -338,6 +338,7 @@ const Index = ({ title }) => {
                             <div className="flex flex-wrap justify-center item-center gap-2">
                                 {LayananOnline.map((data, i) => (
                                     <img
+                                        key={i}
                                         className="hover:-translate-y-1 duration-[150ms] ease-in-out rounded-md shadow-md md:h-[120px] md:shadow-[-1px_12px_30px_-13.2px_rgba(0,0,0,0.75)] "
                                         style={{
                                             backgroundPosition: "50%",
