@@ -7,6 +7,7 @@ import digilibrary from "@/img/layanan-online/digilibrary.png";
 import buletin from "@/img/layanan-online/buletin.png";
 import jurnal from "@/img/layanan-online/jurnal.png";
 import sptmj from "@/img/layanan-online/sptmj.png";
+import Informasi from "@/img/informasi-lldikti.png";
 import React from "react";
 
 const Index = ({ title }) => {
@@ -120,7 +121,7 @@ const Index = ({ title }) => {
             {/* Layanan Online */}
             <article className="mb-6">
                 <div className="flex items-center w-full flex-col">
-                    <div className="flex w-full justify-between p-[20px_100px]">
+                    <div className="flex w-full justify-between md:p-[20px_100px] p-[25px]">
                         <span className="text-black dark:text-white font-bold text-[19px]">
                             Layanan Online
                         </span>
@@ -139,10 +140,9 @@ const Index = ({ title }) => {
                             {LayananOnline.map((data, i) => (
                                 <img
                                     key={i}
-                                    className="hover:-translate-y-1 duration-[150ms] ease-in-out rounded-md shadow-md"
+                                    className="hover:-translate-y-1 duration-[150ms] ease-in-out rounded-md shadow-md md:h-[130px]"
                                     style={{
                                         backgroundPosition: "50%",
-                                        height: "130px",
                                         backgroundSize: "auto",
                                         objectFit: "cover",
                                         background: "#eaea",
@@ -158,7 +158,7 @@ const Index = ({ title }) => {
             {/* Layanan Kami */}
             <article className="mb-6">
                 <div className="flex items-center w-full flex-col">
-                    <div className="flex w-full justify-between p-[20px_100px]">
+                    <div className="flex w-full justify-between md:p-[20px_100px] p-[25px]">
                         <span className="text-black dark:text-white font-bold text-[19px]">
                             Layanan Kami
                         </span>
@@ -172,25 +172,185 @@ const Index = ({ title }) => {
                             </span>
                         </Link>
                     </div>
-                    <div className="w-[80%]">
-                        <div className="flex justify-center flex-row flex-wrap gap-2">
-                            <div className="bg-white shadow-[1px_1px_35px_-12px_rgba(0,0,0,0.75)] mb-2 rounded-[3px] p-1 text-sm text-black w-[50%]">
-                                awd
-                            </div>
-                            <div className="bg-white shadow-[1px_1px_35px_-12px_rgba(0,0,0,0.75)] mb-2 rounded-[3px] p-1 text-sm text-black w-[50%]">
-                                awd
-                            </div>
-                            <div className="bg-white shadow-[1px_1px_35px_-12px_rgba(0,0,0,0.75)] mb-2 rounded-[3px] p-1 text-sm text-black w-[50%]">
-                                awd
-                            </div>
-                            <div className="bg-white shadow-[1px_1px_35px_-12px_rgba(0,0,0,0.75)] mb-2 rounded-[3px] p-1 text-sm text-black w-[50%]">
-                                awd
-                            </div>
-                            <div className="bg-white shadow-[1px_1px_35px_-12px_rgba(0,0,0,0.75)] mb-2 rounded-[3px] p-1 text-sm text-black w-[50%]">
-                                awd
-                            </div>
-                            <div className="bg-white shadow-[1px_1px_35px_-12px_rgba(0,0,0,0.75)] mb-2 rounded-[3px] p-1 text-sm text-black w-[50%]">
-                                awd
+                    <div className="w-[100%]">
+                        <div className="flex md:justify-center md:flex-wrap gap-2 md:p-[0px_20px]">
+                            {LayananKami.map((data, i) => (
+                                <div
+                                    key={i}
+                                    className="bg-white md:shadow-[-1px_12px_30px_-13.2px_rgba(0,0,0,0.75)] shadow-[-1px_12px_35px_-16px_rgba(0,0,0,0.75)] mb-1 rounded-[3px] p-[6px] text-[11px] md:w-[40%] m-[0px_20px]"
+                                >
+                                    <Link
+                                        href="#"
+                                        className="text-black font-bold"
+                                    >
+                                        {data.title}
+                                    </Link>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </article>
+            {/* Informasi */}
+            <article className="mb-6">
+                <div className="flex items-center w-full flex-col">
+                    <div className="flex w-full justify-between md:p-[20px_100px] p-[25px]">
+                        <span className="text-black dark:text-white font-bold text-[19px]">
+                            Informasi
+                        </span>
+                        <Link href="#" className="text-[13px] text-blue-600">
+                            Selengkapnya{" "}
+                            <span className="pl-1">
+                                <FontAwesomeIcon
+                                    icon={faArrowRightLong}
+                                    className="text-[10px]"
+                                />
+                            </span>
+                        </Link>
+                    </div>
+                    <div className="w-[85%]">
+                        <div className="flex justify-center flex-wrap gap-2  md:p-[0px_10px]">
+                            {informasi.map((data, i) => (
+                                <div
+                                    className="card md:w-[290px] w-full  md:rounded-md rounded-none  md:shadow-[-1px_12px_30px_-23px_rgba(0,0,0,0.75)] bg-white hover:-translate-y-1 duration-[150ms] ease-in-out text-black font-bold"
+                                    key={i}
+                                >
+                                    <figure>
+                                        <img src={data.img} alt="Shoes" />
+                                    </figure>
+                                    <div className="p-[5px_10px]">
+                                        <p className="text-xs md:text-xs">
+                                            {data.title}
+                                        </p>
+                                    </div>
+                                    <div className="p-[5px_10px_5px]">
+                                        <p className="text-xs md:text-xs">
+                                            {data.date}
+                                        </p>
+                                    </div>
+                                    <div className="p-[0px_10px_10px] border-t-2">
+                                        <Link
+                                            href="#"
+                                            className="text-[13px] text-blue-600"
+                                        >
+                                            Selengkapnya{" "}
+                                            <span className="pl-1">
+                                                <FontAwesomeIcon
+                                                    icon={faArrowRightLong}
+                                                    className="text-[10px]"
+                                                />
+                                            </span>
+                                        </Link>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </article>
+            {/* Berita Kami */}
+            <article className="mb-6">
+                <div className="flex items-center w-full flex-col">
+                    <div className="flex w-full justify-between md:p-[20px_100px] p-[25px]">
+                        <span className="text-black dark:text-white font-bold text-[19px]">
+                            Berita Kami
+                        </span>
+                        <Link href="#" className="text-[13px] text-blue-600">
+                            Selengkapnya{" "}
+                            <span className="pl-1">
+                                <FontAwesomeIcon
+                                    icon={faArrowRightLong}
+                                    className="text-[10px]"
+                                />
+                            </span>
+                        </Link>
+                    </div>
+                    <div className="w-[85%]">
+                        <div className="flex justify-center flex-wrap gap-2  md:p-[0px_10px]">
+                            {informasi.map((data, i) => (
+                                <div
+                                    className="card md:w-[290px] w-full  md:rounded-md rounded-none  md:shadow-[-1px_12px_30px_-23px_rgba(0,0,0,0.75)] bg-white hover:-translate-y-1 duration-[150ms] ease-in-out text-black font-bold"
+                                    key={i}
+                                >
+                                    <figure>
+                                        <img src={data.img} alt="Shoes" />
+                                    </figure>
+                                    <div className="p-[5px_10px]">
+                                        <p className="text-xs md:text-xs">
+                                            {data.title}
+                                        </p>
+                                    </div>
+                                    <div className="p-[5px_10px_5px]">
+                                        <p className="text-xs md:text-xs">
+                                            {data.date}
+                                        </p>
+                                    </div>
+                                    <div className="p-[0px_10px_10px] border-t-2">
+                                        <Link
+                                            href="#"
+                                            className="text-[13px] text-blue-600"
+                                        >
+                                            Selengkapnya{" "}
+                                            <span className="pl-1">
+                                                <FontAwesomeIcon
+                                                    icon={faArrowRightLong}
+                                                    className="text-[10px]"
+                                                />
+                                            </span>
+                                        </Link>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </article>
+            {/* Berita Kami */}
+            <article className="mb-6">
+                <div className="flex items-center w-full flex-col">
+                    <div className="flex w-full justify-between md:p-[20px_100px] p-[25px]">
+                        <span className="text-black dark:text-white font-bold text-[19px]">
+                            Berita Kami
+                        </span>
+                        <Link href="#" className="text-[13px] text-blue-600">
+                            Selengkapnya{" "}
+                            <span className="pl-1">
+                                <FontAwesomeIcon
+                                    icon={faArrowRightLong}
+                                    className="text-[10px]"
+                                />
+                            </span>
+                        </Link>
+                    </div>
+                    <div className="w-[85%]">
+                        <div className="flex justify-around md:p-[0px_10px]">
+                            <img
+                                className="hover:-translate-y-1 duration-[150ms] ease-in-out rounded-md shadow-md md:h-[250px] md:shadow-[-1px_12px_30px_-13.2px_rgba(0,0,0,0.75)] "
+                                style={{
+                                    backgroundPosition: "50%",
+                                    backgroundSize: "auto",
+                                    objectFit: "cover",
+                                    background: "#eaea",
+                                }}
+                                src={"https://placeimg.com/400/225/arch"}
+                                alt=""
+                            />
+                            <div className="flex flex-wrap justify-center item-center gap-2">
+                                {LayananOnline.map((data, i) => (
+                                    <img
+                                        className="hover:-translate-y-1 duration-[150ms] ease-in-out rounded-md shadow-md md:h-[120px] md:shadow-[-1px_12px_30px_-13.2px_rgba(0,0,0,0.75)] "
+                                        style={{
+                                            backgroundPosition: "50%",
+                                            backgroundSize: "auto",
+                                            objectFit: "cover",
+                                            background: "#eaea",
+                                        }}
+                                        src={
+                                            "https://placeimg.com/400/225/arch"
+                                        }
+                                        alt=""
+                                    />
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -199,6 +359,8 @@ const Index = ({ title }) => {
         </Layout>
     );
 };
+
+//https://placeimg.com/400/225/arch
 
 export default Index;
 
@@ -253,5 +415,26 @@ const LayananKami = [
     {
         id: 8,
         title: "Rekomendasi Pembukaan Program Studi Baru PTS",
+    },
+];
+
+const informasi = [
+    {
+        id: 1,
+        title: "Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi",
+        date: "30 Juni 2022",
+        img: Informasi,
+    },
+    {
+        id: 2,
+        title: "Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi",
+        date: "30 Juni 2022",
+        img: Informasi,
+    },
+    {
+        id: 3,
+        title: "Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi",
+        date: "30 Juni 2022",
+        img: Informasi,
     },
 ];

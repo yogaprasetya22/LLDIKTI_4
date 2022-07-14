@@ -16,7 +16,7 @@ const Layout = ({ children, title }) => {
     return (
         <AnimatePresence exitBeforeEnter initial={true}>
             <ThemeProvider>
-                <div className="min-h-screen bg-white dark:bg-[#393939] ">
+                <div className="min-h-screen bg-[#fffffff8] dark:bg-[#393939] transition-all ">
                     {title && <Head title={title} />}
                     <Navbar title={title} />
                     <motion.article
@@ -27,9 +27,7 @@ const Layout = ({ children, title }) => {
                         transition={{ duration: 0.5, type: "easeInOut" }}
                         style={{ position: "relative" }}
                     >
-                        <div className="pt-[65px]">
-                            {children}
-                        </div>
+                        <div className="pt-[65px]">{children}</div>
                         <Footer />
                     </motion.article>
                 </div>
