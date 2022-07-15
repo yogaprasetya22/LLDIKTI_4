@@ -16,7 +16,7 @@ export const DarkModeToggle = (props) => {
             onClick={toggle}
             id="theme-toggle"
             type="button"
-            className="p-2 rounded-md text-gray-400 hover:text-white focus:outline-none focus:ring-offset-gray-800  border-white border-[1px] dark:bg-white bg-base-100"
+            className="p-2 rounded-md  focus:outline-none focus:ring-offset-gray-800  border-white border-[1px] dark:bg-white bg-base-100"
             aria-controls="mobile-menu"
             aria-expanded="false"
         >

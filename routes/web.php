@@ -23,7 +23,7 @@ Route::get('/', function () {
 });
 
 Route::get('/profil', function () {
-    return Inertia::render('profil', [
+    return Inertia::render('profil/Profil', [
         'title' => 'Profil',
     ]);
 });

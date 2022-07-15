@@ -30,10 +30,10 @@ const Navbar = ({ title }) => {
     return (
         <>
             <div
-                className=" bg-blue-600 md:pr-[50px] md:p-[10px_70px] fixed z-40 top-0  text-[14px] w-full justify-between flex"
+                className=" bg-blue-600 md:pr-[50px] md:p-[10px_70px] fixed z-40 top-0  text-[15px] w-full justify-between flex"
                 style={{ backdropFilter: "blur(4px)" }}
             >
-                <div className="md:flex gap-3 hidden ">
+                <div className="lg:flex gap-3 hidden ">
                     <Link href="#" className="text-white">
                         <FontAwesomeIcon icon={faPhone} className="pr-1" />
                         +021-727-5630
@@ -107,21 +107,22 @@ const Navbar = ({ title }) => {
                     </Link>
                 </div>
             </div>
+            {/* Navbar */}
             <div
-                className="navbar bg-[#ffffffdb] dark:bg-[#2a303cf7] md:pr-[50px] md:pl-[50px] fixed z-40 top-0 text-black dark:text-white text-[12.4px] font-bold mt-[35px]"
+                className="navbar bg-[#ffffffdb] dark:bg-[#2a303cf7] md:pr-[50px] md:pl-[50px] fixed z-40 top-0 text-black dark:text-white text-[16px] mt-[40px] font-semibold"
                 style={{ backdropFilter: "blur(4px)" }}
             >
                 <div className="flex-1">
                     <Link
-                        className="btn btn-ghost normal-case text-xl md:text-xl "
+                        className="btn btn-ghost normal-case text-xl lg:text-xl "
                         href="/"
                     >
                         <img
                             src="https://i0.wp.com/www.lldikti4.id/wp-content/uploads/2021/09/LLDIKTI-LOGOrev1-1.png?resize=300%2C56&ssl=1"
-                            className="w-[130px]"
+                            className="lg:w-[160px] w-[140px]"
                         />
                     </Link>
-                    <div className="hidden md:flex justify-end w-full">
+                    <div className="hidden lg:flex justify-end w-full">
                         <ul className="menu menu-horizontal ">
                             <li tabIndex="0">
                                 <NextLink
@@ -204,7 +205,7 @@ const Navbar = ({ title }) => {
                         </svg>
                     </button>
                     <Link
-                        className=" px-1 py-1.5 bg-blue-600 text-white font-medium text-[11.5px] leading-tight rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out hidden lg:inline-block"
+                        className=" inline-block px-2 py-1.5 bg-blue-600 text-white font-medium text-[13px] leading-tight rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out "
                         data-mdb-ripple="true"
                         data-mdb-ripple-color="light"
                         href="#"
@@ -212,12 +213,31 @@ const Navbar = ({ title }) => {
                     >
                         Kontak & Pengaduan
                     </Link>
-                    <DarkModeToggle />
+                    <div className="lg:inline-block hidden">
+                        <DarkModeToggle />
+                    </div>
                 </div>
 
                 {/* Mobile Navbar */}
 
-                <div className="mr-2 flex md:hidden gap-2">
+                <div className="lg:hidden md:hidden flex items-center" >
+                    <button className=" text-red-100">
+                        <svg
+                            style={
+                                theme === "dark"
+                                    ? { fill: "currentColor" }
+                                    : { fill: "" }
+                            }
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 30 30"
+                            width="20px"
+                            height="20px"
+                        >
+                            <path d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z" />
+                        </svg>
+                    </button>
+                </div>
+                <div className="mr-2 flex lg:hidden gap-2 pl-[10px] lg:pl-0">
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         type="button"

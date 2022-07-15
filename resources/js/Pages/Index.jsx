@@ -19,7 +19,7 @@ const Index = ({ title }) => {
     return (
         <Layout title={title}>
             <header
-                className="relative overflow-hidden bg-no-repeat bg-cover"
+                className="relative overflow-hidden bg-no-repeat bg-cover mt-4"
                 style={{
                     backgroundPosition: "50%",
                     height: "400px",
@@ -30,11 +30,13 @@ const Index = ({ title }) => {
                 <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed">
                     <div className="flex justify-center items-center h-full">
                         <div className="text-center dark:text-white text-black px-6 md:px-12">
-                            <h5 className="text-2xl mb-2">Selamat datang di</h5>
-                            <h1 className=" text-3xl font-bold mt-0 mb-3">
+                            <h5 className="text-3xl mb-2 font-semibold">
+                                Selamat datang di
+                            </h5>
+                            <h1 className=" text-[35px] font-bold mt-0 ">
                                 Lembaga Layanan Pendidikan Tinggi Wilayah
                             </h1>
-                            <h1 className=" text-3xl font-bold mb-3">
+                            <h1 className=" text-[35px] font-bold mb-3">
                                 <span className="text-[#2654a4]">
                                     Jawa Barat
                                 </span>{" "}
@@ -42,7 +44,7 @@ const Index = ({ title }) => {
                                 <span className="text-[#eaa43b]">Banten</span>
                             </h1>
                             <div className=" flex justify-center items-center mb-6">
-                                <p className="text-center max-w-[45%]">
+                                <p className="text-center max-w-[45%] text-[18px]">
                                     LLDIKTI mempunyai tugas membantu peningkatan
                                     mutu penyelenggaraan pendidikan tinggi
                                     negara maupun perguruan tinggi swasta
@@ -50,7 +52,7 @@ const Index = ({ title }) => {
                                 </p>
                             </div>
                             <Link
-                                className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                                className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out text-[15px]"
                                 data-mdb-ripple="true"
                                 data-mdb-ripple-color="light"
                                 href="#"
@@ -76,7 +78,7 @@ const Index = ({ title }) => {
                             <span className="text-center font-bold text-2xl">
                                 98
                             </span>
-                            <span className="text-[13px] dark:text-[#edededaa] text-[#303030aa]">
+                            <span className="text-[13px] dark:text-[#eaeaea] text-[#000]">
                                 Universitas
                             </span>
                         </div>
@@ -84,7 +86,7 @@ const Index = ({ title }) => {
                             <span className="text-center font-bold text-2xl">
                                 19
                             </span>
-                            <span className="text-[13px] dark:text-[#edededaa] text-[#303030aa]">
+                            <span className="text-[13px] dark:text-[#eaeaea] text-[#000]">
                                 Institut
                             </span>
                         </div>
@@ -92,7 +94,7 @@ const Index = ({ title }) => {
                             <span className="text-center font-bold text-2xl">
                                 202
                             </span>
-                            <span className="text-[13px] dark:text-[#edededaa] text-[#303030aa]">
+                            <span className="text-[13px] dark:text-[#eaeaea] text-[#000]">
                                 Sekolah Tinggi
                             </span>
                         </div>
@@ -100,7 +102,7 @@ const Index = ({ title }) => {
                             <span className="text-center font-bold text-2xl">
                                 84
                             </span>
-                            <span className="text-[13px] dark:text-[#edededaa] text-[#303030aa]">
+                            <span className="text-[13px] dark:text-[#eaeaea] text-[#000]">
                                 Akademi
                             </span>
                         </div>
@@ -108,7 +110,7 @@ const Index = ({ title }) => {
                             <span className="text-center font-bold text-2xl">
                                 41
                             </span>
-                            <span className="text-[13px] dark:text-[#edededaa] text-[#303030aa]">
+                            <span className="text-[13px] dark:text-[#eaeaea] text-[#000]">
                                 politektnik
                             </span>
                         </div>
@@ -116,7 +118,7 @@ const Index = ({ title }) => {
                             <span className="text-center font-bold text-2xl">
                                 5
                             </span>
-                            <span className="text-[13px] dark:text-[#edededaa] text-[#303030aa]">
+                            <span className="text-[13px] dark:text-[#eaeaea] text-[#000]">
                                 Komunikasi
                             </span>
                         </div>
@@ -130,7 +132,7 @@ const Index = ({ title }) => {
                         <span className="text-black dark:text-white font-bold text-[19px]">
                             Layanan Online
                         </span>
-                        <Link href="#" className="text-[13px] text-blue-600">
+                        <Link href="#" className="text-[15px] text-blue-600">
                             Selengkapnya{" "}
                             <span className="pl-1">
                                 <FontAwesomeIcon
@@ -167,7 +169,7 @@ const Index = ({ title }) => {
                         <span className="text-black dark:text-white font-bold text-[19px]">
                             Layanan Kami
                         </span>
-                        <Link href="#" className="text-[13px] text-blue-600">
+                        <Link href="#" className="text-[15px] text-blue-600">
                             Selengkapnya{" "}
                             <span className="pl-1">
                                 <FontAwesomeIcon
@@ -182,7 +184,7 @@ const Index = ({ title }) => {
                             {LayananKami.map((data, i) => (
                                 <div
                                     key={i}
-                                    className="bg-white md:shadow-[-1px_12px_30px_-13.2px_rgba(0,0,0,0.75)] shadow-[-1px_12px_35px_-16px_rgba(0,0,0,0.75)] mb-1 rounded-[3px] p-[6px] text-[13px] md:w-[44%] m-[0px_5px]"
+                                    className="bg-white md:shadow-[-1px_12px_30px_-14.1px_rgba(0,0,0,0.75)] shadow-[-1px_12px_35px_-16px_rgba(0,0,0,0.75)] mb-1 rounded-[3px] p-[6px] text-[13px] md:w-[44%] m-[0px_5px]"
                                 >
                                     <Link
                                         href="#"
@@ -203,7 +205,7 @@ const Index = ({ title }) => {
                         <span className="text-black dark:text-white font-bold text-[19px]">
                             Informasi
                         </span>
-                        <Link href="#" className="text-[13px] text-blue-600">
+                        <Link href="#" className="text-[15px] text-blue-600">
                             Selengkapnya{" "}
                             <span className="pl-1">
                                 <FontAwesomeIcon
@@ -233,10 +235,10 @@ const Index = ({ title }) => {
                                             {data.date}
                                         </p>
                                     </div>
-                                    <div className="p-[0px_10px_10px] border-t-2">
+                                    <div className="p-[10px_10px_10px] border-t-2">
                                         <Link
                                             href="#"
-                                            className="text-[13px] text-blue-600"
+                                            className="text-[15px] text-blue-600"
                                         >
                                             Selengkapnya{" "}
                                             <span className="pl-1">
@@ -260,7 +262,7 @@ const Index = ({ title }) => {
                         <span className="text-black dark:text-white font-bold text-[19px]">
                             Berita Kami
                         </span>
-                        <Link href="#" className="text-[13px] text-blue-600">
+                        <Link href="#" className="text-[15px] text-blue-600">
                             Selengkapnya{" "}
                             <span className="pl-1">
                                 <FontAwesomeIcon
@@ -290,10 +292,10 @@ const Index = ({ title }) => {
                                             {data.date}
                                         </p>
                                     </div>
-                                    <div className="p-[0px_10px_10px] border-t-2">
+                                    <div className="p-[10px_10px_10px] border-t-2">
                                         <Link
                                             href="#"
-                                            className="text-[13px] text-blue-600"
+                                            className="text-[15px] text-blue-600"
                                         >
                                             Selengkapnya{" "}
                                             <span className="pl-1">
@@ -317,7 +319,7 @@ const Index = ({ title }) => {
                         <span className="text-black dark:text-white font-bold text-[19px]">
                             Berita Kami
                         </span>
-                        <Link href="#" className="text-[13px] text-blue-600">
+                        <Link href="#" className="text-[15px] text-blue-600">
                             Selengkapnya{" "}
                             <span className="pl-1">
                                 <FontAwesomeIcon
