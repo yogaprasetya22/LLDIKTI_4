@@ -8,6 +8,11 @@ import buletin from "@/img/layanan-online/buletin.png";
 import jurnal from "@/img/layanan-online/jurnal.png";
 import sptmj from "@/img/layanan-online/sptmj.png";
 import Informasi from "@/img/informasi-lldikti.png";
+import galeri1 from "@/img/galeryi-kami/galeri-1.png";
+import galeri2 from "@/img/galeryi-kami/galeri-2.png";
+import galeri3 from "@/img/galeryi-kami/galeri-3.png";
+import galeri4 from "@/img/galeryi-kami/galeri-4.png";
+import galeri5 from "@/img/galeryi-kami/galeri-5.png";
 import React from "react";
 
 const Index = ({ title }) => {
@@ -66,7 +71,7 @@ const Index = ({ title }) => {
             {/* asdasd */}
             <article className="">
                 <div className="w-full h-20 mb-6 flex">
-                    <div className=" flex justify-center items-center w-full collapse multi-collapse gap-1">
+                    <div className=" flex justify-center items-center w-full collapse multi-collapse gap-4">
                         <div className="  p-[8px] rounded-md flex flex-col dark:text-white text-black text-sm">
                             <span className="text-center font-bold text-2xl">
                                 98
@@ -121,7 +126,7 @@ const Index = ({ title }) => {
             {/* Layanan Online */}
             <article className="mb-6">
                 <div className="flex items-center w-full flex-col">
-                    <div className="flex w-full justify-between md:p-[20px_100px] p-[25px]">
+                    <div className="flex w-full justify-between md:p-[20px_70px] p-[25px]">
                         <span className="text-black dark:text-white font-bold text-[19px]">
                             Layanan Online
                         </span>
@@ -135,12 +140,12 @@ const Index = ({ title }) => {
                             </span>
                         </Link>
                     </div>
-                    <div className="w-[85%]">
+                    <div className="w-[90%]">
                         <div className="flex justify-center flex-wrap gap-2">
                             {LayananOnline.map((data, i) => (
                                 <img
                                     key={i}
-                                    className="hover:-translate-y-1 duration-[150ms] ease-in-out rounded-md shadow-md md:h-[130px]"
+                                    className="hover:-translate-y-1 duration-[150ms] ease-in-out rounded-md shadow-md md:h-[180px]"
                                     style={{
                                         backgroundPosition: "50%",
                                         backgroundSize: "auto",
@@ -158,7 +163,7 @@ const Index = ({ title }) => {
             {/* Layanan Kami */}
             <article className="mb-6">
                 <div className="flex items-center w-full flex-col">
-                    <div className="flex w-full justify-between md:p-[20px_100px] p-[25px]">
+                    <div className="flex w-full justify-between md:p-[20px_70px] p-[25px]">
                         <span className="text-black dark:text-white font-bold text-[19px]">
                             Layanan Kami
                         </span>
@@ -173,11 +178,11 @@ const Index = ({ title }) => {
                         </Link>
                     </div>
                     <div className="w-[100%]">
-                        <div className="flex md:justify-center md:flex-wrap gap-2 md:p-[0px_20px]">
+                        <div className="flex md:justify-center md:flex-wrap gap-2 ">
                             {LayananKami.map((data, i) => (
                                 <div
                                     key={i}
-                                    className="bg-white md:shadow-[-1px_12px_30px_-13.2px_rgba(0,0,0,0.75)] shadow-[-1px_12px_35px_-16px_rgba(0,0,0,0.75)] mb-1 rounded-[3px] p-[6px] text-[11px] md:w-[40%] m-[0px_20px]"
+                                    className="bg-white md:shadow-[-1px_12px_30px_-13.2px_rgba(0,0,0,0.75)] shadow-[-1px_12px_35px_-16px_rgba(0,0,0,0.75)] mb-1 rounded-[3px] p-[6px] text-[13px] md:w-[44%] m-[0px_5px]"
                                 >
                                     <Link
                                         href="#"
@@ -194,7 +199,7 @@ const Index = ({ title }) => {
             {/* Informasi */}
             <article className="mb-6">
                 <div className="flex items-center w-full flex-col">
-                    <div className="flex w-full justify-between md:p-[20px_100px] p-[25px]">
+                    <div className="flex w-full justify-between md:p-[20px_70px] p-[25px]">
                         <span className="text-black dark:text-white font-bold text-[19px]">
                             Informasi
                         </span>
@@ -208,18 +213,18 @@ const Index = ({ title }) => {
                             </span>
                         </Link>
                     </div>
-                    <div className="w-[85%]">
+                    <div className="w-[100%]">
                         <div className="flex justify-center flex-wrap gap-2  md:p-[0px_10px]">
                             {informasi.map((data, i) => (
                                 <div
-                                    className="card md:w-[290px] w-full  md:rounded-md rounded-none  md:shadow-[-1px_12px_30px_-23px_rgba(0,0,0,0.75)] bg-white hover:-translate-y-1 duration-[150ms] ease-in-out text-black font-bold"
+                                    className="card md:w-[400px] w-full  md:rounded-md rounded-none  md:shadow-[-1px_12px_30px_-23px_rgba(0,0,0,0.75)] bg-white hover:-translate-y-1 duration-[150ms] ease-in-out text-black font-bold"
                                     key={i}
                                 >
                                     <figure>
                                         <img src={data.img} alt="Shoes" />
                                     </figure>
                                     <div className="p-[5px_10px]">
-                                        <p className="text-xs md:text-xs">
+                                        <p className="text-[15px]">
                                             {data.title}
                                         </p>
                                     </div>
@@ -251,7 +256,7 @@ const Index = ({ title }) => {
             {/* Berita Kami */}
             <article className="mb-6">
                 <div className="flex items-center w-full flex-col">
-                    <div className="flex w-full justify-between md:p-[20px_100px] p-[25px]">
+                    <div className="flex w-full justify-between md:p-[20px_70px] p-[25px]">
                         <span className="text-black dark:text-white font-bold text-[19px]">
                             Berita Kami
                         </span>
@@ -265,18 +270,18 @@ const Index = ({ title }) => {
                             </span>
                         </Link>
                     </div>
-                    <div className="w-[85%]">
+                    <div className="w-[100%]">
                         <div className="flex justify-center flex-wrap gap-2  md:p-[0px_10px]">
                             {informasi.map((data, i) => (
                                 <div
-                                    className="card md:w-[290px] w-full  md:rounded-md rounded-none  md:shadow-[-1px_12px_30px_-23px_rgba(0,0,0,0.75)] bg-white hover:-translate-y-1 duration-[150ms] ease-in-out text-black font-bold"
+                                    className="card md:w-[400px] w-full  md:rounded-md rounded-none  md:shadow-[-1px_12px_30px_-23px_rgba(0,0,0,0.75)] bg-white hover:-translate-y-1 duration-[150ms] ease-in-out text-black font-bold"
                                     key={i}
                                 >
                                     <figure>
                                         <img src={data.img} alt="Shoes" />
                                     </figure>
                                     <div className="p-[5px_10px]">
-                                        <p className="text-xs md:text-xs">
+                                        <p className="text-[15px]">
                                             {data.title}
                                         </p>
                                     </div>
@@ -308,7 +313,7 @@ const Index = ({ title }) => {
             {/* Berita Kami */}
             <article className="mb-6">
                 <div className="flex items-center w-full flex-col">
-                    <div className="flex w-full justify-between md:p-[20px_100px] p-[25px]">
+                    <div className="flex w-full justify-between md:p-[20px_70px] p-[25px]">
                         <span className="text-black dark:text-white font-bold text-[19px]">
                             Berita Kami
                         </span>
@@ -322,33 +327,31 @@ const Index = ({ title }) => {
                             </span>
                         </Link>
                     </div>
-                    <div className="w-[85%]">
+                    <div className="w-[90%]">
                         <div className="flex justify-around md:p-[0px_10px]">
                             <img
-                                className="hover:-translate-y-1 duration-[150ms] ease-in-out rounded-md shadow-md md:h-[250px] md:shadow-[-1px_12px_30px_-13.2px_rgba(0,0,0,0.75)] "
+                                className="hover:-translate-y-1 duration-[150ms] ease-in-out rounded-md shadow-md md:h-[370px] md:shadow-[-1px_12px_30px_-13.2px_rgba(0,0,0,0.75)] "
                                 style={{
                                     backgroundPosition: "50%",
                                     backgroundSize: "auto",
                                     objectFit: "cover",
                                     background: "#eaea",
                                 }}
-                                src={"https://placeimg.com/400/225/arch"}
+                                src={galeri1}
                                 alt=""
                             />
                             <div className="flex flex-wrap justify-center item-center gap-2">
-                                {LayananOnline.map((data, i) => (
+                                {Galeri.map((data, i) => (
                                     <img
                                         key={i}
-                                        className="hover:-translate-y-1 duration-[150ms] ease-in-out rounded-md shadow-md md:h-[120px] md:shadow-[-1px_12px_30px_-13.2px_rgba(0,0,0,0.75)] "
+                                        className="hover:-translate-y-1 duration-[150ms] ease-in-out rounded-md shadow-md md:h-[180px] md:shadow-[-1px_12px_30px_-13.2px_rgba(0,0,0,0.75)] "
                                         style={{
                                             backgroundPosition: "50%",
                                             backgroundSize: "auto",
                                             objectFit: "cover",
                                             background: "#eaea",
                                         }}
-                                        src={
-                                            "https://placeimg.com/400/225/arch"
-                                        }
+                                        src={data.img}
                                         alt=""
                                     />
                                 ))}
@@ -423,19 +426,37 @@ const informasi = [
     {
         id: 1,
         title: "Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi",
-        date: "30 Juni 2022",
+        date: "30 Juni 2022 - 21:37",
         img: Informasi,
     },
     {
         id: 2,
         title: "Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi",
-        date: "30 Juni 2022",
+        date: "30 Juni 2022 - 21:37",
         img: Informasi,
     },
     {
         id: 3,
         title: "Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi",
-        date: "30 Juni 2022",
+        date: "30 Juni 2022 - 21:37",
         img: Informasi,
+    },
+];
+const Galeri = [
+    {
+        id: 1,
+        img: galeri2,
+    },
+    {
+        id: 2,
+        img: galeri3,
+    },
+    {
+        id: 3,
+        img: galeri4,
+    },
+    {
+        id: 4,
+        img: galeri5,
     },
 ];

@@ -7,7 +7,6 @@ export const DarkModeToggle = (props) => {
 
     const [isDarkMode, setDarkMode] = useState(false);
     const toggle = () => {
-        props?.mode(!props?.dark);
         setDarkMode(!isDarkMode);
         setTheme(theme === "dark" ? "light" : "dark");
     };

@@ -3,7 +3,7 @@ import { Transition } from "@headlessui/react";
 import { Link } from "@inertiajs/inertia-react";
 import { DarkModeToggle } from "./DarkMode";
 
-export const MobileNav = ({ isOpen, title, dark, mode }) => {
+export const MobileNav = ({ isOpen, title }) => {
     const [isOpenMobile, setOpenMobile] = useState(false);
 
     const isNavbarMobile = (rout) => {
@@ -23,7 +23,7 @@ export const MobileNav = ({ isOpen, title, dark, mode }) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
             className={
-                "fixed z-30 top-0 w-full mt-[61px] bg-[#fffffff1] dark:bg-[#2a303cf6] dark:text-white text-black"
+                "fixed z-30 top-0 w-full mt-[95px] bg-[#fffffff1] dark:bg-[#2a303cf6] dark:text-white text-black"
             }
         >
             <div className="md:hidden" id="mobile-menu">
@@ -100,7 +100,7 @@ export const MobileNav = ({ isOpen, title, dark, mode }) => {
                 <div className=" w-full dark:text-white text-black p-[0px_30px]">
                     <div className="md:hidden mb-3 flex justify-between items-center">
                         <span className="pr-3">Swith Theme :</span>
-                        <DarkModeToggle mode={mode} dark={dark} />
+                        <DarkModeToggle />
                     </div>
                 </div>
             </div>
