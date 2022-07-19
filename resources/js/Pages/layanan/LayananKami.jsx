@@ -1,12 +1,12 @@
 import Layout from '@/Layouts/Layout'
 import React from 'react'
 
-const info = (props) => {
+const LayananKami = (props) => {
   return (
    <Layout title={props.title}>
-        <div>info</div>
+        <div>LayananKami</div>
    </Layout>
   )
 }
 
-export default info
+export default LayananKami

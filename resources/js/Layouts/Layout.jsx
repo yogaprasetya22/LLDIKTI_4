@@ -27,7 +27,7 @@ const Layout = ({ children, title }) => {
                         transition={{ duration: 0.5, type: "easeInOut" }}
                         style={{ position: "relative" }}
                     >
-                        <div className="pt-[100px]">{children}</div>
+                        <div className="pt-[100px] mt-6">{children}</div>
                         <Footer />
                     </motion.article>
                 </div>

@@ -1,9 +1,12 @@
-import React from 'react'
+import Layout from "@/Layouts/Layout";
+import React from "react";
 
-const Layanan = () => {
-  return (
-    <div>Layanan</div>
-  )
-}
+const Layanan = (props) => {
+    return (
+        <Layout title={props.title}>
+            <div>Layanan</div>
+        </Layout>
+    );
+};
 
-export default Layanan
+export default Layanan;
