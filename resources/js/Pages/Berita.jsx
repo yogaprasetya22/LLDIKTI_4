@@ -1,9 +1,12 @@
-import React from 'react'
+import Layout from "@/Layouts/Layout";
+import React from "react";
 
-const berita = () => {
-  return (
-    <div>berita</div>
-  )
-}
+const berita = (props) => {
+    return (
+        <Layout title={props.title}>
+            <div>berita</div>
+        </Layout>
+    );
+};
 
-export default berita
+export default berita;

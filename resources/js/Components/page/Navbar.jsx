@@ -28,11 +28,15 @@ const Navbar = ({ title }) => {
     const [isDark, setIsDark] = useState(false);
     const { theme } = useContext(ThemeContext);
     return (
-        <>
-            <div
-                className=" bg-blue-600 md:pr-[50px] md:p-[10px_70px] fixed z-40 top-0  text-[15px] w-full justify-between flex"
-                style={{ backdropFilter: "blur(4px)" }}
-            >
+        <nav
+            className="flex flex-col fixed w-full z-10 top-0 left-0 "
+            style={{
+                backdropFilter: "blur(10px) saturate(260%) contrast(180%)",
+                WebkitBackdropFilter:
+                    "blur(10px) saturate(260%) contrast(180%)",
+            }}
+        >
+            <div className=" bg-[#2a3c84] md:pr-[50px] md:p-[6px_70px]  z-40 top-0  text-[15px] w-full justify-between flex ">
                 <div className="lg:flex gap-3 hidden ">
                     <Link href="#" className="text-white">
                         <FontAwesomeIcon icon={faPhone} className="pr-1" />
@@ -56,7 +60,7 @@ const Navbar = ({ title }) => {
                         <span className="flex text-center">Whatsapp</span>
                     </Link>
                 </div>
-                <div className="flex gap-3 md:pr-[50px] p-[10px] md:p-0">
+                <div className="flex gap-3 md:pr-[50px] md:p-0 p-[5px] pl-7">
                     <Link href="#">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -108,32 +112,30 @@ const Navbar = ({ title }) => {
                 </div>
             </div>
             {/* Navbar */}
-            <div
-                className="navbar bg-[#ffffffdb] dark:bg-[#2a303cf7] md:pr-[50px] md:pl-[50px] fixed z-40 top-0 text-black dark:text-white text-[16px] mt-[40px] font-semibold"
-                style={{ backdropFilter: "blur(4px)" }}
-            >
-                <div className="flex-1">
+            <div className="navbar bg-[#ffffffe6] dark:bg-[#2a303cee] md:pr-[50px] md:pl-[50px]  z-40 top-0 text-black dark:text-white text-[16px]  font-semibold  transition duration-[85ms]ease-in-out">
+                <div className="flex-1 py-2">
                     <Link
                         className="btn btn-ghost normal-case text-xl lg:text-xl "
                         href="/"
                     >
                         <img
                             src="https://i0.wp.com/www.lldikti4.id/wp-content/uploads/2021/09/LLDIKTI-LOGOrev1-1.png?resize=300%2C56&ssl=1"
-                            className="lg:w-[160px] w-[140px]"
+                            className="lg:w-[200px] w-[140px]"
                         />
                     </Link>
                     <div className="hidden lg:flex justify-end w-full">
                         <ul className="menu menu-horizontal ">
+                            {/* Profil */}
                             <li tabIndex="0">
                                 <NextLink
                                     href="profil"
                                     title={title}
                                     name="Profile"
                                 />
-                                <ul className="p-2 z-10 bg-[#fffffff1] dark:bg-[#2a303c] text-black dark:text-white delay-75">
+                                <ul className="p-2 z-10 bg-[#ffffff] dark:bg-[#2a303c] text-black dark:text-white delay-75">
                                     <li>
                                         <NextLink
-                                            href="profil-lidikti-4"
+                                            href="profil-lldikti-4"
                                             title={title}
                                             name="Profil LIDIKTI 4"
                                         />
@@ -147,6 +149,7 @@ const Navbar = ({ title }) => {
                                     </li>
                                 </ul>
                             </li>
+                            {/* info */}
                             <li>
                                 <NextLink
                                     href="info"
@@ -154,19 +157,61 @@ const Navbar = ({ title }) => {
                                     name="Info"
                                 />
                             </li>
+                            {/* Akuntabilitas */}
                             <li>
-                                <Link>Akuntabilitas</Link>
+                                <NextLink
+                                    href="akuntabilitas"
+                                    title={title}
+                                    name="Akuntabilitas"
+                                />
                             </li>
+                            {/* Berita */}
                             <li>
-                                <Link>Berita</Link>
+                                <NextLink
+                                    href="berita"
+                                    title={title}
+                                    name="Berita"
+                                />
                             </li>
+                            {/* Layanan */}
                             <li tabIndex="0">
                                 <NextLink
                                     href="layanan"
                                     title={title}
                                     name="Layanan"
                                 />
-                                <ul className="p-2 z-10 bg-[#fffffff1] dark:bg-[#2a303c] text-black dark:text-white delay-75">
+                                <ul className="p-2 z-10 bg-[#ffffff] dark:bg-[#2a303c] text-black dark:text-white ">
+                                    <li>
+                                        <NextLink
+                                            href="layanan/layanan-online"
+                                            title={title}
+                                            name="Layanan Online"
+                                        />
+                                    </li>
+                                    <li>
+                                        <NextLink
+                                            href="layanan/layanan-kami"
+                                            title={title}
+                                            name="Layanan Kami"
+                                        />
+                                    </li>
+                                    <li>
+                                        <NextLink
+                                            href="cara-pengajuan-layanan"
+                                            title={title}
+                                            name="Cara Pengajuan Layanan"
+                                        />
+                                    </li>
+                                </ul>
+                            </li>
+                            {/* Informasi Publik */}
+                            <li tabIndex="0">
+                                <NextLink
+                                    href="informasi-publik"
+                                    title={title}
+                                    name="Informasi Publik"
+                                />
+                                <ul className="p-2 z-10 bg-[#ffffff] dark:bg-[#2a303c] text-black dark:text-white delay-75">
                                     <li>
                                         <NextLink
                                             href="layanan-online"
@@ -175,27 +220,86 @@ const Navbar = ({ title }) => {
                                         />
                                     </li>
                                     <li>
-                                        <Link>Layanan kami</Link>
+                                        <Link>Standar Pelayanan Publik</Link>
                                     </li>
+                                    {/* Produk Hukum */}{" "}
+                                    <li tabIndex="1">
+                                        <NextLink
+                                            href="produk-hukum"
+                                            title={title}
+                                            name="Prodik Hukum"
+                                        />
+                                        {/* <ul className="p-2 z-10 bg-[#ffffff] dark:bg-[#2a303c] text-black dark:text-white delay-75 menu">
+                                            <li>
+                                                <NextLink
+                                                    href="produk-hukum/surat-edaran"
+                                                    title={title}
+                                                    name="Surat Edaran"
+                                                />
+                                            </li>
+                                            <li>
+                                                <NextLink
+                                                    href="produk-hukum/undang-undang"
+                                                    title={title}
+                                                    name="Undang - Undang"
+                                                />
+                                            </li>
+                                            <li>
+                                                <NextLink
+                                                    href="produk-hukum/peraturan-ristektikti"
+                                                    title={title}
+                                                    name="Peraturan Ristektikti"
+                                                />
+                                            </li>
+                                            <li>
+                                                <NextLink
+                                                    href="produk-hukum/peraturan-presiden"
+                                                    title={title}
+                                                    name="Peraturan Presiden"
+                                                />
+                                            </li>
+                                            <li>
+                                                <NextLink
+                                                    href="produk-hukum/peraturan-mentri"
+                                                    title={title}
+                                                    name="Peraturan Mentri"
+                                                />
+                                            </li>
+                                            <li>
+                                                <NextLink
+                                                    href="produk-hukum/peraturan-pemerintah"
+                                                    title={title}
+                                                    name="Peraturan Pemerintah"
+                                                />
+                                            </li>
+                                            <li>
+                                                <NextLink
+                                                    href="sk-dirjen"
+                                                    title={title}
+                                                    name="SK DIRJEN"
+                                                />
+                                            </li>
+                                        </ul> */}
+                                    </li>
+                                    {/* end */}
                                     <li>
-                                        <Link>Profil Kepala LIDIKTI 4</Link>
+                                        <Link>PPID</Link>
                                     </li>
                                 </ul>
-                            </li>
-                            <li>
-                                <Link>Informasi Publik</Link>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div className="flex-none gap-3 hidden md:flex">
-                    <button className=" text-red-100">
+                    {/* search */}
+                    <button className=" text-red-100 ">
                         <svg
                             style={
                                 theme === "dark"
                                     ? { fill: "currentColor" }
                                     : { fill: "" }
                             }
+                            className=" transition duration-500 ease-in-out"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 30 30"
                             width="20px"
@@ -205,7 +309,7 @@ const Navbar = ({ title }) => {
                         </svg>
                     </button>
                     <Link
-                        className=" inline-block px-2 py-1.5 bg-blue-600 text-white font-medium text-[13px] leading-tight rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out "
+                        className=" inline-block px-2 py-1.5 bg-[#3e54aa] text-white font-medium text-[13px] leading-tight rounded shadow-md hover:bg-[#2a3c84] hover:shadow-lg focus:bg-[#2a3c84] focus:shadow-lg focus:outline-none focus:ring-0 active:bg-[#3e54aa] active:shadow-lg transition duration-150 ease-in-out "
                         data-mdb-ripple="true"
                         data-mdb-ripple-color="light"
                         href="#"
@@ -220,7 +324,7 @@ const Navbar = ({ title }) => {
 
                 {/* Mobile Navbar */}
 
-                <div className="lg:hidden md:hidden flex items-center" >
+                <div className="lg:hidden md:hidden flex items-center ">
                     <button className=" text-red-100">
                         <svg
                             style={
@@ -237,7 +341,7 @@ const Navbar = ({ title }) => {
                         </svg>
                     </button>
                 </div>
-                <div className="mr-2 flex lg:hidden gap-2 pl-[10px] lg:pl-0">
+                <div className="mr-2 flex lg:hidden gap-2 pl-[10px] lg:pl-0 ">
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         type="button"
@@ -290,7 +394,7 @@ const Navbar = ({ title }) => {
                 mode={setIsDark}
                 dark={isDark}
             />
-        </>
+        </nav>
     );
 };
 
