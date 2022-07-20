@@ -22,7 +22,6 @@ Route::get('/DbCreate', function () {
     return redirect('/');
 });
 
-<<<<<<< HEAD
 // Profil
 
 Route::get('/profil', function () {
@@ -91,7 +90,6 @@ Route::get('/cara-pengajuan-layanan', function () {
 
 // end Layanan
 
-=======
 Route::get('/DbDelete', function () {
     $db = new DbCreate();
     $db->down(false);
@@ -112,6 +110,5 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
->>>>>>> 9c79dfa688ddb7128ab356ac17e8a0cfb7fe81fc
 
 require __DIR__ . '/auth.php';

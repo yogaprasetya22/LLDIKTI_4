@@ -2,7 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\InfoController;
 use App\Http\Controllers\API\NewsController;
+use App\Http\Controllers\API\GalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +17,10 @@ use App\Http\Controllers\API\NewsController;
 |
 */
 
-Route::get('/News', [NewsController::class, 'index']);
+Route::apiResource('Info', InfoController::class);
+Route::apiResource('News', NewsController::class);
+Route::apiResource('Gallery', GalleryController::class);
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
