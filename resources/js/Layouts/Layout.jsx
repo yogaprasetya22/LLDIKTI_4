@@ -16,7 +16,7 @@ const Layout = ({ children, title }) => {
     return (
         <AnimatePresence exitBeforeEnter initial={true}>
             <ThemeProvider>
-                <div className="min-h-screen bg-[#fffffff2] dark:bg-[#393939] transition-all ">
+                <div className="min-h-screen bg-[#ffffff] dark:bg-[#393939] transition-all ">
                     {title && <Head title={title} />}
                     <Navbar title={title} />
                     <motion.article

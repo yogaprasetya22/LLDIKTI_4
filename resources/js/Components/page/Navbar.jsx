@@ -29,14 +29,14 @@ const Navbar = ({ title }) => {
     const { theme } = useContext(ThemeContext);
     return (
         <nav
-            className="flex flex-col fixed w-full z-10 top-0 left-0 "
+            className="flex flex-col fixed w-full z-10 top-0 left-0 shadow-md"
             style={{
                 backdropFilter: "blur(10px) saturate(260%) contrast(180%)",
                 WebkitBackdropFilter:
                     "blur(10px) saturate(260%) contrast(180%)",
             }}
         >
-            <div className=" bg-[#2a3c84] md:pr-[50px] md:p-[6px_70px]  z-40 top-0  text-[15px] w-full justify-between flex ">
+            <div className=" bg-[#2654a4] md:pr-[50px] md:p-[6px_70px]  z-40 top-0  text-[15px] w-full justify-between flex ">
                 <div className="lg:flex gap-3 hidden ">
                     <Link href="#" className="text-white">
                         <FontAwesomeIcon icon={faPhone} className="pr-1" />
@@ -112,7 +112,7 @@ const Navbar = ({ title }) => {
                 </div>
             </div>
             {/* Navbar */}
-            <div className="navbar bg-[#ffffffe6] dark:bg-[#2a303cee] md:pr-[50px] md:pl-[50px]  z-40 top-0 text-black dark:text-white text-[16px]  font-semibold  transition duration-[85ms]ease-in-out">
+            <div className="navbar bg-[#ffffffd6] dark:bg-[#2a303cee] md:pr-[50px] md:pl-[50px]  z-40 top-0 text-black dark:text-white text-[16px]  font-semibold  transition duration-[85ms]ease-in-out">
                 <div className="flex-1 py-2">
                     <Link
                         className="btn btn-ghost normal-case text-xl lg:text-xl "

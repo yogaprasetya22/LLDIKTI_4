@@ -16,10 +16,10 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/DbCreate', function () {
-    $db = new DbCreate();
-    $db->dbMake(false);
-    return redirect('/');
+Route::get('/', function () {
+    return Inertia::render('index', [
+        'title' => 'index',
+    ]);
 });
 
 // Profil
@@ -90,25 +90,22 @@ Route::get('/cara-pengajuan-layanan', function () {
 
 // end Layanan
 
+
 Route::get('/DbDelete', function () {
     $db = new DbCreate();
     $db->down(false);
     return redirect('/');
 });
 
-
-// Route::inertia('/', 'Index');
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
+Route::get('/DbCreate', function () {
+    $db = new DbCreate();
+    $db->dbMake(false);
+    return redirect('/');
 });
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+
+
+
+
 
 require __DIR__ . '/auth.php';
