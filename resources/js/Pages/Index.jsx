@@ -1,25 +1,28 @@
 import Layout from "@/Layouts/Layout";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "@inertiajs/inertia-react";
 import bgheader from "@/img/bg-header.png";
-import digilibrary from "@/img/layanan-online/digilibrary.png";
-import buletin from "@/img/layanan-online/buletin.png";
-import jurnal from "@/img/layanan-online/jurnal.png";
-import sptmj from "@/img/layanan-online/sptmj.png";
+import BookGif from "@/img/112-book-morph-outline.gif";
+import SuratGif from "@/img/56-document-outline.gif";
+import JurnalGif from "@/img/966-privacy-policy-outline.gif";
+import tamplate from "@/img/tamplate.png";
 import Informasi from "@/img/informasi-lldikti.png";
 import galeri1 from "@/img/galeryi-kami/galeri-1.png";
 import galeri2 from "@/img/galeryi-kami/galeri-2.png";
 import galeri3 from "@/img/galeryi-kami/galeri-3.png";
 import galeri4 from "@/img/galeryi-kami/galeri-4.png";
 import galeri5 from "@/img/galeryi-kami/galeri-5.png";
+import IconSalin from "@/img/icon-salin.png";
+import IconLLDIKTI from "@/img/icon-llditi.png";
 import React from "react";
+import Tamplate from "@/Components/page/Tamplate";
+import Chard from "@/Components/page/Chard";
+import AnimationCard from "@/Components/page/AnimationCard";
 
 const Index = ({ title }) => {
     return (
         <Layout title={title}>
             <header
-                className="relative overflow-hidden bg-no-repeat bg-cover "
+                className="relative overflow-hidden bg-no-repeat bg-cover mt-10"
                 style={{
                     backgroundPosition: "50%",
                     height: "400px",
@@ -33,7 +36,7 @@ const Index = ({ title }) => {
                             <h5 className="md:text-3xl lg:mt-0 text-[19px] lg:mb-4  md:mb-2 font-semibold">
                                 Selamat datang di
                             </h5>
-                            <h1 className=" md:text-[35px] text-[25px] font-bold mt-0  mb-3">
+                            <h1 className=" md:text-[35px] text-[25px] font-bold mt-0  mb-1">
                                 Lembaga Layanan Pendidikan Tinggi Wilayah
                             </h1>
                             <h1 className=" md:text-[35px] text-[25px] font-bold mb-3">
@@ -44,35 +47,54 @@ const Index = ({ title }) => {
                                 <span className="text-[#eaa43b]">Banten</span>
                             </h1>
                             <div className=" flex justify-center items-center mb-6">
-                                <p className="text-center lg:max-w-[48%]  md:text-[17.5px] max-w-[80%] text-[15px]">
+                                <p className="text-center lg:max-w-[60%]  md:text-[17.5px] max-w-[80%] text-[15px]">
                                     LLDIKTI mempunyai tugas membantu peningkatan
                                     mutu penyelenggaraan pendidikan tinggi
                                     negara maupun perguruan tinggi swasta
                                     diwilayah kerjanya
                                 </p>
                             </div>
-                            <Link
-                                className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out text-[15px]"
-                                data-mdb-ripple="true"
-                                data-mdb-ripple-color="light"
-                                href="#"
-                                role="button"
-                            >
-                                Baca Selengkapnya
-                                <span className="pl-1">
-                                    <FontAwesomeIcon
-                                        icon={faArrowRightLong}
-                                        className="text-[10px]"
-                                    />
-                                </span>
-                            </Link>
+                            <div className="w-full flex justify-center items-center gap-4 flex-col md:flex-row mb-1">
+                                <Link
+                                    className="flex text-[16px] leading-[16px] font-extrabold text-blue-100 border-[3px] p-3 rounded-md  dark:border-[#393939] border-[#2654a4] bg-[#2654a4] dark:hover:bg-[#393939] transition-all justify-center items-center"
+                                    data-mdb-ripple="true"
+                                    data-mdb-ripple-color="light"
+                                    href="#"
+                                    role="button"
+                                >
+                                    Layanan Kami
+                                    <span className="pl-2">
+                                        <img
+                                            src={IconSalin}
+                                            alt=""
+                                            className="w-[16px]"
+                                        />
+                                    </span>
+                                </Link>
+                                <Link
+                                    className="flex text-[16px] leading-[16px] text-[#2654a4] font-extrabold hover:text-blue-100 border-[3px] p-3 rounded-md border-[#2654a4]  hover:border-[#2654a4] hover:bg-[#2654a4]  transition-all justify-center items-center"
+                                    data-mdb-ripple="true"
+                                    data-mdb-ripple-color="light"
+                                    href="#"
+                                    role="button"
+                                >
+                                    Profil LLDIKTI
+                                    <span className="pl-2">
+                                        <img
+                                            src={IconLLDIKTI}
+                                            alt=""
+                                            className="w-[16px]"
+                                        />
+                                    </span>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
             </header>
             {/* Sebaran Perguruan Tinggi */}
-            <article className="">
-                <div className="w-full mb-6 mt-4 md:mt-0 flex">
+            <article className="mt-10 mb-16">
+                <div className="w-full md:mt-0 flex">
                     <div className=" flex flex-col md:flex-row justify-center mitems-center w-full collapse multi-collapse md:gap-6 gap-2">
                         {PerguruanTinggi.map((data, i) => (
                             <div
@@ -91,252 +113,236 @@ const Index = ({ title }) => {
                 </div>
             </article>
             {/* Layanan Online */}
-            <article className="mb-6">
-                <div className="flex items-center w-full flex-col">
-                    <div className="flex w-full justify-between md:p-[20px_70px] p-[25px]">
-                        <span className="text-black dark:text-white font-bold text-[19px]">
-                            Layanan Online
-                        </span>
-                        <Link
-                            href="#"
-                            className="text-[15px] text-blue-600 hover:text-blue-100"
-                        >
-                            Selengkapnya{" "}
-                            <span className="pl-1">
-                                <FontAwesomeIcon
-                                    icon={faArrowRightLong}
-                                    className="text-[10px]"
-                                />
-                            </span>
-                        </Link>
+            <Tamplate title="Layanan Online" color={true}>
+                <div className="w-[90%] py-7">
+                    <div className="flex justify-center flex-wrap gap-2">
+                        {LayananOnline.map((data, i) => (
+                            <div
+                                key={i}
+                                className="w-[290px] h-[250px] rounded-md bg-[#ffffff] z-1 relative image-full hover:-translate-y-1 duration-[150ms] ease-in-out shadow-md p-4 border-[1px]"
+                            >
+                               <AnimationCard data={data} />
+                            </div>
+                        ))}
                     </div>
-                    <div className="w-[90%]">
-                        <div className="flex justify-center flex-wrap gap-2">
-                            {LayananOnline.map((data, i) => (
+                </div>
+            </Tamplate>
+            {/* Layanan Kami */}
+            <Tamplate title="Layanan Kami">
+                <div className="w-[90%] md:w-[100%] py-7">
+                    <div className="flex md:justify-center md:flex-wrap md:flex-row md:px-0 flex-col px-4 gap-2 ">
+                        {LayananKami.map((data, i) => (
+                            <div
+                                key={i}
+                                className="bg-white shadow-md drop-shadow-md border-y-[1px] mb-1 rounded-[3px] p-[5px] text-[14px] md:w-[44%] "
+                            >
+                                <Link
+                                    href="#"
+                                    className="text-black font-semibold"
+                                >
+                                    {data.title}
+                                </Link>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </Tamplate>
+
+            {/* Berita Kami */}
+            <Tamplate title="Berita Kami" color={true}>
+                <div className="md:w-[100%] w-[85%] py-7">
+                    <div className="flex justify-center flex-wrap gap-7 md:p-[0px_10px]">
+                        {informasi.map((data, i) => (
+                            <div
+                                key={i}
+                                className="card md:w-[600px] lg:w-[350px] w-full px-4 md:px-0 md:rounded-md rounded-none shadow-md drop-shadow-md bg-white hover:-translate-y-1 duration-[150ms] ease-in-out text-black font-bold"
+                            >
+                                <Chard i={i} data={data} />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </Tamplate>
+            {/* Galeri Kami */}
+            <Tamplate title="Galeri Kami">
+                <div className="md:w-[90%] w-[85%] py-7">
+                    <div className="flex lg:justify-around lg:flex-row flex-col md:p-[0px_10px]">
+                        <img
+                            className="hover:-translate-y-1 duration-[150ms] ease-in-out rounded-md shadow-md md:h-[370px] h-[180px] md:shadow-[-1px_12px_30px_-13.2px_rgba(0,0,0,0.75)] mb-3 lg:mb-0"
+                            style={{
+                                backgroundPosition: "50%",
+                                backgroundSize: "auto",
+                                objectFit: "cover",
+                                background: "#eaea",
+                            }}
+                            src={galeri1}
+                            alt=""
+                        />
+                        <div className="flex md:flex-wrap md:flex-row justify-center item-center md:gap-2 gap-4 flex-col ">
+                            {Galeri.map((data, i) => (
                                 <img
                                     key={i}
-                                    className="hover:-translate-y-1 duration-[150ms] ease-in-out rounded-md shadow-md md:h-[180px]"
+                                    className="hover:-translate-y-1 duration-[150ms] ease-in-out rounded-md shadow-md md:h-[180px] md:shadow-[-1px_12px_30px_-13.2px_rgba(0,0,0,0.75)] "
                                     style={{
                                         backgroundPosition: "50%",
                                         backgroundSize: "auto",
                                         objectFit: "cover",
                                         background: "#eaea",
                                     }}
-                                    src={data.title}
+                                    src={data.img}
                                     alt=""
                                 />
                             ))}
                         </div>
                     </div>
                 </div>
-            </article>
-            {/* Layanan Kami */}
-            <article className="mb-6">
-                <div className="flex items-center w-full flex-col">
-                    <div className="flex w-full justify-between md:p-[20px_70px] p-[25px]">
-                        <span className="text-black dark:text-white font-bold text-[19px]">
-                            Layanan Kami
-                        </span>
-                        <Link
-                            href="#"
-                            className="text-[15px] text-blue-600 hover:text-blue-100"
-                        >
-                            Selengkapnya{" "}
-                            <span className="pl-1">
-                                <FontAwesomeIcon
-                                    icon={faArrowRightLong}
-                                    className="text-[10px]"
-                                />
-                            </span>
-                        </Link>
-                    </div>
-                    <div className="w-[90%] md:w-[100%]">
-                        <div className="flex md:justify-center md:flex-wrap md:flex-row md:px-0 flex-col px-4 gap-2 ">
-                            {LayananKami.map((data, i) => (
-                                <div
-                                    key={i}
-                                    className="bg-white md:shadow-[-1px_12px_30px_-14.1px_rgba(0,0,0,0.75)] shadow-[-1px_12px_35px_-16px_rgba(0,0,0,0.75)] mb-1 rounded-[3px] p-[6px] text-[12px] md:w-[44%] "
-                                >
-                                    <Link
-                                        href="#"
-                                        className="text-black font-bold"
-                                    >
-                                        {data.title}
-                                    </Link>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </article>
+            </Tamplate>
             {/* Informasi */}
-            <article className="mb-6">
-                <div className="flex items-center w-full flex-col">
-                    <div className="flex w-full justify-between md:p-[20px_70px] p-[25px]">
-                        <span className="text-black dark:text-white font-bold text-[19px]">
-                            Informasi
-                        </span>
-                        <Link
-                            href="#"
-                            className="text-[15px] text-blue-600 hover:text-blue-100"
-                        >
-                            Selengkapnya{" "}
-                            <span className="pl-1">
-                                <FontAwesomeIcon
-                                    icon={faArrowRightLong}
-                                    className="text-[10px]"
-                                />
-                            </span>
-                        </Link>
-                    </div>
-                    <div className="md:w-[100%] w-[85%]">
-                        <div className="flex justify-center flex-wrap gap-2  md:p-[0px_10px]">
-                            {informasi.map((data, i) => (
-                                <div
-                                    className="card md:w-[600px] lg:w-[400px] w-full px-4 md:px-0  md:rounded-md rounded-none  md:shadow-[-1px_12px_30px_-23px_rgba(0,0,0,0.75)] bg-white hover:-translate-y-1 duration-[150ms] ease-in-out text-black font-bold"
-                                    key={i}
-                                >
-                                    <figure>
-                                        <img src={data.img} alt="Shoes" />
-                                    </figure>
-                                    <div className="p-[5px_10px]">
-                                        <p className="text-[15px]">
-                                            {data.title}
-                                        </p>
-                                    </div>
-                                    <div className="p-[5px_10px_5px]">
-                                        <p className="text-xs md:text-xs">
-                                            {data.date}
-                                        </p>
-                                    </div>
-                                    <div className="p-[10px_10px_10px] border-t-2">
-                                        <Link
-                                            href="#"
-                                            className="text-[15px] text-blue-600"
-                                        >
-                                            Selengkapnya{" "}
-                                            <span className="pl-1">
-                                                <FontAwesomeIcon
-                                                    icon={faArrowRightLong}
-                                                    className="text-[10px]"
-                                                />
-                                            </span>
-                                        </Link>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+            <Tamplate title="Informasi kami" color={true}>
+                <div className="md:w-[100%] w-[85%] py-7">
+                    <div className="flex justify-center flex-wrap gap-7 md:p-[0px_10px]">
+                        {informasi.map((data, i) => (
+                            <div
+                                key={i}
+                                className="card md:w-[600px] lg:w-[350px] w-full px-4 md:px-0 md:rounded-md rounded-none shadow-md drop-shadow-md bg-white hover:-translate-y-1 duration-[150ms] ease-in-out text-black font-bold"
+                            >
+                                <Chard i={i} data={data} />
+                            </div>
+                        ))}
                     </div>
                 </div>
-            </article>
-            {/* Berita Kami */}
-            <article className="mb-6">
-                <div className="flex items-center w-full flex-col">
-                    <div className="flex w-full justify-between md:p-[20px_70px] p-[25px]">
-                        <span className="text-black dark:text-white font-bold text-[19px]">
-                            Berita Kami
-                        </span>
-                        <Link
-                            href="#"
-                            className="text-[15px] text-blue-600 hover:text-blue-100"
-                        >
-                            Selengkapnya{" "}
-                            <span className="pl-1">
-                                <FontAwesomeIcon
-                                    icon={faArrowRightLong}
-                                    className="text-[10px]"
-                                />
-                            </span>
-                        </Link>
-                    </div>
-                    <div className="md:w-[100%] w-[85%]">
-                        <div className="flex justify-center flex-wrap gap-2  md:p-[0px_10px]">
-                            {informasi.map((data, i) => (
-                                <div
-                                    className="card md:w-[600px] lg:w-[400px] w-full px-4 md:px-0 md:rounded-md rounded-none  md:shadow-[-1px_12px_30px_-23px_rgba(0,0,0,0.75)] bg-white hover:-translate-y-1 duration-[150ms] ease-in-out text-black font-bold"
-                                    key={i}
-                                >
-                                    <figure>
-                                        <img src={data.img} alt="Shoes" />
-                                    </figure>
-                                    <div className="p-[5px_10px]">
-                                        <p className="text-[15px]">
-                                            {data.title}
-                                        </p>
-                                    </div>
-                                    <div className="p-[5px_10px_5px]">
-                                        <p className="text-xs md:text-xs">
-                                            {data.date}
-                                        </p>
-                                    </div>
-                                    <div className="p-[10px_10px_10px] border-t-2">
-                                        <Link
-                                            href="#"
-                                            className="text-[15px] text-blue-600"
+            </Tamplate>
+            <article className="bg-[#ffffff]">
+                <div className="flex items-center w-full flex-col ">
+                    <div className="w-[95%] py-7">
+                        <div className="flex justify-between gap-7 md:p-[0px_10px]">
+                            {/* line 1 */}
+                            <div className="flex flex-col w-full">
+                                <div className="flex items-center text-[26px] text-black font-extrabold leading-[150%]">
+                                    Butuh Bantuan ?
+                                    <span className="pl-2 pt-3">
+                                        <svg
+                                            width="7"
+                                            height="7"
+                                            viewBox="0 0 7 7"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
                                         >
-                                            Selengkapnya{" "}
-                                            <span className="pl-1">
-                                                <FontAwesomeIcon
-                                                    icon={faArrowRightLong}
-                                                    className="text-[10px]"
-                                                />
+                                            <path
+                                                d="M3.5 7C2.5375 7 1.71111 6.6583 1.02083 5.9749C0.340278 5.28173 0 4.45188 0 3.48536C0 2.52859 0.340278 1.70851 1.02083 1.0251C1.71111 0.341701 2.5375 0 3.5 0C4.43333 0 5.25 0.341701 5.95 1.0251C6.65 1.70851 7 2.52859 7 3.48536C7 4.12971 6.83472 4.72036 6.50417 5.25732C6.18333 5.78452 5.76042 6.2092 5.23542 6.53138C4.71042 6.84379 4.13194 7 3.5 7Z"
+                                                fill="#24529E"
+                                            />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div className="flex justify-between gap-[3rem] text-black text-start ">
+                                    <div className="">
+                                        <div className="alamat my-4 flex flex-col ">
+                                            <span className=" font-extrabold">
+                                                Alamat
                                             </span>
-                                        </Link>
+                                            Jl. PH.H. Mustofa No.38, Cikutra,
+                                            Kec. Cibeunying Kidul, Kota Bandung,
+                                            Jawa Barat 40124
+                                        </div>
+                                        <div className="jam my-4 flex flex-col ">
+                                            <span className=" font-extrabold">
+                                                Jam Operasional
+                                            </span>
+                                            <div className=" w-full">
+                                                <span className="flex">
+                                                    Senin
+                                                    <p className="pl-10">
+                                                        08.00 - 16.00
+                                                    </p>
+                                                </span>
+                                                <span className="flex">
+                                                    Selasa
+                                                    <p className="pl-8">
+                                                        08.00 - 16.00
+                                                    </p>
+                                                </span>
+                                                <span className="flex">
+                                                    Rabu
+                                                    <p className="pl-10">
+                                                        08.00 - 16.00
+                                                    </p>
+                                                </span>
+                                                <span className="flex">
+                                                    Kamis
+                                                    <p className="pl-9">
+                                                        08.00 - 16.00
+                                                    </p>
+                                                </span>
+                                                <span className="flex">
+                                                    Jumat
+                                                    <p className="pl-10">
+                                                        08.00 - 16.00
+                                                    </p>
+                                                </span>
+                                                <span className="flex">
+                                                    Sabtu
+                                                    <p className="pl-10">
+                                                        Tutup
+                                                    </p>
+                                                </span>
+                                                <span className="flex">
+                                                    Minggu
+                                                    <p className="pl-7">
+                                                        Tutup
+                                                    </p>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className=" w-full">
+                                        <div className="tel flex flex-col my-4">
+                                            <span className=" font-extrabold">
+                                                Telphone
+                                            </span>
+                                            022-727-5630
+                                        </div>
+                                        <div className="tel flex flex-col my-4">
+                                            <span className=" font-extrabold">
+                                                Whatsapp
+                                            </span>
+                                            082244121226 (Chat Only)
+                                            <br />
+                                            +62 822-4412-1226
+                                        </div>
+                                        <div className="flex flex-col my-4">
+                                            <span className=" font-extrabold">
+                                                Email
+                                            </span>
+                                            <span className="flex">
+                                                Humas
+                                                <p className="pl-8">
+                                                    humas@lldikti4.or.id
+                                                </p>
+                                            </span>
+                                            <span className="flex">
+                                                Informasi
+                                                <p className="pl-4">
+                                                    informasi@lldikti4.or.id
+                                                </p>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </article>
-            {/* Galeri Kami */}
-            <article className="mb-6">
-                <div className="flex items-center w-full flex-col">
-                    <div className="flex w-full justify-between md:p-[20px_70px] p-[25px]">
-                        <span className="text-black dark:text-white font-bold text-[19px]">
-                            Galeri Kami
-                        </span>
-                        <Link
-                            href="#"
-                            className="text-[15px] text-blue-600 hover:text-blue-100"
-                        >
-                            Selengkapnya{" "}
-                            <span className="pl-1">
-                                <FontAwesomeIcon
-                                    icon={faArrowRightLong}
-                                    className="text-[10px]"
+                            </div>
+                            {/* line 2 */}
+                            <div className="gmap_canvas">
+                                <iframe
+                                    className="rounded-md shadow-md drop-shadow-md"
+                                    width={688}
+                                    height={400}
+                                    id="gmap_canvas"
+                                    src="https://maps.google.com/maps?q=Kopertis%20Region%20IV&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                    frameBorder={0}
+                                    scrolling="no"
+                                    marginHeight={0}
+                                    marginWidth={0}
                                 />
-                            </span>
-                        </Link>
-                    </div>
-                    <div className="md:w-[90%] w-[85%]">
-                        <div className="flex lg:justify-around lg:flex-row flex-col md:p-[0px_10px]">
-                            <img
-                                className="hover:-translate-y-1 duration-[150ms] ease-in-out rounded-md shadow-md md:h-[370px] h-[180px] md:shadow-[-1px_12px_30px_-13.2px_rgba(0,0,0,0.75)] mb-3 lg:mb-0"
-                                style={{
-                                    backgroundPosition: "50%",
-                                    backgroundSize: "auto",
-                                    objectFit: "cover",
-                                    background: "#eaea",
-                                }}
-                                src={galeri1}
-                                alt=""
-                            />
-                            <div className="flex md:flex-wrap md:flex-row justify-center item-center md:gap-2 gap-4 flex-col ">
-                                {Galeri.map((data, i) => (
-                                    <img
-                                        key={i}
-                                        className="hover:-translate-y-1 duration-[150ms] ease-in-out rounded-md shadow-md md:h-[180px] md:shadow-[-1px_12px_30px_-13.2px_rgba(0,0,0,0.75)] "
-                                        style={{
-                                            backgroundPosition: "50%",
-                                            backgroundSize: "auto",
-                                            objectFit: "cover",
-                                            background: "#eaea",
-                                        }}
-                                        src={data.img}
-                                        alt=""
-                                    />
-                                ))}
                             </div>
                         </div>
                     </div>
@@ -386,19 +392,27 @@ const PerguruanTinggi = [
 const LayananOnline = [
     {
         id: 1,
-        title: digilibrary,
+        background: tamplate,
+        content: SuratGif,
+        title: "SPTMJ Online",
     },
     {
         id: 2,
-        title: buletin,
+        background: tamplate,
+        content: BookGif,
+        title: "Digilibrary",
     },
     {
         id: 3,
-        title: jurnal,
+        background: tamplate,
+        content: JurnalGif,
+        title: "Jurnal LLDIKTI",
     },
     {
         id: 4,
-        title: sptmj,
+        background: tamplate,
+        content: BookGif,
+        title: "Buletin LLDIMTI",
     },
 ];
 
@@ -441,19 +455,19 @@ const informasi = [
     {
         id: 1,
         title: "Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi",
-        date: "30 Juni 2022 - 21:37",
+        date: "30 Juni 2022",
         img: Informasi,
     },
     {
         id: 2,
-        title: "Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi",
-        date: "30 Juni 2022 - 21:37",
+        title: "Penyerahan SK Jabatan Akademik Dosen Kemdikbudristek",
+        date: "30 Juni 2022",
         img: Informasi,
     },
     {
         id: 3,
-        title: "Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi",
-        date: "30 Juni 2022 - 21:37",
+        title: "Sosialisasi Pelaporan Akademik Melalui Aplikasi Neo Feeder",
+        date: "30 Juni 2022",
         img: Informasi,
     },
 ];

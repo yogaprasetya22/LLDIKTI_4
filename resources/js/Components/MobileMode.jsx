@@ -205,7 +205,7 @@ export const MobileNav = ({ isOpen, title }) => {
                         )}
                     </ul>
                 </div>
-                <div class="divider">OR</div>
+                <div className="divider">OR</div>
                 <div className=" w-full dark:text-white text-black p-[0px_30px]">
                     <div className="lg:hidden mb-3 flex justify-between items-center">
                         <span className="pr-3">Swith Theme :</span>
