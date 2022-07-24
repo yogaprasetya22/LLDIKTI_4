@@ -75,9 +75,9 @@ class DbCreate extends Model
             });
         }
 
-        if (!Schema::hasTable('info_cat')) {
-            Schema::create('info_cat', function (Blueprint $table) {
-                $table->integer('id_info_cat', true)->notNull();
+        if (!Schema::hasTable('info_categories')) {
+            Schema::create('info_categories', function (Blueprint $table) {
+                $table->integer('id_info_category', true)->notNull();
                 $table->string('category', 128)->notNull();
                 $table->text('description')->nullable();
                 $table->timestamp('created_at')->useCurrent();
@@ -85,11 +85,11 @@ class DbCreate extends Model
             });
         }
 
-        if (!Schema::hasTable('info_detail')) {
-            Schema::create('info_detail', function (Blueprint $table) {
+        if (!Schema::hasTable('info_details')) {
+            Schema::create('info_details', function (Blueprint $table) {
                 $table->integer('id_info_detail', true)->notNull();
-                $table->integer('id_info_cat')->notNull();
-                $table->foreign('id_info_cat')->references('id_info_cat')->on('info_cat')->onDelete('cascade');
+                $table->integer('id_info_category')->notNull();
+                $table->foreign('id_info_category')->references('id_info_category')->on('info_categories')->onDelete('cascade');
                 $table->string('title', 128)->notNull();
                 $table->mediumText('content')->notNull();
                 $table->string('author', 128)->notNull();
@@ -102,9 +102,9 @@ class DbCreate extends Model
             });
         }
 
-        if (!Schema::hasTable('documents_cat')) {
-            Schema::create('documents_cat', function (Blueprint $table) {
-                $table->integer('id_document_cat', true)->notNull();
+        if (!Schema::hasTable('documents_categories')) {
+            Schema::create('documents_categories', function (Blueprint $table) {
+                $table->integer('id_document_category', true)->notNull();
                 $table->string('category', 128)->notNull();
                 $table->text('description')->nullable();
                 $table->timestamp('created_at')->useCurrent();
@@ -115,8 +115,8 @@ class DbCreate extends Model
         if (!Schema::hasTable('documents')) {
             Schema::create('documents', function (Blueprint $table) {
                 $table->integer('id_document', true)->notNull();
-                $table->integer('id_document_cat')->notNull();
-                $table->foreign('id_document_cat')->references('id_document_cat')->on('documents_cat')->onDelete('cascade');
+                $table->integer('id_document_category')->notNull();
+                $table->foreign('id_document_category')->references('id_document_category')->on('documents_categories')->onDelete('cascade');
                 $table->string('title', 128)->notNull();
                 $table->string('uri', 512)->notNull();
                 $table->string('description', 512)->nullable();
@@ -125,9 +125,9 @@ class DbCreate extends Model
             });
         }
 
-        if (!Schema::hasTable('news_cat')) {
-            Schema::create('news_cat', function (Blueprint $table) {
-                $table->integer('id_news_cat', true)->notNull();
+        if (!Schema::hasTable('news_categories')) {
+            Schema::create('news_categories', function (Blueprint $table) {
+                $table->integer('id_news_category', true)->notNull();
                 $table->string('category', 128)->notNull();
                 $table->text('description')->nullable();
                 $table->timestamp('created_at')->useCurrent();
@@ -135,11 +135,11 @@ class DbCreate extends Model
             });
         }
 
-        if (!Schema::hasTable('news_detail')) {
-            Schema::create('news_detail', function (Blueprint $table) {
+        if (!Schema::hasTable('news_details')) {
+            Schema::create('news_details', function (Blueprint $table) {
                 $table->integer('id_news_detail', true)->notNull();
-                $table->integer('id_news_cat')->notNull();
-                $table->foreign('id_news_cat')->references('id_news_cat')->on('news_cat')->onDelete('cascade');
+                $table->integer('id_news_category')->notNull();
+                $table->foreign('id_news_category')->references('id_news_category')->on('news_categories')->onDelete('cascade');
                 $table->string('title', 128)->notNull();
                 $table->mediumText('content')->notNull();
                 $table->string('author', 128)->notNull();
@@ -154,9 +154,9 @@ class DbCreate extends Model
             });
         }
 
-        if (!Schema::hasTable('gallery_cat')) {
-            Schema::create('gallery_cat', function (Blueprint $table) {
-                $table->integer('id_gallery_cat', true)->notNull();
+        if (!Schema::hasTable('gallery_categories')) {
+            Schema::create('gallery_categories', function (Blueprint $table) {
+                $table->integer('id_gallery_category', true)->notNull();
                 $table->string('category', 128)->notNull();
                 $table->text('description')->nullable();
                 $table->timestamp('created_at')->useCurrent();
@@ -166,11 +166,11 @@ class DbCreate extends Model
 
 
 
-        if (!Schema::hasTable('gallery_detail')) {
-            Schema::create('gallery_detail', function (Blueprint $table) {
+        if (!Schema::hasTable('gallery_details')) {
+            Schema::create('gallery_details', function (Blueprint $table) {
                 $table->integer('id_gallery_detail', true)->notNull();
-                $table->integer('id_gallery_cat')->notNull();
-                $table->foreign('id_gallery_cat')->references('id_gallery_cat')->on('gallery_cat')->onDelete('cascade');
+                $table->integer('id_gallery_category')->notNull();
+                $table->foreign('id_gallery_category')->references('id_gallery_category')->on('gallery_categories')->onDelete('cascade');
                 $table->string('title', 128)->notNull();
                 $table->string('uri', 512)->notNull();
                 $table->string('description', 512)->nullable();
@@ -194,8 +194,8 @@ class DbCreate extends Model
             });
         }
 
-        if (!Schema::hasTable('operational')) {
-            Schema::create('operational', function (Blueprint $table) {
+        if (!Schema::hasTable('operationals')) {
+            Schema::create('operationals', function (Blueprint $table) {
                 $table->integer('id_operational', true)->notNull();
                 $table->string('hari', 50)->notNull();
                 $table->string('waktu', 50)->notNull();
