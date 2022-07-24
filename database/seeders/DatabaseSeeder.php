@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Info_category;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,5 +21,10 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        Info_category::create([
+            'category' => 'Test Category',
+            'description' => 'Test Description Of news category',
+        ]);
     }
 }
