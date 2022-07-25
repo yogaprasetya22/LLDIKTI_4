@@ -1,9 +1,9 @@
 import Layout from "@/Layouts/Layout";
 import { Link } from "@inertiajs/inertia-react";
 import bgheader from "@/img/bg-header.png";
-import BookGif from "@/img/112-book-morph-outline.gif";
-import SuratGif from "@/img/56-document-outline.gif";
-import JurnalGif from "@/img/966-privacy-policy-outline.gif";
+import BookGif from "@/img/gif/112-book-morph-outline.gif";
+import SuratGif from "@/img/gif/56-document-outline.gif";
+import JurnalGif from "@/img/gif/966-privacy-policy-outline.gif";
 import tamplate from "@/img/tamplate.png";
 import Informasi from "@/img/informasi-lldikti.png";
 import galeri1 from "@/img/galeryi-kami/galeri-1.png";
@@ -121,7 +121,7 @@ const Index = ({ title }) => {
                                 key={i}
                                 className="w-[290px] h-[250px] rounded-md bg-[#ffffff] z-1 relative image-full hover:-translate-y-1 duration-[150ms] ease-in-out shadow-md p-4 border-[1px]"
                             >
-                               <AnimationCard data={data} />
+                                <AnimationCard data={data} />
                             </div>
                         ))}
                     </div>
@@ -130,20 +130,24 @@ const Index = ({ title }) => {
             {/* Layanan Kami */}
             <Tamplate title="Layanan Kami">
                 <div className="w-[90%] md:w-[100%] py-7">
-                    <div className="flex md:justify-center md:flex-wrap md:flex-row md:px-0 flex-col px-4 gap-2 ">
-                        {LayananKami.map((data, i) => (
-                            <div
-                                key={i}
-                                className="bg-white shadow-md drop-shadow-md border-y-[1px] mb-1 rounded-[3px] p-[5px] text-[14px] md:w-[44%] "
-                            >
-                                <Link
-                                    href="#"
-                                    className="text-black font-semibold"
+                    <div className="flex md:justify-evenly md:flex-wrap md:flex-row md:px-0 flex-col px-4 gap-4 ">
+                        {LayananKami.map((data, i) => {
+                            let ganjil =
+                                i % 2 === 0 ? "md:text-end" : "text-start";
+                            return (
+                                <div
+                                    key={i}
+                                    className={`bg-white ${ganjil} shadow-md drop-shadow-md border-y-[1px] mb-1 rounded-[3px] p-[5px] text-[14px] md:w-[44%]`}
                                 >
-                                    {data.title}
-                                </Link>
-                            </div>
-                        ))}
+                                    <Link 
+                                        href="#"
+                                        className="text-black font-semibold"
+                                    >
+                                        {data.title}
+                                    </Link>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </Tamplate>
@@ -215,7 +219,7 @@ const Index = ({ title }) => {
             <article className="bg-[#ffffff]">
                 <div className="flex items-center w-full flex-col ">
                     <div className="w-[95%] py-7">
-                        <div className="flex justify-between gap-7 md:p-[0px_10px]">
+                        <div className="flex lg:justify-between lg:flex-row flex-col gap-7 md:p-[0px_10px]">
                             {/* line 1 */}
                             <div className="flex flex-col w-full">
                                 <div className="flex items-center text-[26px] text-black font-extrabold leading-[150%]">
@@ -235,7 +239,7 @@ const Index = ({ title }) => {
                                         </svg>
                                     </span>
                                 </div>
-                                <div className="flex justify-between gap-[3rem] text-black text-start ">
+                                <div className="flex justify-between lg:gap-[3rem] gap-6 text-black text-start ">
                                     <div className="">
                                         <div className="alamat my-4 flex flex-col ">
                                             <span className=" font-extrabold">
@@ -250,59 +254,59 @@ const Index = ({ title }) => {
                                                 Jam Operasional
                                             </span>
                                             <div className=" w-full">
-                                                <span className="flex">
+                                                <span className="flex flex-col lg:flex-row">
                                                     Senin
-                                                    <p className="pl-10">
+                                                    <p className="md:pl-10 pl-4">
                                                         08.00 - 16.00
                                                     </p>
                                                 </span>
-                                                <span className="flex">
+                                                <span className="flex flex-col lg:flex-row">
                                                     Selasa
-                                                    <p className="pl-8">
+                                                    <p className="md:pl-8 pl-4">
                                                         08.00 - 16.00
                                                     </p>
                                                 </span>
-                                                <span className="flex">
+                                                <span className="flex flex-col lg:flex-row">
                                                     Rabu
-                                                    <p className="pl-10">
+                                                    <p className="md:pl-10 pl-4">
                                                         08.00 - 16.00
                                                     </p>
                                                 </span>
-                                                <span className="flex">
+                                                <span className="flex flex-col lg:flex-row">
                                                     Kamis
-                                                    <p className="pl-9">
+                                                    <p className="md:pl-9 pl-4">
                                                         08.00 - 16.00
                                                     </p>
                                                 </span>
-                                                <span className="flex">
+                                                <span className="flex flex-col lg:flex-row">
                                                     Jumat
-                                                    <p className="pl-10">
+                                                    <p className="md:pl-10 pl-4">
                                                         08.00 - 16.00
                                                     </p>
                                                 </span>
-                                                <span className="flex">
+                                                <span className="flex flex-col lg:flex-row">
                                                     Sabtu
-                                                    <p className="pl-10">
+                                                    <p className="md:pl-10 pl-4">
                                                         Tutup
                                                     </p>
                                                 </span>
-                                                <span className="flex">
+                                                <span className="flex flex-col lg:flex-row">
                                                     Minggu
-                                                    <p className="pl-7">
+                                                    <p className="md:pl-7 pl-4">
                                                         Tutup
                                                     </p>
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className=" w-full">
-                                        <div className="tel flex flex-col my-4">
+                                    <div className=" md:w-full w-[50%]">
+                                        <div className="flex flex-col my-4">
                                             <span className=" font-extrabold">
                                                 Telphone
                                             </span>
                                             022-727-5630
                                         </div>
-                                        <div className="tel flex flex-col my-4">
+                                        <div className="flex flex-col my-4">
                                             <span className=" font-extrabold">
                                                 Whatsapp
                                             </span>
@@ -314,15 +318,15 @@ const Index = ({ title }) => {
                                             <span className=" font-extrabold">
                                                 Email
                                             </span>
-                                            <span className="flex">
+                                            <span className="flex flex-col md:flex-row">
                                                 Humas
-                                                <p className="pl-8">
+                                                <p className="md:pl-8 md:my-0 my-2 pl-2">
                                                     humas@lldikti4.or.id
                                                 </p>
                                             </span>
-                                            <span className="flex">
+                                            <span className="flex flex-col md:flex-row">
                                                 Informasi
-                                                <p className="pl-4">
+                                                <p className="md:pl-4 md:my-0 my-2 pl-2">
                                                     informasi@lldikti4.or.id
                                                 </p>
                                             </span>
@@ -333,9 +337,9 @@ const Index = ({ title }) => {
                             {/* line 2 */}
                             <div className="gmap_canvas">
                                 <iframe
-                                    className="rounded-md shadow-md drop-shadow-md"
-                                    width={688}
-                                    height={400}
+                                    className="rounded-md shadow-md drop-shadow-md lg:w-[688px] w-full lg:h-full h-[300px]"
+                                    // width={688}
+                                    // height={400}
                                     id="gmap_canvas"
                                     src="https://maps.google.com/maps?q=Kopertis%20Region%20IV&t=&z=13&ie=UTF8&iwloc=&output=embed"
                                     frameBorder={0}

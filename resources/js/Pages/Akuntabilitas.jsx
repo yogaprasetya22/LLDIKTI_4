@@ -18,9 +18,11 @@ const akuntabilitas = (props) => {
                 </h1>
             </Heading>
             <article>
-                <div className="text-center">
-                    <p>Document</p>
-                    <span>Akuntabilitas</span>
+                <div className="text-center flex flex-col gap-6 py-5 text-black">
+                    <p className=" text-extrabold text-[26px]">Document</p>
+                    <span className=" text-extrabold text-[35px]">
+                        Akuntabilitas
+                    </span>
                 </div>
                 <div className="w-full ">
                     <div className="flex flex-wrap justify-around px-[5rem] my-5 gap-5 ">
@@ -28,7 +30,7 @@ const akuntabilitas = (props) => {
                         {dataAkuntabilitas.map((data, i) => (
                             <div
                                 key={i}
-                                className="bg-[#ffff] w-[35rem] h-[10rem] rounded-md flex shadow-md drop-shadow-md hover:-translate-y-1 duration-[150ms] ease-in-out"
+                               
                             >
                                 <Wrapper data={data} />
                             </div>

@@ -24,12 +24,14 @@ const NextLink = ({ href, title, name }) => {
 };
 
 const Navbar = ({ title }) => {
+    const [hover, setHover] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [isDark, setIsDark] = useState(false);
     const { theme } = useContext(ThemeContext);
+
     return (
         <nav
-            className="flex flex-col fixed w-full z-10 top-0 left-0 shadow-md"
+            className="flex flex-col fixed w-full z-10 top-0 left-0 shadow-md "
             style={{
                 backdropFilter: "blur(10px) saturate(260%) contrast(180%)",
                 WebkitBackdropFilter:
@@ -112,7 +114,11 @@ const Navbar = ({ title }) => {
                 </div>
             </div>
             {/* Navbar */}
-            <div className="navbar bg-[#ffffffd6] dark:bg-[#2a303cee] md:pr-[50px] md:pl-[50px]  z-40 top-0 text-black dark:text-white text-[16px]  font-semibold  transition duration-[85ms]ease-in-out">
+            <div
+                className="navbar bg-[#ffffffd6] dark:bg-[#2a303cee] md:px-[120px]   z-40 top-0 text-black dark:text-white text-[16px]   transition duration-[85ms]ease-in-out
+            
+            "
+            >
                 <div className="flex-1 py-2">
                     <Link
                         className="btn btn-ghost normal-case text-xl lg:text-xl "
@@ -132,7 +138,7 @@ const Navbar = ({ title }) => {
                                     title={title}
                                     name="Profile"
                                 />
-                                <ul className="p-2 z-10 bg-[#ffffff] dark:bg-[#2a303c] text-black dark:text-white delay-75">
+                                <ul className="p-2 z-10 bg-[#ffffff] shadow-md drop-shadow-md dark:bg-[#2a303c] text-black dark:text-white delay-75">
                                     <li>
                                         <NextLink
                                             href="profil-lldikti-4"
@@ -180,7 +186,7 @@ const Navbar = ({ title }) => {
                                     title={title}
                                     name="Layanan"
                                 />
-                                <ul className="p-2 z-10 bg-[#ffffff] dark:bg-[#2a303c] text-black dark:text-white ">
+                                <ul className="p-2 z-10 bg-[#ffffff] shadow-md drop-shadow-md dark:bg-[#2a303c] text-black dark:text-white ">
                                     <li>
                                         <NextLink
                                             href="layanan/layanan-online"
@@ -211,79 +217,153 @@ const Navbar = ({ title }) => {
                                     title={title}
                                     name="Informasi Publik"
                                 />
-                                <ul className="p-2 z-10 bg-[#ffffff] dark:bg-[#2a303c] text-black dark:text-white delay-75">
+                                {/* Produk Hukum */}
+                                {hover && (
+                                    <ul
+                                        className="p-2 bg-[#ffffff] shadow-md drop-shadow-md dark:bg-[#2a303c] text-black dark:text-white delay-75 menu
+                                         left-[17rem] top-[4rem] absolute z-20
+                                        "
+                                        onMouseEnter={(e) => setHover(true)}
+                                        onMouseLeave={(e) => setHover(false)}
+                                    >
+                                        <li>
+                                            <NextLink
+                                                href="produk-hukum/surat-edaran"
+                                                title={title}
+                                                name="Surat Edaran"
+                                            />
+                                        </li>
+                                        <li>
+                                            <NextLink
+                                                href="produk-hukum/undang-undang"
+                                                title={title}
+                                                name="Undang - Undang"
+                                            />
+                                        </li>
+                                        <li>
+                                            <NextLink
+                                                href="produk-hukum/peraturan-ristektikti"
+                                                title={title}
+                                                name="Peraturan Ristektikti"
+                                            />
+                                        </li>
+                                        <li>
+                                            <NextLink
+                                                href="produk-hukum/peraturan-presiden"
+                                                title={title}
+                                                name="Peraturan Presiden"
+                                            />
+                                        </li>
+                                        <li>
+                                            <NextLink
+                                                href="produk-hukum/peraturan-mentri"
+                                                title={title}
+                                                name="Peraturan Mentri"
+                                            />
+                                        </li>
+                                        <li>
+                                            <NextLink
+                                                href="produk-hukum/peraturan-pemerintah"
+                                                title={title}
+                                                name="Peraturan Pemerintah"
+                                            />
+                                        </li>
+                                        <li>
+                                            <NextLink
+                                                href="sk-dirjen"
+                                                title={title}
+                                                name="SK DIRJEN"
+                                            />
+                                        </li>
+                                    </ul>
+                                )}
+                                <ul className="p-2 z-10 bg-[#ffffff] shadow-md drop-shadow-md dark:bg-[#2a303c] text-black dark:text-white delay-75 overflow-y-scroll max-h-[30rem] no-scrollbar">
                                     <li>
                                         <NextLink
-                                            href="layanan-online"
+                                            href="standar-layanan-publik"
                                             title={title}
-                                            name="Layanan Online"
+                                            name="Standar Layanan Publik"
                                         />
                                     </li>
-                                    <li>
-                                        <Link>Standar Pelayanan Publik</Link>
-                                    </li>
-                                    {/* Produk Hukum */}{" "}
-                                    <li tabIndex="1">
+                                    <li
+                                        onMouseEnter={(e) => setHover(true)}
+                                        onMouseLeave={(e) => setHover(false)}
+                                    >
                                         <NextLink
                                             href="produk-hukum"
                                             title={title}
                                             name="Prodik Hukum"
                                         />
-                                        {/* <ul className="p-2 z-10 bg-[#ffffff] dark:bg-[#2a303c] text-black dark:text-white delay-75 menu">
-                                            <li>
-                                                <NextLink
-                                                    href="produk-hukum/surat-edaran"
-                                                    title={title}
-                                                    name="Surat Edaran"
-                                                />
-                                            </li>
-                                            <li>
-                                                <NextLink
-                                                    href="produk-hukum/undang-undang"
-                                                    title={title}
-                                                    name="Undang - Undang"
-                                                />
-                                            </li>
-                                            <li>
-                                                <NextLink
-                                                    href="produk-hukum/peraturan-ristektikti"
-                                                    title={title}
-                                                    name="Peraturan Ristektikti"
-                                                />
-                                            </li>
-                                            <li>
-                                                <NextLink
-                                                    href="produk-hukum/peraturan-presiden"
-                                                    title={title}
-                                                    name="Peraturan Presiden"
-                                                />
-                                            </li>
-                                            <li>
-                                                <NextLink
-                                                    href="produk-hukum/peraturan-mentri"
-                                                    title={title}
-                                                    name="Peraturan Mentri"
-                                                />
-                                            </li>
-                                            <li>
-                                                <NextLink
-                                                    href="produk-hukum/peraturan-pemerintah"
-                                                    title={title}
-                                                    name="Peraturan Pemerintah"
-                                                />
-                                            </li>
-                                            <li>
-                                                <NextLink
-                                                    href="sk-dirjen"
-                                                    title={title}
-                                                    name="SK DIRJEN"
-                                                />
-                                            </li>
-                                        </ul> */}
                                     </li>
-                                    {/* end */}
                                     <li>
-                                        <Link>PPID</Link>
+                                        <NextLink
+                                            href="ppid"
+                                            title={title}
+                                            name="PPID"
+                                        />
+                                    </li>{" "}
+                                    <li>
+                                        <NextLink
+                                            href="prosedur-operasional-standar"
+                                            title={title}
+                                            name="Prosedur Operasional Stander"
+                                        />
+                                    </li>{" "}
+                                    <li>
+                                        <NextLink
+                                            href="peta-proses-bisnis-lldikti-wilayah-iv"
+                                            title={title}
+                                            name="Peta Proses Bisnis LLDIKTI Wilayah IV"
+                                        />
+                                    </li>
+                                    <li>
+                                        <NextLink
+                                            href="buku-panduan-pedoman"
+                                            title={title}
+                                            name="Buku Panduan / Pedoman"
+                                        />
+                                    </li>
+                                    <li>
+                                        <NextLink
+                                            href="materi-kegiatan"
+                                            title={title}
+                                            name="Materi Kegiatan"
+                                        />
+                                    </li>
+                                    <li>
+                                        <NextLink
+                                            href="buletin-lldikti-wilayah-iv"
+                                            title={title}
+                                            name="Buletin LLDIKTI Wilayah IV"
+                                        />
+                                    </li>
+                                    <li>
+                                        <NextLink
+                                            href="buku-direktori-pts-lldikti-iv"
+                                            title={title}
+                                            name="Buku Direktori PTS LLDIKTI IV"
+                                        />
+                                    </li>
+                                    <li>
+                                        <NextLink
+                                            href="publikasi"
+                                            title={title}
+                                            name="Buku Statistik Perguruan Tinggi"
+                                        />
+                                    </li>
+                                    <li>
+                                        <NextLink
+                                            href="kegiatan"
+                                            title={title}
+                                            name="Agenda Kegiatan"
+                                        />
+                                    </li>
+                                    <li>
+                                        <NextLink
+                                            href="gallery"
+                                            title={title}
+                                            name="Galeri"
+                                        />
                                     </li>
                                 </ul>
                             </li>

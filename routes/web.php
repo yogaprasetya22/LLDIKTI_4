@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LldiktiController;
 use App\Models\costum\DbCreate;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -17,13 +18,13 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('index', [
+    return Inertia::render('Index', [
         'title' => 'index',
     ]);
 });
+// Route::get('/', [LldiktiController::class, 'index']);
 
 // Profil
-
 Route::get('/profil', function () {
     return Inertia::render('profil/Profil', [
         'title' => 'profil',
@@ -43,11 +44,12 @@ Route::get('/profil-kepala-lldikti-4', function () {
 // end Profil
 
 // Info
-Route::get('/info', function () {
-    return Inertia::render('Info', [
-        'title' => 'info',
-    ]);
-});
+// Route::get('/info', function () {
+//     return Inertia::render('Info', [
+//         'title' => 'info',
+//     ]);
+// });
+Route::get('/info', [LldiktiController::class, 'info']);
 // end Info
 
 // akuntabilitas
@@ -59,11 +61,7 @@ Route::get('/akuntabilitas', function () {
 // end akuntabilitas
 
 // Berita
-Route::get('/berita', function () {
-    return Inertia::render('Berita', [
-        'title' => 'berita',
-    ]);
-});
+Route::get('/berita', [LldiktiController::class, 'berita']);
 // end Berita
 
 // Layanan
@@ -91,6 +89,28 @@ Route::get('/cara-pengajuan-layanan', function () {
 // end Layanan
 
 
+// Informasi Publik
+Route::get('/informasi-publik', [LldiktiController::class, 'informasiPublik']);
+
+Route::get('/standar-layanan-publik', function () {
+    return Inertia::render('informasi-publik/StandarLayananPublik', [
+        'title' => 'standar-layanan-publik',
+    ]);
+});
+// end Informasi Publik
+
+
+// PPID
+
+// end PPID
+
+
+
+
+
+
+
+//ROUTE PENGADUAN
 Route::get('/DbDelete', function () {
     $db = new DbCreate();
     $db->down(false);
