@@ -113,7 +113,11 @@ const Index = ({ title }) => {
                 </div>
             </article>
             {/* Layanan Online */}
-            <Tamplate title="Layanan Online" color={true}>
+            <Tamplate
+                title="Layanan Online"
+                color={true}
+                link="layanan/layanan-online"
+            >
                 <div className="w-[90%] py-7">
                     <div className="flex justify-center flex-wrap gap-2">
                         {LayananOnline.map((data, i) => (
@@ -128,7 +132,7 @@ const Index = ({ title }) => {
                 </div>
             </Tamplate>
             {/* Layanan Kami */}
-            <Tamplate title="Layanan Kami">
+            <Tamplate title="Layanan Kami" link="layanan/layanan-kami">
                 <div className="w-[90%] md:w-[100%] py-7">
                     <div className="flex md:justify-evenly md:flex-wrap md:flex-row md:px-0 flex-col px-4 gap-4 ">
                         {LayananKami.map((data, i) => {
@@ -139,7 +143,7 @@ const Index = ({ title }) => {
                                     key={i}
                                     className={`bg-white ${ganjil} shadow-md drop-shadow-md border-y-[1px] mb-1 rounded-[3px] p-[5px] text-[14px] md:w-[44%]`}
                                 >
-                                    <Link 
+                                    <Link
                                         href="#"
                                         className="text-black font-semibold"
                                     >
@@ -153,7 +157,7 @@ const Index = ({ title }) => {
             </Tamplate>
 
             {/* Berita Kami */}
-            <Tamplate title="Berita Kami" color={true}>
+            <Tamplate title="Berita Kami" color={true} link="berita">
                 <div className="md:w-[100%] w-[85%] py-7">
                     <div className="flex justify-center flex-wrap gap-7 md:p-[0px_10px]">
                         {informasi.map((data, i) => (
@@ -168,7 +172,7 @@ const Index = ({ title }) => {
                 </div>
             </Tamplate>
             {/* Galeri Kami */}
-            <Tamplate title="Galeri Kami">
+            <Tamplate title="Galeri Kami" link="galery">
                 <div className="md:w-[90%] w-[85%] py-7">
                     <div className="flex lg:justify-around lg:flex-row flex-col md:p-[0px_10px]">
                         <img
@@ -202,7 +206,7 @@ const Index = ({ title }) => {
                 </div>
             </Tamplate>
             {/* Informasi */}
-            <Tamplate title="Informasi kami" color={true}>
+            <Tamplate title="Informasi kami" color={true} link='info'>
                 <div className="md:w-[100%] w-[85%] py-7">
                     <div className="flex justify-center flex-wrap gap-7 md:p-[0px_10px]">
                         {informasi.map((data, i) => (

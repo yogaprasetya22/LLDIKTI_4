@@ -97,6 +97,51 @@ Route::get('/standar-layanan-publik', function () {
         'title' => 'standar-layanan-publik',
     ]);
 });
+Route::get('/produk-hukum', function () {
+    return Inertia::render('informasi-publik/ProdukHukum', [
+        'title' => 'produk-hukum',
+    ]);
+});
+Route::get('/ppid', function () {
+    return Inertia::render('informasi-publik/PPID', [
+        'title' => 'ppid',
+    ]);
+});
+Route::get('/prosedur-operasional-standar', function () {
+    return Inertia::render('informasi-publik/POS', [
+        'title' => 'prosedur-operasional-standar',
+    ]);
+});
+Route::get('/peta-proses-bisnis-lldikti-wilayah-iv', function () {
+    return Inertia::render('informasi-publik/PPBLW', [
+        'title' => 'peta-proses-bisnis-lldikti-wilayah-iv',
+    ]);
+});
+Route::get('/buku-panduan-pedoman', function () {
+    return Inertia::render('informasi-publik/BukuPP', [
+        'title' => 'buku-panduan-pedoman',
+    ]);
+});
+// Route::get('/buku-panduan-pedoman', function () {
+//     return Inertia::render('informasi-publik/BukuPP', [
+//         'title' => 'buku-panduan-pedoman',
+//     ]);
+// });
+// Route::get('/buku-panduan-pedoman', function () {
+//     return Inertia::render('informasi-publik/BukuPP', [
+//         'title' => 'buku-panduan-pedoman',
+//     ]);
+// });
+Route::get('/buku-direktori-pts-lldikti-iv', function () {
+    return Inertia::render('informasi-publik/BDPL4', [
+        'title' => 'buku-direktori-pts-lldikti-iv',
+    ]);
+});
+Route::get('/kegiatan', function () {
+    return Inertia::render('informasi-publik/AgendaKegiatan', [
+        'title' => 'kegiatan',
+    ]);
+});
 // end Informasi Publik
 
 

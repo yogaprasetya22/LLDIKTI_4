@@ -277,6 +277,7 @@ const Navbar = ({ title }) => {
                                         </li>
                                     </ul>
                                 )}
+                                {/* end */}
                                 <ul className="p-2 z-10 bg-[#ffffff] shadow-md drop-shadow-md dark:bg-[#2a303c] text-black dark:text-white delay-75 overflow-y-scroll max-h-[30rem] no-scrollbar">
                                     <li>
                                         <NextLink
@@ -345,11 +346,16 @@ const Navbar = ({ title }) => {
                                         />
                                     </li>
                                     <li>
-                                        <NextLink
-                                            href="publikasi"
-                                            title={title}
-                                            name="Buku Statistik Perguruan Tinggi"
-                                        />
+                                        <a
+                                            href={
+                                                "https://pddikti.kemdikbud.go.id/publikasi"
+                                            }
+                                            className={
+                                                "dark:text-white text-base-100"
+                                            }
+                                        >
+                                            Buku Statistik Perguruan Tinggi
+                                        </a>
                                     </li>
                                     <li>
                                         <NextLink

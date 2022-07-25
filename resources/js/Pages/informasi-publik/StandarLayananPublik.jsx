@@ -39,11 +39,12 @@ const StandarLayananPublik = (props) => {
                     <div className="flex justify-center items-center ">
                         <div className="max-w-[50rem] flex flex-col gap-5">
                             <img
-                                className="rounded-md shadow-md drop-shadow-md bg-white hover:-translate-y-1 duration-[150ms] ease-in-out"
+                                className="rounded-md shadow-md drop-shadow-md bg-white hover:-translate-y-1 duration-[150ms] ease-in-out "
                                 src="https://i0.wp.com/www.lldikti4.id/wp-content/uploads/2022/04/4X4A4336-scaled.jpg?resize=1024%2C683&ssl=11"
                                 alt="Dr. M. Samsuri, S.Pd., M.T."
                             />
                             <img
+                                className="rounded-md shadow-md drop-shadow-md bg-white hover:-translate-y-1 duration-[150ms] ease-in-out "
                                 src="https://i0.wp.com/www.lldikti4.id/wp-content/uploads/2022/04/Maklumat-Pakta-Integritas-scaled.jpg?fit=2560%2C1811&ssl=1"
                                 alt="Maklumat Pakta Integritas"
                             />
@@ -91,9 +92,9 @@ const StandarLayananPublik = (props) => {
                         <br />
                         <br />
                     </div>
-                    <div className="pdf w-full flex justify-center items-start ">
+                    <div className="pdf w-full flex justify-center items-start">
                         <div className="flex flex-col relative">
-                            <div className="max-h-[80rem] rounded-md shadow-md drop-shadow-md border-[1px]">
+                            <div className="max-h-[53rem] rounded-md shadow-md drop-shadow-md border-[1px] mb-[7rem]">
                                 <Document
                                     file={lldiktipdf}
                                     onLoadSuccess={onDocumentLoadSuccess}
@@ -102,7 +103,7 @@ const StandarLayananPublik = (props) => {
                                 </Document>
                             </div>
 
-                            <div className="flex justify-between items-center px-[7rem]  py-5">
+                            <div className="flex justify-between items-center px-[7rem]  py-5 absolute bottom-0 w-full">
                                 <button
                                     className=" btn btn-outline rounded-md text-[#24529e]"
                                     onClick={goToPrevPage}
