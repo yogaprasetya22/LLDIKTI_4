@@ -13,7 +13,7 @@ const Chard = ({ data }) => {
                 <p className="text-xs md:text-xs">{data.date}</p>
             </div>
             <div className="p-[10px_15px]">
-                <p className="text-[16px] font-extrabold leading-[150%]">
+                <p className="text-[16px] font-semibold leading-[150%]">
                     {data.title}
                 </p>
             </div>

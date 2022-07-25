@@ -10,7 +10,7 @@ const Tamplate = ({ children, title, color }) => {
                 className={` ${
                     color
                         ? "bg-[#fafafa] dark:bg-[#3f3e3ee9] "
-                        : "bg-[#ffffff] dark:bg-[#393939]"
+                        : " dark:bg-[#393939]"
                 } `}
             >
                 <div className="flex items-center w-full flex-col">

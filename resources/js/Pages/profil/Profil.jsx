@@ -1,7 +1,7 @@
 import Heading from "@/Components/page/Heading";
 import Layout from "@/Layouts/Layout";
 import React from "react";
-import SuratGif from "@/img/56-document-outline.gif";
+import SuratGif from "@/img/gif/56-document-outline.gif";
 import tamplate from "@/img/tamplate.png";
 import AnimationCard from "@/Components/page/AnimationCard";
 

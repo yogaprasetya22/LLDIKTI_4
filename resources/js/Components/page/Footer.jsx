@@ -5,11 +5,11 @@ import { Link } from "@inertiajs/inertia-react";
 const Footer = () => {
     return (
         <>
-            <div className=" p-10 bg-[#2654a4] dark:bg-base-300 text-white flex flex-col">
+            <div className=" py-10 bg-[#2654a4] dark:bg-base-300 text-white flex flex-col flex-wrap">
                 <div className="pb-6  container my-5">
                     <img src={LLDIKTI} alt="" className="w-[13rem]" />
                 </div>
-                <footer className="footer  container">
+                <footer className="footer container flex lg:flex-row flex-col">
                     <div className="w-full">
                         <span className=" text-center text-white text-[16px] pb-2 font-extrabold">
                             Tentang
@@ -189,7 +189,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div>
-                        <span className="text-center text-white text-[16px] pb-2 font-extrabold">
+                        <span className="text-center text-white text-[16px] pb-2 font-extrabold mt-11 lg:mt-0">
                             Meida Sosial
                         </span>
                         <div className="grid grid-flow-col gap-4">
