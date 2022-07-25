@@ -7,3 +7,9 @@ export const SubText = ({ children }) => (
         {children}
     </span>
 );
+
+export const TitleText = ({ children }) => (
+    <span className=" text-gray-600 dark:text-white font-extrabold">
+        {children}
+    </span>
+);

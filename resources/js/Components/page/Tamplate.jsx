@@ -3,14 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "@inertiajs/inertia-react";
 
-const Tamplate = ({ children, title, color }) => {
+const Tamplate = ({ children, title, color, link }) => {
     return (
         <article className="">
             <div
                 className={` ${
                     color
-                        ? "bg-[#fafafa] dark:bg-[#3f3e3ee9] "
-                        : " dark:bg-[#393939]"
+                        ? "bg-[#fafafa] dark:bg-[#242937] "
+                        : " dark:bg-[#1f2537]"
                 } `}
             >
                 <div className="flex items-center w-full flex-col">
@@ -43,8 +43,8 @@ const Tamplate = ({ children, title, color }) => {
                 </div>
                 <div className="flex w-full justify-center p-[20px_70px] pb-[4rem] ">
                     <Link
-                        href="#"
-                        className="text-[15px] text-[#2654a4] font-extrabold hover:text-blue-100 border-[3px] p-2 rounded-md border-[#2654a4] dark:border-[#393939] hover:border-[#2654a4] hover:bg-[#2654a4] dark:hover:bg-[#393939] transition-all"
+                        href={"/" + link}
+                        className="text-[15px] text-[#2654a4] dark:text-[#1f6df4] font-extrabold hover:text-blue-100 border-[3px] p-2 rounded-md border-[#2654a4] dark:border-[#1f6df4] hover:border-[#2654a4] hover:bg-[#2654a4] dark:hover:bg-[#1f6df4] dark:hover:text-blue-100 transition-all"
                     >
                         Selengkapnya{" "}
                         <span className="pl-1">

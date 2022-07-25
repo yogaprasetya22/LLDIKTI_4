@@ -5,7 +5,7 @@ import { Link } from "@inertiajs/inertia-react";
 const Footer = () => {
     return (
         <>
-            <div className=" py-10 bg-[#2654a4] dark:bg-base-300 text-white flex flex-col flex-wrap">
+            <div className=" py-10 bg-[#2654a4] dark:bg-[#1c2c47] text-white flex flex-col flex-wrap">
                 <div className="pb-6  container my-5">
                     <img src={LLDIKTI} alt="" className="w-[13rem]" />
                 </div>
@@ -242,7 +242,7 @@ const Footer = () => {
                     </div>
                 </footer>
             </div>
-            <div className="bg-black w-full p-2 text-center text-[14px] leading-[150%] font-bold">
+            <div className="bg-black dark:bg-gray-300 dark:text-black w-full p-2 text-center text-[14px] leading-[150%] font-bold">
                 Lembaga Layanan Pendidikan Tinggi (LLDIKTI) Wilayah IV Jawa
                 Barat dan Banten @ {new Date().getFullYear()} - Hak Cipta
                 Dilindungi
