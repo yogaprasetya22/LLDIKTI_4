@@ -62,11 +62,11 @@ const LayananKami = (props) => {
                     </span>
                 </div>
                 <div className="flex w-full justify-center items-center md:p-[20px_70px] p-[25px]">
-                    <div className="w-[90%] md:w-[100%] py-7">
+                    <div className="w-[100%] py-7">
                         <div className="flex md:justify-evenly md:flex-wrap md:flex-row md:px-0 flex-col px-4 gap-4 ">
                             {DataLayananKami.map((data, i) => {
                                 let ganjil =
-                                    i % 2 === 0 ? "text-end" : "text-start";
+                                    i % 2 === 0 ? "md:text-end" : "text-start";
                                 return (
                                     <div
                                         key={i}

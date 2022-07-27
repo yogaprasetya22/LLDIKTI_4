@@ -18,7 +18,7 @@ const akuntabilitas = (props) => {
                 </h1>
             </Heading>
             <article>
-                <div className="text-center flex flex-col gap-6 py-5 text-black">
+                <div className="text-center flex flex-col gap-6 py-5 text-black dark:text-white mt-2">
                     <p className=" text-extrabold text-[26px]">Document</p>
                     <span className=" text-extrabold text-[35px]">
                         Akuntabilitas

@@ -8,6 +8,7 @@ export const MobileNav = ({ isOpen, title }) => {
     const [isOpenProfil, setOpenProfil] = useState(false);
     const [isOpenLayanan, setOpenLayanan] = useState(false);
     const [isOpenInformasi, setOpenInformasi] = useState(false);
+    const [isOpenProdukHukum, setOpenProdukHukum] = useState(false);
 
     const isNavbarMobile = (rout) => {
         return ` ${"/" + title === "/" + rout ? "text-yellow-500" : ""}`;
@@ -18,6 +19,7 @@ export const MobileNav = ({ isOpen, title }) => {
             setOpenProfil(false);
             setOpenLayanan(false);
             setOpenInformasi(false);
+            setOpenProdukHukum(false);
         }
     }, [isOpen]);
 
@@ -28,8 +30,12 @@ export const MobileNav = ({ isOpen, title }) => {
             setOpenProfil(!isOpenProfil);
         } else if (value === "layanan") {
             setOpenLayanan(!isOpenLayanan);
-        } else if (value === "informasi") {
+        } 
+        else if (value === "informasi") {
             setOpenInformasi(!isOpenInformasi);
+        }
+        else if (value === "produk-hukum") {
+            setOpenProdukHukum(!isOpenProdukHukum);
         }
     };
     return (
@@ -46,11 +52,11 @@ export const MobileNav = ({ isOpen, title }) => {
                 WebkitBackdropFilter: "blur(6px) saturate(260%) contrast(180%)",
             }}
             className={
-                "relative font-bold z-30 top-0 w-full bg-[#ffffffe6] dark:bg-[#2a303cee] dark:text-white text-black"
+                "relative font-bold z-30 top-0 w-full bg-[#ffffffe6] dark:bg-[#2a2d3cee] dark:text-white text-black"
             }
         >
             <div className="lg:hidden" id="mobile-menu">
-                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 overflow-y-scroll max-h-[50vh]">
+                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 overflow-y-scroll max-h-[55vh] md:max-h-[38.5vh]">
                     <ul className="menu flex flex-col p-0 text-grey-400 transition duration-[85ms] ease-in-out">
                         {/* Profil */}
                         {!isOpenProfil && (
@@ -136,14 +142,14 @@ export const MobileNav = ({ isOpen, title }) => {
                                 </li>
                                 <li>
                                     <NextLinkMobile
-                                        href="layanan-online"
+                                        href="layanan/layanan-online"
                                         title={title}
                                         name="Layanan Online"
                                     />
                                 </li>
                                 <li>
                                     <NextLinkMobile
-                                        href="layanan-kami"
+                                        href="layanan/layanan-kami"
                                         title={title}
                                         name="Layanan Kami"
                                     />
@@ -172,7 +178,7 @@ export const MobileNav = ({ isOpen, title }) => {
                             </li>
                         )}
                         {isOpenInformasi && (
-                            <ul>
+                            <>
                                 <li>
                                     <NextLinkMobile
                                         href="informasi-publik"
@@ -182,26 +188,160 @@ export const MobileNav = ({ isOpen, title }) => {
                                 </li>
                                 <li>
                                     <NextLinkMobile
-                                        href="layanan-online"
+                                        href="standar-layanan-publik"
                                         title={title}
-                                        name="Layanan Online"
+                                        name="Standar Layanan Publik"
+                                    />
+                                </li>
+                                <li tabIndex={"0"}>
+                                    <button
+                                        onClick={(e) => toggle(e)}
+                                        value="produk-hukum"
+                                        className={isNavbarMobile(
+                                            "produk-hukum"
+                                        )}
+                                    >
+                                        Prodik Hukum
+                                    </button>
+                                </li>
+                                {/* produk hukum */}
+                                {isOpenProdukHukum && (
+                                    <div className="pl-3">
+                                        <li>
+                                            <NextLinkMobile
+                                                href="produk-hukum"
+                                                title={title}
+                                                name="Prodik Hukum"
+                                            />
+                                        </li>
+                                        <li>
+                                            <NextLinkMobile
+                                                href="produk-hukum/surat-edaran"
+                                                title={"produk-hukum/" + title}
+                                                name="Surat Edaran"
+                                            />
+                                        </li>
+                                        <li>
+                                            <NextLinkMobile
+                                                href="produk-hukum/undang-undang"
+                                                title={"produk-hukum/" + title}
+                                                name="Undang - Undang"
+                                            />
+                                        </li>
+                                        <li>
+                                            <NextLinkMobile
+                                                href="produk-hukum/peraturan-ristektikti"
+                                                title={"produk-hukum/" + title}
+                                                name="Peraturan Ristektikti"
+                                            />
+                                        </li>
+                                        <li>
+                                            <NextLinkMobile
+                                                href="produk-hukum/peraturan-presiden"
+                                                title={"produk-hukum/" + title}
+                                                name="Peraturan Presiden"
+                                            />
+                                        </li>
+                                        <li>
+                                            <NextLinkMobile
+                                                href="produk-hukum/peraturan-mentri"
+                                                title={"produk-hukum/" + title}
+                                                name="Peraturan Mentri"
+                                            />
+                                        </li>
+                                        <li>
+                                            <NextLinkMobile
+                                                href="produk-hukum/peraturan-pemerintah"
+                                                title={"produk-hukum/" + title}
+                                                name="Peraturan Pemerintah"
+                                            />
+                                        </li>
+                                        <li>
+                                            <NextLinkMobile
+                                                href="produk-hukum/sk-dirjen"
+                                                title={"produk-hukum/" + title}
+                                                name="SK DIRJEN"
+                                            />
+                                        </li>
+                                    </div>
+                                )}
+                                {/* end */}
+                                <li>
+                                    <NextLinkMobile
+                                        href="ppid"
+                                        title={title}
+                                        name="PPID"
                                     />
                                 </li>
                                 <li>
                                     <NextLinkMobile
-                                        href="layanan-kami"
+                                        href="prosedur-operasional-standar"
                                         title={title}
-                                        name="Layanan Kami"
+                                        name="Prosedur Operasional Stander"
+                                    />
+                                </li>{" "}
+                                <li>
+                                    <NextLinkMobile
+                                        href="peta-proses-bisnis-lldikti-wilayah-iv"
+                                        title={title}
+                                        name="Peta Proses Bisnis LLDIKTI Wilayah IV"
                                     />
                                 </li>
                                 <li>
                                     <NextLinkMobile
-                                        href="cara-pengajuan-layanan"
+                                        href="buku-panduan-pedoman"
                                         title={title}
-                                        name="Cara Pengajuan Layanan"
+                                        name="Buku Panduan / Pedoman"
                                     />
                                 </li>
-                            </ul>
+                                <li>
+                                    <NextLinkMobile
+                                        href="materi-kegiatan"
+                                        title={title}
+                                        name="Materi Kegiatan"
+                                    />
+                                </li>
+                                <li>
+                                    <NextLinkMobile
+                                        href="buletin-lldikti-wilayah-iv"
+                                        title={title}
+                                        name="Buletin LLDIKTI Wilayah IV"
+                                    />
+                                </li>
+                                <li>
+                                    <NextLinkMobile
+                                        href="buku-direktori-pts-lldikti-iv"
+                                        title={title}
+                                        name="Buku Direktori PTS LLDIKTI IV"
+                                    />
+                                </li>
+                                <li>
+                                    <a
+                                        href={
+                                            "https://pddikti.kemdikbud.go.id/publikasi"
+                                        }
+                                        className={
+                                            "dark:text-white text-base-100"
+                                        }
+                                    >
+                                        Buku Statistik Perguruan Tinggi
+                                    </a>
+                                </li>
+                                <li>
+                                    <NextLinkMobile
+                                        href="kegiatan"
+                                        title={title}
+                                        name="Agenda Kegiatan"
+                                    />
+                                </li>
+                                <li>
+                                    <NextLinkMobile
+                                        href="gallery"
+                                        title={title}
+                                        name="Galeri"
+                                    />
+                                </li>
+                            </>
                         )}
                     </ul>
                 </div>

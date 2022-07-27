@@ -11,7 +11,6 @@ const PRistekdikti = (props) => {
     useEffect(() => {
         const Validasi = () => {
             const data = props?.lldikti.data;
-            // console.log(data)
             setData(
                 data.map((item) => {
                     return {

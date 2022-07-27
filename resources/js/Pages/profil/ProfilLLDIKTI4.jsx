@@ -23,8 +23,8 @@ const ProfilLLDIKTI4 = (props) => {
                 </h1>
             </Heading>
             <article>
-                <div className="w-full container">
-                    <div className=" float-left my-6 mx-2 w-[15rem]">
+                <div className="w-full container py-4">
+                    <div className=" float-left my-6 mx-2 w-[15rem] md:inline-block hidden">
                         Kepala Lembaga Layanan Pendidikan Tinggi (LLDIKTI)
                         Wilayah IV, Jawa Barat dan Banten​
                     </div>
@@ -289,9 +289,9 @@ const ProfilLLDIKTI4 = (props) => {
                                     <button
                                         className={`${
                                             !button
-                                                ? "border-[#000] border-[1px_1px_5px_1px] border-b-[#fff] z-[1] rounded-br-md rounded-bl-md text-[#2657a7]"
+                                                ? "border-[#000] border-[2px_2px_5px_2px] border-b-[#fff] z-[1] rounded-br-md rounded-bl-md text-[#2657a7]"
                                                 : "text-[#000]"
-                                        } -mb-1 w-[10%] p-4 text-center text-[26px]`}
+                                        } -mb-1 lg:w-[12%] md:w-[15%] w-[20%] md:p-4 p-2 text-center md:text-[26px] text-[15px]`}
                                         onClick={() => setButton(false)}
                                     >
                                         Fungsi
@@ -299,15 +299,15 @@ const ProfilLLDIKTI4 = (props) => {
                                     <button
                                         className={`${
                                             button
-                                                ? "border-[#000] border-[1px_1px_4px_1px] border-b-[#fff] z-[1] rounded-br-md rounded-bl-md text-[#2657a7]"
+                                                ? "border-[#000] border-[2px_2px_5px_2px] border-b-[#fff] z-[1] rounded-br-md rounded-bl-md text-[#2657a7]"
                                                 : "text-[#000]"
-                                        } -mb-1 w-[10%] p-4 text-center text-[26px]`}
+                                        } -mb-1 lg:w-[12%] md:w-[15%] w-[20%] md:p-4 p-2 text-center md:text-[26px] text-[15px]`}
                                         onClick={() => setButton(true)}
                                     >
                                         Tugas
                                     </button>
                                 </div>
-                                <div className="border-[1px]  border-[#000] py-10 ">
+                                <div className="border-[2px]  border-[#000] py-10 ">
                                     <div className="flex justify-evenly flex-row flex-wrap">
                                         {button ? (
                                             <>

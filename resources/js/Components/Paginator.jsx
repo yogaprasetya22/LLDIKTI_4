@@ -46,7 +46,7 @@ export default Paginator;
 
 const ButonP = ({ title, clr }) => (
     <button
-        className={`btn btn-outline rounded-md text-[#24529e] ${
+        className={`btn btn-outline rounded-md text-[#24529e] dark:text-white dark:border-[#24529e] ${
             clr ? "bg-[#24529e] text-[#fff]" : ""
         } text-[11px] p-3 md:text-[15px]  md:p-4`}
     >
@@ -57,7 +57,7 @@ const ButonP = ({ title, clr }) => (
 const ButonLink = ({ title, link }) => (
     <Link
         href={link}
-        className="btn btn-outline rounded-md text-[#24529e] text-[11px] p-3 md:text-[15px] md:p-4"
+        className="btn btn-outline rounded-md text-[#24529e] dark:text-white dark:border-[#24529e] text-[11px] p-3 md:text-[15px] md:p-4"
     >
         {title}
     </Link>
