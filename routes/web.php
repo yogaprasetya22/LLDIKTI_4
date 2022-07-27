@@ -122,16 +122,16 @@ Route::get('/buku-panduan-pedoman', function () {
         'title' => 'buku-panduan-pedoman',
     ]);
 });
-// Route::get('/buku-panduan-pedoman', function () {
-//     return Inertia::render('informasi-publik/BukuPP', [
-//         'title' => 'buku-panduan-pedoman',
-//     ]);
-// });
-// Route::get('/buku-panduan-pedoman', function () {
-//     return Inertia::render('informasi-publik/BukuPP', [
-//         'title' => 'buku-panduan-pedoman',
-//     ]);
-// });
+Route::get('/materi-kegiatan', function () {
+    return Inertia::render('informasi-publik/MateriKegiatan', [
+        'title' => 'materi-kegiatan',
+    ]);
+});
+Route::get('/buletin-lldikti-wilayah-iv', function () {
+    return Inertia::render('informasi-publik/BLW4', [
+        'title' => 'buletin-lldikti-wilayah-iv',
+    ]);
+});
 Route::get('/buku-direktori-pts-lldikti-iv', function () {
     return Inertia::render('informasi-publik/BDPL4', [
         'title' => 'buku-direktori-pts-lldikti-iv',
@@ -142,11 +142,46 @@ Route::get('/kegiatan', function () {
         'title' => 'kegiatan',
     ]);
 });
+Route::get('/gallery', function () {
+    return Inertia::render('informasi-publik/Galery', [
+        'title' => 'gallery',
+    ]);
+});
 // end Informasi Publik
 
 
 // PPID
-
+Route::get('/produk-hukum/undang-undang', function () {
+    return Inertia::render('PPID/UUD', [
+        'title' => 'undang-undang',
+    ]);
+});
+Route::get('/produk-hukum/surat-edaran', function () {
+    return Inertia::render('PPID/SuratEdaran', [
+        'title' => 'surat-edaran',
+    ]);
+});
+Route::get("produk-hukum/peraturan-ristektikti", [LldiktiController::class, 'PeraturanRistektikti']);
+Route::get('/produk-hukum/peraturan-presiden', function () {
+    return Inertia::render('PPID/PPresiden', [
+        'title' => 'peraturan-presiden',
+    ]);
+});
+Route::get('/produk-hukum/peraturan-mentri', function () {
+    return Inertia::render('PPID/PMentri', [
+        'title' => 'peraturan-mentri',
+    ]);
+});
+Route::get('/produk-hukum/peraturan-pemerintah', function () {
+    return Inertia::render('PPID/PPemerintah', [
+        'title' => 'peraturan-pemerintah',
+    ]);
+});
+Route::get('/produk-hukum/sk-dirjen', function () {
+    return Inertia::render('PPID/SKD', [
+        'title' => 'sk-dirjen',
+    ]);
+});
 // end PPID
 
 

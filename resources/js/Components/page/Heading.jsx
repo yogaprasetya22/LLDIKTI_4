@@ -4,7 +4,7 @@ import bgheader from "@/img/bg-header.png";
 const Heading = ({ children }) => {
     return (
         <header
-            className="relative overflow-hidden bg-no-repeat shadow-sm max-h-[23rem]"
+            className="relative overflow-hidden bg-no-repeat shadow-md max-h-[23rem]"
             style={{
                 backgroundPosition: "50%",
                 height: "400px",

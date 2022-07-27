@@ -172,7 +172,7 @@ const Index = ({ title }) => {
                 </div>
             </Tamplate>
             {/* Galeri Kami */}
-            <Tamplate title="Galeri Kami" link="galery">
+            <Tamplate title="Galeri Kami" link="gallery">
                 <div className="md:w-[90%] w-[85%] py-7">
                     <div className="flex lg:justify-around lg:flex-row flex-col md:p-[0px_10px]">
                         <img

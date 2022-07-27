@@ -242,7 +242,7 @@ const Footer = () => {
                     </div>
                 </footer>
             </div>
-            <div className="bg-black dark:bg-gray-300 dark:text-black w-full p-2 text-center text-[14px] leading-[150%] font-bold">
+            <div className="bg-black dark:bg-gray-300 dark:text-black w-full md:px-2 px-5 text-center text-[14px] leading-[150%] py-2 ">
                 Lembaga Layanan Pendidikan Tinggi (LLDIKTI) Wilayah IV Jawa
                 Barat dan Banten @ {new Date().getFullYear()} - Hak Cipta
                 Dilindungi

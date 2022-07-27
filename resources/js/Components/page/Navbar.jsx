@@ -8,11 +8,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const NextLink = ({ href, title, name }) => {
+    console.log(title);
     const isNavbar = (rout, parent) => {
         if (!parent)
             return `${
                 "/" + title === rout ? "dark:text-white text-base-100" : ""
             }`;
+
         return `${"/" + title === rout ? "text-yellow-500" : ""}`;
     };
 
@@ -221,7 +223,7 @@ const Navbar = ({ title }) => {
                                 {hover && (
                                     <ul
                                         className="p-2 bg-[#ffffff] shadow-md drop-shadow-md dark:bg-[#2a303c] text-black dark:text-white delay-75 menu
-                                         left-[17rem] top-[4rem] absolute z-20
+                                         left-[16rem] top-[4rem] absolute z-20
                                         "
                                         onMouseEnter={(e) => setHover(true)}
                                         onMouseLeave={(e) => setHover(false)}
@@ -229,49 +231,49 @@ const Navbar = ({ title }) => {
                                         <li>
                                             <NextLink
                                                 href="produk-hukum/surat-edaran"
-                                                title={title}
+                                                title={"produk-hukum/" + title}
                                                 name="Surat Edaran"
                                             />
                                         </li>
                                         <li>
                                             <NextLink
                                                 href="produk-hukum/undang-undang"
-                                                title={title}
+                                                title={"produk-hukum/" + title}
                                                 name="Undang - Undang"
                                             />
                                         </li>
                                         <li>
                                             <NextLink
                                                 href="produk-hukum/peraturan-ristektikti"
-                                                title={title}
+                                                title={"produk-hukum/" + title}
                                                 name="Peraturan Ristektikti"
                                             />
                                         </li>
                                         <li>
                                             <NextLink
                                                 href="produk-hukum/peraturan-presiden"
-                                                title={title}
+                                                title={"produk-hukum/" + title}
                                                 name="Peraturan Presiden"
                                             />
                                         </li>
                                         <li>
                                             <NextLink
                                                 href="produk-hukum/peraturan-mentri"
-                                                title={title}
+                                                title={"produk-hukum/" + title}
                                                 name="Peraturan Mentri"
                                             />
                                         </li>
                                         <li>
                                             <NextLink
                                                 href="produk-hukum/peraturan-pemerintah"
-                                                title={title}
+                                                title={"produk-hukum/" + title}
                                                 name="Peraturan Pemerintah"
                                             />
                                         </li>
                                         <li>
                                             <NextLink
-                                                href="sk-dirjen"
-                                                title={title}
+                                                href="produk-hukum/sk-dirjen"
+                                                title={"produk-hukum/" + title}
                                                 name="SK DIRJEN"
                                             />
                                         </li>
