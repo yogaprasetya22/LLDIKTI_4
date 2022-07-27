@@ -9,3 +9,7 @@
 
 ## About Laravel
 
+.env -> name database 
+```php
+DB_DATABASE=lldikti
+```
