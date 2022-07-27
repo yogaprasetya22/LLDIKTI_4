@@ -19,17 +19,17 @@ const BukuPP = (props) => {
                 </h1>
             </Heading>
             <article>
-                <div className="container flex flex-col gap-5 mb-20">
+                <div className="container flex flex-col gap-5 mb-20 py-12">
                     <TitleText>Bagian Umum</TitleText>
                     <div className="flex flex-col pl-6">
                         {BPP.map((data, i) => (
                             <div key={i} className="flex flex-row">
                                 <p className="pr-2">•</p>
                                 <a
-                                    href="#"
-                                    className=" dark:text-[#eb6f98] text-[#cc3366] pl-3"
+                                    href={data.url}
+                                    className=" dark:text-[#eb6f98] text-[#cc3366] pl-3 link link-hover"
                                 >
-                                    {data.title}
+                                    {data.des}
                                 </a>
                             </div>
                         ))}
@@ -44,90 +44,119 @@ export default BukuPP;
 
 const BPP = [
     {
-        title: "Pedoman Operasional Tentang Penilaian Angka Kredit Kenaikan Jabatan Akademik/Pangkat Dosen  ",
+        des: "Pedoman Operasional Tentang Penilaian Angka Kredit Kenaikan Jabatan Akademik/Pangkat Dosen",
+        url: "http://www.kopertis3.or.id/v6/wp-content/uploads/2019/12/PO-Penilaian-Angka-Kredit-Dosen-16-OKTOBER-2019_compressed.pdf",
     },
     {
-        title: "Persyaratan Usulan Dosen (NIDN, NIDK, NUP, Perubahan Nomor Registrasi, Perubahan Data Dosen, Pindah Homebase External-Internal) ",
+        des: "Persyaratan Usulan Dosen (NIDN, NIDK, NUP, Perubahan Nomor Registrasi, Perubahan Data Dosen, Pindah Homebase External-Internal)",
+        url: "http://www.kopertis3.or.id/v6/wp-content/uploads/2018/11/Persyaratan-Usulan-Dosen.pdf",
     },
     {
-        title: "Buku Panduan Pengusulan Program Penelitian Dan Pengabdian Kepada Masyarakat Melalui Simlitabmas Tahun 2018  ",
+        des: "Buku Panduan Pengusulan Program Penelitian Dan Pengabdian Kepada Masyarakat Melalui Simlitabmas Tahun 2018",
+        url: "http://www.kopertis3.or.id/v6/wp-content/uploads/2018/08/Pengusulan-Program-Penelitian-Dan-Pengabdian-Kepada-Masyarakat-Melalui-Simlitabmas-Tahun-2018.pdf",
     },
     {
-        title: "Panduan Penyusunan LKPT APT v1_1 ",
+        des: "Panduan Penyusunan LKPT APT v1_1",
+        url: "http://www.kopertis3.or.id/v6/wp-content/uploads/2018/08/Panduan-Penyusunan-LKPT-APT-v1_1-kopertis-3.pdf",
     },
     {
-        title: "Panduan Penyusunan LED APT V1_1 ",
+        des: "Panduan Penyusunan LED APT V1_1",
+        url: "http://www.kopertis3.or.id/v6/wp-content/uploads/2018/08/Panduan-Penyusunan-LED-APT-v1_1-kopertis-3.pdf",
     },
     {
-        title: "Panduan Edisi XII – Skema Penelitian 2018",
+        des: "Panduan Edisi XII Skema Penelitian 2018",
+        url: "http://www.kopertis3.or.id/v6/wp-content/uploads/2018/08/Panduan-Edisi-XII-Skema-Penelitian-2018.pdf",
     },
     {
-        title: "Persyaratan Perubahan Data Mahasiswa 2018",
+        des: "Persyaratan Perubahan Data Mahasiswa 2018",
+        url: "http://www.kopertis3.or.id/v6/wp-content/uploads/2018/07/Persyaratan-Perubahan-Data-Mahasiswa-2018.pdf",
     },
     {
-        title: "Panduan Akses E-Resources 2018",
+        des: "Panduan Akses E-Resources 2018",
+        url: "http://www.kopertis3.or.id/v6/wp-content/uploads/2018/05/Panduan-Akses-E-Resources-2018.pdf",
     },
     {
-        title: "Panduan Beasiswa Peningkatan Prestasi Akademik (PPA) Tahun 2018",
+        des: "Panduan Beasiswa Peningkatan Prestasi Akademik (PPA) Tahun 2018",
+        url: "http://www.kopertis3.or.id/v6/wp-content/uploads/2018/05/Panduan-Beasiswa-PPA-tahun-2018.pdf",
     },
     {
-        title: "Tata Cara dihapus PPH / PPN Dana Hibah Penelitian dan Pengabdian bagi Masyarakat",
+        des: "Tata Cara dihapus PPH / PPN Dana Hibah Penelitian dan Pengabdian bagi Masyarakat",
+        url: "http://www.kopertis3.or.id/v6/wp-content/uploads/2018/05/Tata_Cara_PAJAK-PENELITIAN.pdf",
     },
     {
-        title: "Pedoman Perpajakan Hibah Penelitian Tahun 2018",
+        des: "Pedoman Perpajakan Hibah Penelitian Tahun 2018",
+        url: "http://www.kopertis3.or.id/v6/wp-content/uploads/2018/05/Pedoman-Perpajakan-Hibah-Penelitian.pdf",
     },
     {
-        title: "SINTA – Panduan Untuk Verifikator",
+        des: "SINTA Panduan Untuk Verifikator",
+        url: "http://www.kopertis3.or.id/v6/wp-content/uploads/2018/04/PANDUAN-VERIFIKATOR-LENGKAP.pdf",
     },
     {
-        title: "SINTA – Panduan Google Scholar",
+        des: "SINTA Panduan Google Scholar",
+        url: "http://www.kopertis3.or.id/v6/wp-content/uploads/2018/04/PANDUAN-GS-LENGKAP.pdf",
     },
     {
-        title: "SINTA – Panduan untuk Penulis",
+        des: "SINTA Panduan untuk Penulis",
+        url: "http://www.kopertis3.or.id/v6/wp-content/uploads/2018/04/SINTA-PANDUAN-PENULIS-LENGKAP.pdf",
     },
     {
-        title: "Intisari Statistik Pendidikan Tinggi Tahun 2017",
+        des: "Intisari Statistik Pendidikan Tinggi Tahun 2017",
+        url: "http://www.kopertis3.or.id/v6/wp-content/uploads/2018/02/Intisari-Statistik-Pendidikan-Tinggi-2017.pdf",
     },
     {
-        title: "Buku Statistik Pendidikan Tinggi Tahun 2017",
+        des: "Buku Statistik Pendidikan Tinggi Tahun 2017",
+        url: "http://www.kopertis3.or.id/v6/wp-content/uploads/2018/02/Buku-Statistik-Pendidikan-Tinggi-2017.pdf",
     },
     {
-        title: "Panduan Tata Cara Penyelenggaraan Rekognisi Pembelajaran Lampau",
+        des: "Panduan Tata Cara Penyelenggaraan Rekognisi Pembelajaran Lampau",
+        url: "http://lldikti3.ristekdikti.go.id/v2/wp-content/uploads/Lampiran-Pedoman-RPL-SALINAN1.pdf",
     },
     {
-        title: "Slide Presentasi Rekognisi Pembelajaran Lampau 2017",
+        des: "Slide Presentasi Rekognisi Pembelajaran Lampau 2017",
+        url: "http://lldikti3.ristekdikti.go.id/v2/wp-content/uploads/1D1_Dit-Pembelajaran_21032017_SLIDE-PRESENTASI-RPL.pdf",
     },
     {
-        title: "Pedoman Bantuan Biaya Pendidikan Bidikmisi Tahun 2017",
+        des: "Pedoman Bantuan Biaya Pendidikan Bidikmisi Tahun 2017",
+        url: "http://lldikti3.ristekdikti.go.id/v2/wp-content/uploads/PEDOMAN_BIDIKMISI_2017.pdf",
     },
     {
-        title: "Bahan Menteri Riset, Teknologi, dan Pendidikan Tinggi Republik Indonesia pada Rapat Kerja Nasional Tahun 2017",
+        des: "Bahan Menteri Riset, Teknologi, dan Pendidikan Tinggi Republik Indonesia pada Rapat Kerja Nasional Tahun 2017",
+        url: "http://lldikti3.ristekdikti.go.id/v2/wp-content/uploads/Bahan-Paparan-Bapak-Menteri-30-jan-2017-rev-9.compressed.pdf",
     },
     {
-        title: "Persyaratan dan Prosedur Pendirian dan Perubahan PTS serta Pembukaan Program Studi Perguruan Pada Perguruan Tinggi Tahun 2017",
+        des: "Persyaratan dan Prosedur Pendirian dan Perubahan PTS serta Pembukaan Program Studi Perguruan Pada Perguruan Tinggi Tahun 2017",
+        url: "http://lldikti3.ristekdikti.go.id/v2/wp-content/uploads/Persyaratan_dan_Prosedur_Pendirian_PTS_dan_Prodi_PT2017.pdf",
     },
     {
-        title: "Menutupi Pedoman Sistem Penjaminan Mutu Pendidikan Tinggi 2016",
+        des: "Menutupi Pedoman Sistem Penjaminan Mutu Pendidikan Tinggi 2016",
+        url: "http://lldikti3.ristekdikti.go.id/v2/wp-content/uploads/cover-ristekdikti-rev-28-03-2015.pdf",
     },
     {
-        title: "Pedoman Sistem Penjaminan Mutu Pendidikan Tinggi 2016",
+        des: "Pedoman Sistem Penjaminan Mutu Pendidikan Tinggi 2016",
+        url: "http://lldikti3.ristekdikti.go.id/v2/wp-content/uploads/PEDOMAN-SISTEM-PENJAMINAN-MUTU-DIKTI-rev-28-03-2016.pdf",
     },
     {
-        title: "Buku Kurikulum Pendidikan Tinggi Tahun 2014 Direktorat Pembelajaraan dan Kemahasiswaan Direktorat Jenderal Pendidikan Tinggi Kementerian Pendidikan dan Kebudayaan",
+        des: "Buku Kurikulum Pendidikan Tinggi Tahun 2014 Direktorat Pembelajaraan dan Kemahasiswaan Direktorat Jenderal Pendidikan Tinggi Kementerian Pendidikan dan Kebudayaan",
+        url: "http://lldikti3.ristekdikti.go.id/html/wp-content/uploads/2014/11/Final-Buku-K-DIKTI.pdf",
     },
     {
-        title: "Buku Panduan Pengembangan Kurikulum Berbasis Kompetensi Pendidikan Tinggi",
+        des: "Buku Panduan Pengembangan Kurikulum Berbasis Kompetensi Pendidikan Tinggi",
+        url: "http://lldikti3.ristekdikti.go.id/html/wp-content/uploads/2011/04/BUKU-Panduan-KBK.pdf",
     },
     {
-        title: "Pedoman Program Bantuan Dana Untuk Kegiatan Kemahasiswaan (Ko Dan Ekstra Kurikuler) Tahun 2014",
+        des: "Pedoman Program Bantuan Dana Untuk Kegiatan Kemahasiswaan (Ko Dan Ekstra Kurikuler) Tahun 2014",
+        url: "http://lldikti3.ristekdikti.go.id/html/wp-content/uploads/2014/03/Pedoman-Dana-Bantuan-Keg2014.pdf",
     },
     {
-        title: "Buku Pedoman Olimpiade Nasional Matematika dan Ilmu Pengetahuan Alam Perguruan Tinggi (ON MIPA-PT) Tahun 2014",
+        des: "Buku Pedoman Olimpiade Nasional Matematika dan Ilmu Pengetahuan Alam Perguruan Tinggi (ON MIPA-PT) Tahun 2014",
+        url: "http://lldikti3.ristekdikti.go.id/html/wp-content/uploads/2014/03/PEDOMAN-OLIMPIADE-MIPA-11022014.pdf",
     },
     {
-        title: "Pedoman Program Mahasiswa Wirausaha (PMW) Tahun 2013",
+        des: "Pedoman Program Mahasiswa Wirausaha (PMW) Tahun 2013",
+        url: "http://lldikti3.ristekdikti.go.id/html/wp-content/uploads/2014/03/B1.-Pedoman-PMW-2013.pdf",
     },
     {
-        title: "Pedoman Bidikmisi Tahun 2012",
+        des: "Pedoman Bidikmisi Tahun 2012",
+        url: "http://lldikti3.ristekdikti.go.id/html/wp-content/uploads/2014/03/Pedoman-Bidikmisi-2012-17-JAN.pdf",
     },
 ];

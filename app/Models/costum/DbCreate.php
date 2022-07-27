@@ -81,19 +81,21 @@ class DbCreate extends Model
                 $table->timestamps();
             });
         }
+        // if (!Schema::hasTable('p_ristekdikti')) {
+        //     Schema::create('p_ristekdikti', function (Blueprint $table) {
+        //         $table->id();
+        //         $table->text('url')->nullable();
+        //         $table->text('description')->nullable();
+        //         $table->timestamps();
+        //     });
+        // }
 
         if (!Schema::hasTable('info_details')) {
             Schema::create('info_details', function (Blueprint $table) {
                 $table->id();
-                $table->integer('id_info_category')->notNull();
-                $table->foreign('id_info_category')->references('id_info_category')->on('info_categories')->onDelete('cascade');
-                $table->string('title', 128)->notNull();
-                $table->mediumText('content')->notNull();
-                $table->string('author', 128)->notNull();
-                $table->string('img_uri_one', 512)->nullable();
-                $table->string('img_uri_two', 512)->nullable();
-                $table->string('img_uri_three', 512)->nullable();
-                $table->string('attachment', 512)->nullable();
+                $table->text('url')->nullable();
+                $table->text('description')->nullable();
+                $table->string('download');
                 $table->timestamps();
             });
         }

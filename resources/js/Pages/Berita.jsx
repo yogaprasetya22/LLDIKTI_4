@@ -9,6 +9,7 @@ import Paginator from "@/Components/Paginator";
 const berita = (props) => {
     const [lldikti, setLldikti] = useState([]);
     const [meta, setMeta] = useState([]);
+    console.log(props.lldikti.data)
     useEffect(() => {
         const Validasi = async () => {
             const data = props.lldikti;

@@ -2,10 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\costum\DbCreate;
-use App\Models\User;
-use GuzzleHttp\Promise\Create;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
 use Illuminate\Database\Seeder;
 use App\Models\Info_category;
 
@@ -19,7 +16,7 @@ class DatabaseSeeder extends Seeder
      * 
      */
     protected $authors = [
-        [   
+        [
             'des' => 'Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi',
         ],
         [
@@ -28,7 +25,7 @@ class DatabaseSeeder extends Seeder
         [
             'des' => 'Sosialisasi Pelaporan Akademik Melalui Aplikasi Neo Feeder',
         ],
-        [   
+        [
             'des' => 'Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi',
         ],
         [
@@ -37,7 +34,7 @@ class DatabaseSeeder extends Seeder
         [
             'des' => 'Sosialisasi Pelaporan Akademik Melalui Aplikasi Neo Feeder',
         ],
-        [   
+        [
             'des' => 'Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi',
         ],
         [
@@ -46,7 +43,7 @@ class DatabaseSeeder extends Seeder
         [
             'des' => 'Sosialisasi Pelaporan Akademik Melalui Aplikasi Neo Feeder',
         ],
-        [   
+        [
             'des' => 'Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi',
         ],
         [
@@ -55,7 +52,7 @@ class DatabaseSeeder extends Seeder
         [
             'des' => 'Sosialisasi Pelaporan Akademik Melalui Aplikasi Neo Feeder',
         ],
-        [   
+        [
             'des' => 'Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi',
         ],
         [
@@ -64,7 +61,7 @@ class DatabaseSeeder extends Seeder
         [
             'des' => 'Sosialisasi Pelaporan Akademik Melalui Aplikasi Neo Feeder',
         ],
-        [   
+        [
             'des' => 'Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi',
         ],
         [
@@ -73,7 +70,7 @@ class DatabaseSeeder extends Seeder
         [
             'des' => 'Sosialisasi Pelaporan Akademik Melalui Aplikasi Neo Feeder',
         ],
-        [   
+        [
             'des' => 'Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi',
         ],
         [
@@ -82,7 +79,7 @@ class DatabaseSeeder extends Seeder
         [
             'des' => 'Sosialisasi Pelaporan Akademik Melalui Aplikasi Neo Feeder',
         ],
-        [   
+        [
             'des' => 'Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi',
         ],
         [

@@ -1,1 +1,66 @@
-Produk Hukum, Prosedur Operasional Stander, Buku Panduan / Pedoman, Materi Kegiatan, Galery, Produk Hukum -> Surat edaran, dll.
+
+{img:lldikti0,
+des:"Buletin LLDIKTI IV - April 2022"
+},{
+img:lldikti1,
+des:"Buletin LLDIKTI IV - Agustus 2021"
+},{
+img:lldikti2,
+des:"Buletin LLDIKTI IV - Agustus 2021"
+},{
+img:lldikti3,
+des:"Buletin LLDIKTI IV - April 2021"
+},{
+img:lldikti4,
+des:"Buletin LLDIKTI IV - April 2020"
+},{
+img:lldikti5,
+des:"Buletin Vol. 16 Bulan Desember"
+},{
+img:lldikti6,
+des:"Buletin Vol.15 Agustus 2016"
+},{
+img:lldikti7,
+des:"Buletin_Vol_17_No_II"
+},{
+img:lldikti8,
+des:"Buletin Desember 2018"
+},{
+img:lldikti9,
+des:"Buleletin I - 2014"
+},{
+img:lldikti10,
+des:"Buletin I - 2016"
+},{
+img:lldikti11,
+des:"Buletin LLDIKTI IV – Vol 16"
+},{
+img:lldikti12,
+des:"Buletin LLDIKTI IV – Vol 18"
+}
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
