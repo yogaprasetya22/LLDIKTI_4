@@ -9,7 +9,7 @@ const PPemerintah = (props) => {
             <Heading>
                 <h1 className=" md:text-[40px] text-[30px] font-bold mb-3">
                     <span className=" text-[#eaa43b]">
-                        PROSEDUR OPERASIONAL STANDAR
+                        PERATURAN PEMERINTAH
                     </span>
                 </h1>
                 <h1 className=" md:text-[31px] text-[21px] mt-0  mb-10">
