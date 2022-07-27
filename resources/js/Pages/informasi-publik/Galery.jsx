@@ -78,15 +78,27 @@ import lldikti74 from "@/img/lldikti_galery/lldikti74.jpg";
 import lldikti75 from "@/img/lldikti_galery/lldikti75.jpg";
 import lldikti76 from "@/img/lldikti_galery/lldikti76.jpg";
 import lldikti77 from "@/img/lldikti_galery/lldikti77.jpg";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const Galery = (props) => {
+    const [dataGalery, setDataGalery] = useState([]);
+    const [load, setLoad] = useState(false);
+    useEffect(() => {
+        const galeeery = () => {
+            setLoad(false);
+            setDataGalery(Galeri);
+            setTimeout(() => {
+                setLoad(true);
+            }, 1000);
+        };
+        galeeery();
+    }, []);
     return (
         <Layout title={props.title}>
             <Heading>
                 <h1 className=" md:text-[40px] text-[30px] font-bold mb-3">
-                    <span className=" text-[#eaa43b]">
-                        PROSEDUR OPERASIONAL STANDAR
-                    </span>
+                    <span className=" text-[#eaa43b]">GALLERY</span>
                 </h1>
                 <h1 className=" md:text-[31px] text-[21px] mt-0  mb-10">
                     <span className="text-[#2654a4]">
@@ -98,18 +110,28 @@ const Galery = (props) => {
                 <div className="md:w-[100%] py-7">
                     <div className="flex lg:justify-between lg:flex-row flex-col ">
                         <div className="flex md:flex-wrap md:flex-row justify-center item-center md:gap-4 gap-4 flex-col ">
-                            {Galeri.map((data, i) => (
-                                <img
-                                    key={i}
-                                    className="hover:-translate-y-1 duration-[150ms] ease-in-out rounded-md shadow-md md:h-[15rem] md:shadow-[-1px_12px_30px_-13.2px_rgba(0,0,0,0.75)]"
-                                    style={{
-                                        backgroundPosition: "50%",
-                                        backgroundSize: "auto",
-                                        objectFit: "cover",
-                                    }}
-                                    src={data.img}
-                                    alt=""
-                                />
+                            {dataGalery.map((data, i) => (
+                                <>
+                                    {load ? (
+                                        <img
+                                            key={i}
+                                            className="hover:-translate-y-1 duration-[150ms] ease-in-out rounded-md shadow-md md:h-[15rem] md:shadow-[-1px_12px_30px_-13.2px_rgba(0,0,0,0.75)]"
+                                            style={{
+                                                backgroundPosition: "50%",
+                                                backgroundSize: "auto",
+                                                objectFit: "cover",
+                                            }}
+                                            src={data.img}
+                                            alt=""
+                                        />
+                                    ) : (
+                                        <div className="hover:-translate-y-1 duration-[150ms] ease-in-out rounded-md shadow-md md:h-[15rem] md:shadow-[-1px_12px_30px_-13.2px_rgba(0,0,0,0.75)] w-[22rem]">
+                                            <div className="flex justify-center items-center h-full font-extrabold text-[1.5rem]">
+                                                loading..
+                                            </div>
+                                        </div>
+                                    )}
+                                </>
                             ))}
                         </div>
                     </div>

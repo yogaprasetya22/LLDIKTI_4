@@ -35,7 +35,7 @@ const StandarLayananPublik = (props) => {
                 </h1>
             </Heading>
             <article>
-                <div className="w-full container">
+                <div className="w-full container mt-20">
                     <div className="flex justify-center items-center ">
                         <div className="max-w-[50rem] flex flex-col gap-5">
                             <img

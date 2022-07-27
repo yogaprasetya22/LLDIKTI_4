@@ -7,7 +7,7 @@ const Chard = ({ data }) => {
     return (
         <>
             <figure>
-                <img src={data.img} alt="Shoes" />
+                <img src={data.img} alt="Shoes" className=" bg-cover"  />
             </figure>
             <div className="p-[10px_15px_5px]">
                 <p className="text-xs md:text-xs">{data.date}</p>

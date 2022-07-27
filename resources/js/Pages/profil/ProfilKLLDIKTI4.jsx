@@ -26,10 +26,10 @@ const ProfilKLLDIKTI4 = (props) => {
                             alt="Dr. M. Samsuri, S.Pd., M.T.
 Kepala LLDIKTI Wilayah IV Jawa Barat dan Banten"
                         />
-                        <span className="text-black text-[24px] font-semibold">
+                        <span className="text-black md:text-[24px] text-[18px] font-semibold">
                             Dr. M. Samsuri, S.Pd., M.T.
                         </span>
-                        <span className="text-black text-[20px] font-semibold">
+                        <span className="text-black md:text-[20px] text-[16px] font-semibold text-center">
                             Kepala LLDIKTI Wilayah IV Jawa Barat dan Banten
                         </span>
                     </div>

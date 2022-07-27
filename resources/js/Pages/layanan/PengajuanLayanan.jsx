@@ -1,9 +1,20 @@
 import Heading from "@/Components/page/Heading";
 import Layout from "@/Layouts/Layout";
-import { Link } from "@inertiajs/inertia-react";
-import React from "react";
+import {
+    faCaretDown,
+    faCaretRight,
+    fas,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useState } from "react";
 
 const PengajuanLayanan = (props) => {
+    const [buttonSet, setButton] = useState({
+        p1: false,
+        p2: false,
+        p3: false,
+        p4: false,
+    });
     return (
         <Layout title={props.title}>
             <Heading>
@@ -28,35 +39,191 @@ const PengajuanLayanan = (props) => {
                         </div>
                     </span>
                 </div>
-                {/* <div className="flex w-full justify-center items-center md:p-[20px_70px] p-[25px]">
-                    <div className="w-[90%] md:w-[100%] py-7">
-                        <div className="flex md:justify-evenly md:flex-wrap md:flex-row md:px-0 flex-col px-4 gap-4 ">
-                            {DataLayananKami.map((data, i) => {
-                                let ganjil =
-                                    i % 2 === 0 ? "text-end" : "text-start";
-                                return (
-                                    <div
-                                        key={i}
-                                        className={`bg-white ${ganjil} shadow-md drop-shadow-md border-y-[1px] mb-1 rounded-[3px] p-[5px] text-[14px] md:w-[44%]`}
+                {/* 1 */}
+                <div className="flex items-start w-full flex-col container hs-dropdown">
+                    <div className="p-2 ">
+                        <button
+                            onClick={() => setButton({ p1: !buttonSet.p1 })}
+                        >
+                            {buttonSet.p1 ? (
+                                <TitleOf>
+                                    Penggunaan Aplikasi EMPAT (E-Office
+                                    Manajemen Pelayanan Aplikasi Terpadu)
+                                </TitleOf>
+                            ) : (
+                                <TitleOn>
+                                    Penggunaan Aplikasi EMPAT (E-Office
+                                    Manajemen Pelayanan Aplikasi Terpadu)
+                                </TitleOn>
+                            )}
+                        </button>
+                        <div
+                            className={`${
+                                buttonSet.p1 ? "flex" : "hidden"
+                            } flex-col gap-5 transition-all duration-300`}
+                        >
+                            <div className="flex flex-col pt-4">
+                                <div className="flex flex-row pl-2 md:pl-6">
+                                    <video
+                                        className="md:h-[30rem] md:w-[45rem] w-[20rem] h-[15rem] rounded-md"
+                                        controls
                                     >
-                                        <Link
-                                            href="#"
-                                            className="text-black font-semibold"
-                                        >
-                                            {data.title}
-                                        </Link>
-                                    </div>
-                                );
-                            })}
+                                        <source
+                                            className="rounded-md"
+                                            src="https://www.lldikti4.id/wp-content/uploads/2022/06/Layanan-EMPAT.mp4?_=1"
+                                            type="video/mp4"
+                                        />
+                                    </video>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
+                {/* 2 */}
+                <div className="flex items-start w-full flex-col container hs-dropdown">
+                    <div className="p-2 ">
+                        <button
+                            onClick={() => setButton({ p2: !buttonSet.p2 })}
+                        >
+                            {buttonSet.p2 ? (
+                                <TitleOf>
+                                    Pengusulan Jabatan Akademik Dosen (JAD)
+                                </TitleOf>
+                            ) : (
+                                <TitleOn>
+                                    Pengusulan Jabatan Akademik Dosen (JAD)
+                                </TitleOn>
+                            )}
+                        </button>
+                        <div
+                            className={`${
+                                buttonSet.p2 ? "flex" : "hidden"
+                            } flex-col gap-5 transition-all duration-300`}
+                        >
+                            <div className="flex flex-col pt-4">
+                                <div className="flex flex-row pl-2 md:pl-6">
+                                    <video
+                                        className="md:h-[30rem] md:w-[45rem] w-[20rem] h-[15rem] rounded-md"
+                                        controls
+                                    >
+                                        <source
+                                            className=""
+                                            src="https://www.lldikti4.id/wp-content/uploads/2022/06/JAD-Online.mp4?_=2"
+                                            type="video/mp4"
+                                        />
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* 3 */}
+                <div className="flex items-start w-full flex-col container hs-dropdown">
+                    <div className="p-2 ">
+                        <button
+                            onClick={() => setButton({ p3: !buttonSet.p3 })}
+                        >
+                            {buttonSet.p3 ? (
+                                <TitleOf>
+                                    Proses Pendataan Perguruan Tinggi dan Prodi
+                                    pada PDDIKTI
+                                </TitleOf>
+                            ) : (
+                                <TitleOn>
+                                    Proses Pendataan Perguruan Tinggi dan Prodi
+                                    pada PDDIKTI
+                                </TitleOn>
+                            )}
+                        </button>
+                        <div
+                            className={`${
+                                buttonSet.p3 ? "flex" : "hidden"
+                            } flex-col gap-5 transition-all duration-300`}
+                        >
+                            <div className="flex flex-col pt-4">
+                                <div className="flex flex-row pl-2 md:pl-6">
+                                    <video
+                                        className="md:h-[30rem] md:w-[45rem] w-[20rem] h-[15rem] rounded-md"
+                                        controls
+                                    >
+                                        <source
+                                            className=""
+                                            src="https://www.lldikti4.id/wp-content/uploads/2022/06/Proses-Pendataan-PT_Prodi-Studi-pada-PDDIKTI.mp4?_=3"
+                                            type="video/mp4"
+                                        />
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* 4 */}
+                <div className="flex items-start w-full flex-col container hs-dropdown">
+                    <div className="p-2 ">
+                        <button
+                            onClick={() => setButton({ p4: !buttonSet.p4 })}
+                        >
+                            {buttonSet.p4 ? (
+                                <TitleOf>
+                                    Pengusulan Alur Mutasi/Perpindahan Mahasiswa
+                                </TitleOf>
+                            ) : (
+                                <TitleOn>
+                                    Pengusulan Alur Mutasi/Perpindahan Mahasiswa
+                                </TitleOn>
+                            )}
+                        </button>
+                        <div
+                            className={`${
+                                buttonSet.p4 ? "flex" : "hidden"
+                            } flex-col gap-5 transition-all duration-300`}
+                        >
+                            <div className="flex flex-col pt-4">
+                                <div className="flex flex-row pl-2 md:pl-6">
+                                    <video
+                                        className="md:h-[30rem] md:w-[45rem] w-[20rem] h-[15rem] rounded-md"
+                                        controls
+                                    >
+                                        <source
+                                            className=""
+                                            src="https://www.lldikti4.id/wp-content/uploads/2022/07/Alur-Mutasi-Mahasiswa.mp4?_=4"
+                                            type="video/mp4"
+                                        />
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </article>
         </Layout>
     );
 };
 
 export default PengajuanLayanan;
+
+const TitleOn = ({ children }) => {
+    // #ffb94c
+    return (
+        <div className=" py-3 px-4 inline-flex  text-start lg:text-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm  hover:bg-gray-50 transition-all text-sm dark:bg-gray-800 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
+            <div className="flex items-center flex-fow gap-4 font-semibold text-[#2657a7] md:text-[1.5rem] text-[13px]">
+                <FontAwesomeIcon icon={faCaretRight} />
+                <span>{children}</span>
+            </div>
+        </div>
+    );
+};
+const TitleOf = ({ children }) => {
+    // #ffb94c
+    return (
+        <div className="hs-dropdown-toggle py-3 px-4 inline-flex text-start lg:text-center items-center gap-2 rounded-md border font-medium bg-white  transition-all text-sm dark:bg-gray-800 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
+            <div className="flex items-center flex-fow gap-4 font-semibold text-[#ffb94c] md:text-[1.5rem] text-[13px]">
+                <FontAwesomeIcon icon={faCaretDown} />
+                <span>{children}</span>
+            </div>
+        </div>
+    );
+};
 
 const DataLayananKami = [
     {

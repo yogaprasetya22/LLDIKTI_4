@@ -26,7 +26,6 @@ const info = (props) => {
         };
         Validasi();
     }, []);
-    // console.log(meta);
     return (
         <Layout title={props.title}>
             <Heading>

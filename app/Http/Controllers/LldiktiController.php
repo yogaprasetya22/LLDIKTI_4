@@ -41,7 +41,7 @@ class LldiktiController extends Controller
     }
     public function PeraturanRistektikti()
     {
-        $lldikti = new newlldikti(Info_detail::paginate(6));
+        $lldikti = new newlldikti(Info_detail::paginate(10));
         return Inertia::render('PPID/PRistekdikti', [
             'title' => 'peraturan-ristektikti',
             'lldikti' => $lldikti,

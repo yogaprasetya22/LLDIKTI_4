@@ -25,7 +25,7 @@ const Layanan = (props) => {
             </Heading>
             <article className="flex items-center w-full flex-col">
                 <div className="w-[90%] py-7 ">
-                    <div className="flex justify-center flex-wrap gap-[10rem]">
+                    <div className="flex justify-center flex-wrap md:gap-[10rem] ">
                         {DataLayananOnline.map((data, i) => (
                             <div
                                 key={i}

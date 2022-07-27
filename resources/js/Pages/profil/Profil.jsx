@@ -19,13 +19,13 @@ const Profil = ({ title }) => {
                 </h1>
             </Heading>
             <div className="flex items-center w-full flex-col">
-                <div className="flex w-full justify-center items-center md:p-[20px_70px] p-[25px] mt-[2.5rem]">
-                    <div className=" w-[60%] py-7">
+                <div className="flex w-full justify-center items-center md:p-[20px_70px] p-[25px] md:mt-[2.5rem] mt-0">
+                    <div className=" md:w-[60%] w-[90%]  py-7 ">
                         <div className="flex justify-between  flex-wrap">
                             {LayananOnline.map((data, i) => (
                                 <div
                                     key={i}
-                                    className="w-[290px] h-[250px]  rounded-md bg-[#ffffff] z-1 relative image-full hover:-translate-y-1 duration-[150ms] ease-in-out shadow-md p-4 border-[1px]"
+                                    className="w-[290px] h-[250px] mt-7 md:mt-0 rounded-md bg-[#ffffff] z-1 relative image-full hover:-translate-y-1 duration-[150ms] ease-in-out shadow-md p-4 border-[1px]"
                                 >
                                     <AnimationCard
                                         data={data}

@@ -2,9 +2,8 @@ import React from "react";
 import IconPdf from "@/img/pdf-icon.png";
 
 const TamplatePdf = ({ data }) => {
-    console.log(data);
     return (
-        <article className=" ">
+        <article className=" py-6">
             <div className="w-full lg:hidden">
                 {data.map((data, i) => {
                     return (
@@ -20,8 +19,8 @@ const TamplatePdf = ({ data }) => {
                                         className="md:w-[190px] w-[80px]"
                                     />
                                 </div>
-                                <div className="flex flex-col p-5 text-black gap-4  ">
-                                    <a className="text-[15px] text-center md:text-left md:w-[25rem] link link-hover">
+                                <div className="flex flex-col p-5 text-[#36597c] gap-4  ">
+                                    <a className="text-[15px] text-center md:text-left md:w-[25rem] link link-hover font-bold">
                                         {data.des}
                                     </a>
                                     <span className="flex items-center gap-1 justify-center md:justify-start">

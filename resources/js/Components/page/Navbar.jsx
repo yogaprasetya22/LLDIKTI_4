@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const NextLink = ({ href, title, name }) => {
-    console.log(title);
     const isNavbar = (rout, parent) => {
         if (!parent)
             return `${
@@ -117,7 +116,7 @@ const Navbar = ({ title }) => {
             </div>
             {/* Navbar */}
             <div
-                className="navbar bg-[#ffffffd6] dark:bg-[#2a303cee] md:px-[120px]   z-40 top-0 text-black dark:text-white text-[16px]   transition duration-[85ms]ease-in-out
+                className="navbar bg-[#ffffffd6] dark:bg-[#2a303cee] lg:px-[120px] z-40 top-0 text-black dark:text-white text-[16px]   transition duration-[85ms]ease-in-out
             
             "
             >
@@ -433,7 +432,7 @@ const Navbar = ({ title }) => {
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         type="button"
-                        className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none  focus:ring-offset-gray-800  border-white border-2
+                        className="dark:bg-[#1b173bfb] bg-[#d9d1d1] inline-flex items-center justify-center p-2 rounded-md  hover:text-white hover:bg-gray-800 focus:outline-none  focus:ring-offset-gray-800 border-[#eaeaea] dark:border-white border-2 text-[#000] dark:text-white
                         "
                         aria-controls="mobile-menu"
                         aria-expanded="false"
