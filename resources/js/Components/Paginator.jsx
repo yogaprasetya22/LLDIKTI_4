@@ -55,10 +55,10 @@ const ButonP = ({ title, clr }) => (
 );
 
 const ButonLink = ({ title, link }) => (
-    <Link
+    <a
         href={link}
         className="btn btn-outline rounded-md text-[#24529e] dark:text-white dark:border-[#24529e] text-[11px] p-3 md:text-[15px] md:p-4"
     >
         {title}
-    </Link>
+    </a>
 );
