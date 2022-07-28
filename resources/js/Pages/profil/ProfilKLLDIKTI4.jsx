@@ -75,7 +75,7 @@ Kepala LLDIKTI Wilayah IV Jawa Barat dan Banten"
                             Pendidikan, Kebudayaan, Riset dan Teknologi hingga
                             saat ini.
                         </Paragraph>
-                        <div className="flex flex-col text-gray-800">
+                        <div className="flex flex-col text-gray-800 dark:text-white">
                             <p className="py-2 text-[18px] font-semibold">
                                 Pendidikan
                             </p>
@@ -92,7 +92,7 @@ Kepala LLDIKTI Wilayah IV Jawa Barat dan Banten"
                                 Lampung
                             </span>
                         </div>
-                        <div className="flex flex-col text-gray-800 mb-10">
+                        <div className="flex flex-col text-gray-800 dark:text-white mb-10">
                             <p className="py-2 text-[18px] font-semibold">
                                 Pengalaman
                             </p>
