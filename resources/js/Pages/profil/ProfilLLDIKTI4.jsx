@@ -299,7 +299,7 @@ const ProfilLLDIKTI4 = (props) => {
                                     <button
                                         className={`${
                                             button
-                                                ? "border-[#000] border-[2px_2px_5px_2px] border-b-[#242937] z-[1] rounded-br-md rounded-bl-md text-[#2657a7]"
+                                                ? "border-[#000] border-[2px_2px_5px_2px] border-b-[#fff] dark:border-b-[#242937] z-[1] rounded-br-md rounded-bl-md text-[#2657a7]"
                                                 : "text-[#000] dark:text-white"
                                         } -mb-1 lg:w-[12%] md:w-[15%] w-[20%] md:p-4 p-2 text-center md:text-[26px] text-[15px]`}
                                         onClick={() => setButton(true)}
