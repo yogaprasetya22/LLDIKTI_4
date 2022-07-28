@@ -17,7 +17,9 @@ const ProdukHukum = (props) => {
                     </span>
                 </h1>
             </Heading>
-            <TamplatePdf data={DataProdukHukum} />
+            <article className="my-10">
+                <TamplatePdf data={DataProdukHukum} />
+            </article>
         </Layout>
     );
 };

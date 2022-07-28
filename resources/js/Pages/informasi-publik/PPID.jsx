@@ -16,7 +16,7 @@ const PPID = (props) => {
                     </span>
                 </h1>
             </Heading>
-            <article>
+            <article className="my-10">
                 <div className="w-full container">
                     <div className="flex flex-col gap-4 mt-10">
                         <TitleText>

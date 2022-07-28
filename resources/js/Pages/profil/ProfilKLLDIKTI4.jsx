@@ -18,7 +18,7 @@ const ProfilKLLDIKTI4 = (props) => {
                     </span>
                 </h1>
             </Heading>
-            <article>
+            <article className="my-10">
                 <div className="w-full container">
                     <div className="flex flex-col justify-center items-center">
                         <img

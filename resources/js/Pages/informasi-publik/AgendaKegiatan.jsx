@@ -16,7 +16,7 @@ const AgendaKegiatan = (props) => {
                   </span>
               </h1>
           </Heading>
-          <article>
+          <article className="my-10">
               <div className="flex items-center w-full flex-col">
                   <div className="w-[100%] md:px-0  py-7">
                       <div className="flex justify-center flex-wrap gap-7 md:p-[0px_10px] ">
