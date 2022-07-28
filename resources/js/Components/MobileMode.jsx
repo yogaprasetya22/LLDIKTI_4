@@ -30,11 +30,9 @@ export const MobileNav = ({ isOpen, title }) => {
             setOpenProfil(!isOpenProfil);
         } else if (value === "layanan") {
             setOpenLayanan(!isOpenLayanan);
-        } 
-        else if (value === "informasi") {
+        } else if (value === "informasi") {
             setOpenInformasi(!isOpenInformasi);
-        }
-        else if (value === "produk-hukum") {
+        } else if (value === "produk-hukum") {
             setOpenProdukHukum(!isOpenProdukHukum);
         }
     };
@@ -193,17 +191,19 @@ export const MobileNav = ({ isOpen, title }) => {
                                         name="Standar Layanan Publik"
                                     />
                                 </li>
-                                <li tabIndex={"0"}>
-                                    <button
-                                        onClick={(e) => toggle(e)}
-                                        value="produk-hukum"
-                                        className={isNavbarMobile(
-                                            "produk-hukum"
-                                        )}
-                                    >
-                                        Prodik Hukum
-                                    </button>
-                                </li>
+                                {!isOpenProdukHukum && (
+                                    <li tabIndex={"0"}>
+                                        <button
+                                            onClick={(e) => toggle(e)}
+                                            value="produk-hukum"
+                                            className={isNavbarMobile(
+                                                "produk-hukum"
+                                            )}
+                                        >
+                                            Prodik Hukum
+                                        </button>
+                                    </li>
+                                )}
                                 {/* produk hukum */}
                                 {isOpenProdukHukum && (
                                     <div className="pl-3">

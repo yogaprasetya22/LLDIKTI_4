@@ -315,7 +315,7 @@ const ProfilLLDIKTI4 = (props) => {
                                                 {tugas.map((data, i) => (
                                                     <div
                                                         key={i}
-                                                        className="flex flex-col lg:text-justify gap-3 w-[30%] p-4"
+                                                        className="flex flex-col lg:text-justify gap-3 lg:w-[20%] w-[50%] p-4"
                                                     >
                                                         <p className=" font-extrabold text-blue-600 md:text-[19px]">
                                                             {data.no}
@@ -331,7 +331,7 @@ const ProfilLLDIKTI4 = (props) => {
                                                 {fungsi.map((data, i) => (
                                                     <div
                                                         key={i}
-                                                        className="flex flex-col lg:text-justify gap-3 w-[30%] p-4"
+                                                        className="flex flex-col lg:text-justify gap-3 lg:w-[20%] w-[50%] p-4"
                                                     >
                                                         <p className=" font-extrabold text-blue-600 text-[19px]">
                                                             {data.no}

@@ -81,14 +81,6 @@ class DbCreate extends Model
                 $table->timestamps();
             });
         }
-        // if (!Schema::hasTable('p_ristekdikti')) {
-        //     Schema::create('p_ristekdikti', function (Blueprint $table) {
-        //         $table->id();
-        //         $table->text('url')->nullable();
-        //         $table->text('description')->nullable();
-        //         $table->timestamps();
-        //     });
-        // }
 
         if (!Schema::hasTable('info_details')) {
             Schema::create('info_details', function (Blueprint $table) {
