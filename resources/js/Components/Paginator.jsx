@@ -2,11 +2,15 @@ import { Link } from "@inertiajs/inertia-react";
 import React from "react";
 
 const Paginator = ({ meta }) => {
+    const path = meta?.path?.split("/")[3];
     const currnet = meta?.current_page;
     const prev = meta?.links[0].url;
     const prevCurrnet = meta?.links[3].url;
     const next = meta?.links[meta.links.length - 1].url;
     const nextCurrnet = meta?.links[meta?.last_page - 2].url;
+    // const nexts = meta?.links[meta.links.length - 1].url.slice(-1);
+    // const links = `${import.meta.env.VITE_APP_URL}/${path}?page=${nexts}`;
+    // console.log(links);
 
     return (
         <div className="btn-group mt-2 mb-8 flex gap-2 md:px-[5rem] w-full justify-center">
@@ -54,11 +58,13 @@ const ButonP = ({ title, clr }) => (
     </button>
 );
 
-const ButonLink = ({ title, link }) => (
-    <a
-        href={link}
-        className="btn btn-outline rounded-md text-[#24529e] dark:text-white dark:border-[#24529e] text-[11px] p-3 md:text-[15px] md:p-4"
-    >
-        {title}
-    </a>
-);
+const ButonLink = ({ title, link }) => {
+    return (
+        <Link
+            href={link}
+            className="btn btn-outline rounded-md text-[#24529e] dark:text-white dark:border-[#24529e] text-[11px] p-3 md:text-[15px] md:p-4"
+        >
+            {title}
+        </Link>
+    );
+};
