@@ -59,7 +59,7 @@ const Index = ({ title }) => {
                                     className="flex text-[16px] leading-[16px] font-extrabold text-blue-100 border-[3px] p-3 rounded-md  dark:border-[#393939] border-[#2654a4] bg-[#2654a4] dark:hover:bg-[#393939] transition-all justify-center items-center"
                                     data-mdb-ripple="true"
                                     data-mdb-ripple-color="light"
-                                    href="/layanan-kami"
+                                    href="layanan/layanan-kami"
                                     role="button"
                                 >
                                     Layanan Kami
@@ -83,7 +83,7 @@ const Index = ({ title }) => {
                                         <img
                                             src={IconLLDIKTI}
                                             alt=""
-                                            className="w-[16px]"
+                                            className="w-[16px] "
                                         />
                                     </span>
                                 </Link>
