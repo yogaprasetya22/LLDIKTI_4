@@ -27,7 +27,7 @@ const PengajuanLayanan = (props) => {
                     <span className="text-[#2654a4]">Seputar LLDIKTI 4</span>
                 </h1>
             </Heading>
-            <article className="mb-10">
+            <article className="my-10">
                 {/* 1 */}
                 <div className="flex items-start w-full flex-col container hs-dropdown">
                     <div className="p-2 ">
