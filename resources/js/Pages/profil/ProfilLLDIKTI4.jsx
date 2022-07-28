@@ -289,8 +289,8 @@ const ProfilLLDIKTI4 = (props) => {
                                     <button
                                         className={`${
                                             !button
-                                                ? "border-[#000] border-[2px_2px_5px_2px] border-b-[#fff] z-[1] rounded-br-md rounded-bl-md text-[#2657a7]"
-                                                : "text-[#000]"
+                                                ? "border-[#000] border-[2px_2px_5px_2px] border-b-[#fff] dark:border-b-[#242937] z-[1] rounded-br-md rounded-bl-md text-[#2657a7]"
+                                                : "text-[#000] dark:text-white"
                                         } -mb-1 lg:w-[12%] md:w-[15%] w-[20%] md:p-4 p-2 text-center md:text-[26px] text-[15px]`}
                                         onClick={() => setButton(false)}
                                     >
@@ -299,8 +299,8 @@ const ProfilLLDIKTI4 = (props) => {
                                     <button
                                         className={`${
                                             button
-                                                ? "border-[#000] border-[2px_2px_5px_2px] border-b-[#fff] z-[1] rounded-br-md rounded-bl-md text-[#2657a7]"
-                                                : "text-[#000]"
+                                                ? "border-[#000] border-[2px_2px_5px_2px] border-b-[#242937] z-[1] rounded-br-md rounded-bl-md text-[#2657a7]"
+                                                : "text-[#000] dark:text-white"
                                         } -mb-1 lg:w-[12%] md:w-[15%] w-[20%] md:p-4 p-2 text-center md:text-[26px] text-[15px]`}
                                         onClick={() => setButton(true)}
                                     >
@@ -315,14 +315,14 @@ const ProfilLLDIKTI4 = (props) => {
                                                 {tugas.map((data, i) => (
                                                     <div
                                                         key={i}
-                                                        className="flex flex-col text-justify gap-3 w-[30%] p-4"
+                                                        className="flex flex-col lg:text-justify gap-3 w-[30%] p-4"
                                                     >
-                                                        <p className=" font-extrabold text-blue-600 text-[19px]">
+                                                        <p className=" font-extrabold text-blue-600 md:text-[19px]">
                                                             {data.no}
                                                         </p>
-                                                        <Paragraph>
+                                                        <span className="text-[16px] font-bold">
                                                             {data.des}
-                                                        </Paragraph>
+                                                        </span>
                                                     </div>
                                                 ))}
                                             </>
@@ -331,14 +331,14 @@ const ProfilLLDIKTI4 = (props) => {
                                                 {fungsi.map((data, i) => (
                                                     <div
                                                         key={i}
-                                                        className="flex flex-col text-justify gap-3 w-[30%] p-4"
+                                                        className="flex flex-col lg:text-justify gap-3 w-[30%] p-4"
                                                     >
                                                         <p className=" font-extrabold text-blue-600 text-[19px]">
                                                             {data.no}
                                                         </p>
-                                                        <Paragraph>
+                                                        <span className="text-[16px] font-bold">
                                                             {data.des}
-                                                        </Paragraph>
+                                                        </span>
                                                     </div>
                                                 ))}
                                             </>

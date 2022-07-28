@@ -11,6 +11,8 @@ const StandarLayananPublik = (props) => {
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
 
+    console.log(parent);
+
     const onDocumentLoadSuccess = ({ numPages }) => {
         setNumPages(numPages);
     };
@@ -92,34 +94,33 @@ const StandarLayananPublik = (props) => {
                         <br />
                         <br />
                     </div>
-                    <div className="pdf w-full flex justify-center items-start">
-                        <div className="flex flex-col relative">
-                            <div className="max-h-[53rem] rounded-md shadow-md drop-shadow-md border-[1px] mb-[7rem]">
+                    <div className="w-full flex justify-center items-start relative">
+                        <div className="flex flex-col ">
+                            <div className="max-h-[32rem] rounded-md shadow-md drop-shadow-md  mb-[7rem] lg:max-w-[22.5rem] outline-none">
                                 <Document
                                     file={lldiktipdf}
                                     onLoadSuccess={onDocumentLoadSuccess}
                                 >
-                                    <Page pageNumber={pageNumber} />
+                                    <Page pageNumber={pageNumber} scale={0.6} />
                                 </Document>
                             </div>
-
-                            <div className="flex justify-between items-center px-[7rem]  py-5 absolute bottom-0 w-full">
-                                <button
-                                    className=" btn btn-outline rounded-md text-[#24529e]"
-                                    onClick={goToPrevPage}
-                                >
-                                    Prev
-                                </button>
-                                <p className="text-[#24529e] font-semibold">
-                                    Page {pageNumber} of {numPages}
-                                </p>
-                                <button
-                                    className=" btn btn-outline rounded-md text-[#24529e]"
-                                    onClick={goToNextPage}
-                                >
-                                    Next
-                                </button>
-                            </div>
+                        </div>{" "}
+                        <div className="flex justify-between items-center  py-5 absolute bottom-0 lg:w-[30%] md:w-[50%] w-[80%]">
+                            <button
+                                className=" btn btn-outline rounded-md text-[#24529e]"
+                                onClick={goToPrevPage}
+                            >
+                                Prev
+                            </button>
+                            <p className="text-[#24529e] font-semibold">
+                                Page {pageNumber} of {numPages}
+                            </p>
+                            <button
+                                className=" btn btn-outline rounded-md text-[#24529e]"
+                                onClick={goToNextPage}
+                            >
+                                Next
+                            </button>
                         </div>
                     </div>
                 </div>
