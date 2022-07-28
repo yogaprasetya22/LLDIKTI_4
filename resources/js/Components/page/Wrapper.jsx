@@ -15,16 +15,14 @@ const Wrapper = ({ data }) => {
                 />
             </div>
             <div className="flex flex-col p-5 text-black gap-4">
-                <span className="text-[16px] font-semibold ">
-                    {data.title}
-                </span>
+                <span className="text-[16px] font-semibold ">{data.title}</span>
                 <span className="text-[15px]">{data.desc}</span>
                 <Link
                     href={data.link}
-                    className="flex text-[15px] text-[#5b7db6]"
+                    className="flex text-[15px] text-[#5b7db6] select-none link link-hover"
                 >
                     Unduh
-                    <span className="pl-1">
+                    <span className="pl-1 ">
                         <FontAwesomeIcon
                             icon={faArrowRightLong}
                             className="text-[10px]"

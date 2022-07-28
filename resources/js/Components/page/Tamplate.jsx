@@ -44,7 +44,7 @@ const Tamplate = ({ children, title, color, link }) => {
                 <div className="flex w-full justify-center p-[20px_70px] pb-[4rem] ">
                     <Link
                         href={"/" + link}
-                        className="text-[15px] text-[#2654a4] dark:text-[#1f6df4] font-extrabold hover:text-blue-100 border-[3px] p-2 rounded-md border-[#2654a4] dark:border-[#1f6df4] hover:border-[#2654a4] hover:bg-[#2654a4] dark:hover:bg-[#1f6df4] dark:hover:text-blue-100 transition-all"
+                        className="text-[15px] text-[#2654a4] dark:text-[#1f6df4] font-extrabold hover:text-blue-100 border-[3px] p-2 rounded-md border-[#2654a4] dark:border-[#1f6df4] hover:border-[#2654a4] hover:bg-[#2654a4] dark:hover:bg-[#1f6df4] dark:hover:text-blue-100 transition-all select-none"
                     >
                         Selengkapnya{" "}
                         <span className="pl-1">

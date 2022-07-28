@@ -101,7 +101,7 @@ const Index = ({ title }) => {
                                 key={i}
                                 className=" p-[8px] rounded-md flex flex-col dark:text-white text-black text-sm"
                             >
-                                <span className="text-center font-bold text-3xl">
+                                <span className="text-center font-bold text-3xl select-none">
                                     {data.total}
                                 </span>
                                 <span className="text-[14px] dark:text-[#eaeaea] text-[#000] text-center">
@@ -145,7 +145,7 @@ const Index = ({ title }) => {
                                 >
                                     <Link
                                         href="#"
-                                        className="text-black font-semibold"
+                                        className="text-black font-semibold select-none link link-hover"
                                     >
                                         {data.title}
                                     </Link>

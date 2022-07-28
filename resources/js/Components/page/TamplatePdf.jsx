@@ -37,13 +37,13 @@ const TamplatePdf = ({ data }) => {
                                     <span className="text-sm text-gray-900 font-light px-1 py-4  break-all">
                                         <a
                                             href="#"
-                                            className="link link-hover text-blue-500"
+                                            className="link link-hover text-blue-500 select-none"
                                         >
                                             Keputusan Menteri,
                                         </a>{" "}
                                         <a
                                             href="#"
-                                            className="link link-hover text-blue-500"
+                                            className="link link-hover text-blue-500 select-none"
                                         >
                                             Produk Hukum
                                         </a>
