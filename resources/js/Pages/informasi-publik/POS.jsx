@@ -377,7 +377,7 @@ export default POS;
 const TitleOn = ({ children }) => {
     // #ffb94c
     return (
-        <div className="hs-dropdown-toggle py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-gray-800 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
+        <div className=" py-3 px-4 inline-flex  text-start lg:text-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm  hover:bg-gray-50 transition-all text-sm dark:bg-gray-800 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
             <div className="flex items-center flex-fow gap-4 font-semibold text-[#2657a7] md:text-[1.5rem] text-[13px]">
                 <FontAwesomeIcon icon={faCaretRight} />
                 <span>{children}</span>
@@ -388,7 +388,7 @@ const TitleOn = ({ children }) => {
 const TitleOf = ({ children }) => {
     // #ffb94c
     return (
-        <div className="hs-dropdown-toggle py-3 px-4 text-start md:text-center inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white  transition-all text-sm dark:bg-gray-800 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
+        <div className="hs-dropdown-toggle py-3 px-4 inline-flex text-start lg:text-center items-center gap-2 rounded-md border font-medium bg-white  transition-all text-sm dark:bg-gray-800 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
             <div className="flex items-center flex-fow gap-4 font-semibold text-[#ffb94c] md:text-[1.5rem] text-[13px]">
                 <FontAwesomeIcon icon={faCaretDown} />
                 <span>{children}</span>

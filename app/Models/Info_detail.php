@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Info_detail extends Model
 {
     use HasFactory;
-    protected $primaryKey = 'id_info_detail';
-    protected $guarded = ['id_info_detail', 'created_at', 'updated_at'];
+    protected $primaryKey = 'id';
+    protected $guarded = ['id'];
 
     public function getRouteKeyName()
     {
-        return 'id_info_detail';
+        return 'id';
     }
 }

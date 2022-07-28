@@ -10,11 +10,11 @@ use Illuminate\Database\Eloquent\Model;
 class Info_category extends Model
 {
     use HasApiTokens, HasFactory, Notifiable;
-    protected $primaryKey = 'id_info_category';
-    protected $guarded = ['id_info_category'];
+    protected $primaryKey = 'id';
+    protected $guarded = ['id'];
 
     public function getRouteKeyName()
     {
-        return 'id_info_category';
+        return 'id';
     }
 }

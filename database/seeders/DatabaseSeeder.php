@@ -18,111 +18,147 @@ class DatabaseSeeder extends Seeder
     protected $authors = [
         [
             'des' => 'Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi',
+            'category' => 'category'
         ],
         [
             'des' => 'Penyerahan SK Jabatan Akademik Dosen Kemdikbudristek',
+            'category' => 'category'
         ],
         [
             'des' => 'Sosialisasi Pelaporan Akademik Melalui Aplikasi Neo Feeder',
+            'category' => 'category'
         ],
         [
             'des' => 'Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi',
+            'category' => 'category'
         ],
         [
             'des' => 'Penyerahan SK Jabatan Akademik Dosen Kemdikbudristek',
+            'category' => 'category'
         ],
         [
             'des' => 'Sosialisasi Pelaporan Akademik Melalui Aplikasi Neo Feeder',
+            'category' => 'category'
         ],
         [
             'des' => 'Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi',
+            'category' => 'category'
         ],
         [
             'des' => 'Penyerahan SK Jabatan Akademik Dosen Kemdikbudristek',
+            'category' => 'category'
         ],
         [
             'des' => 'Sosialisasi Pelaporan Akademik Melalui Aplikasi Neo Feeder',
+            'category' => 'category'
         ],
         [
             'des' => 'Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi',
+            'category' => 'category'
         ],
         [
             'des' => 'Penyerahan SK Jabatan Akademik Dosen Kemdikbudristek',
+            'category' => 'category'
         ],
         [
             'des' => 'Sosialisasi Pelaporan Akademik Melalui Aplikasi Neo Feeder',
+            'category' => 'category'
         ],
         [
             'des' => 'Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi',
+            'category' => 'category'
         ],
         [
             'des' => 'Penyerahan SK Jabatan Akademik Dosen Kemdikbudristek',
+            'category' => 'category'
         ],
         [
             'des' => 'Sosialisasi Pelaporan Akademik Melalui Aplikasi Neo Feeder',
+            'category' => 'category'
         ],
         [
             'des' => 'Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi',
+            'category' => 'category'
         ],
         [
             'des' => 'Penyerahan SK Jabatan Akademik Dosen Kemdikbudristek',
+            'category' => 'category'
         ],
         [
             'des' => 'Sosialisasi Pelaporan Akademik Melalui Aplikasi Neo Feeder',
+            'category' => 'category'
         ],
         [
             'des' => 'Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi',
+            'category' => 'category'
         ],
         [
             'des' => 'Penyerahan SK Jabatan Akademik Dosen Kemdikbudristek',
+            'category' => 'category'
         ],
         [
             'des' => 'Sosialisasi Pelaporan Akademik Melalui Aplikasi Neo Feeder',
+            'category' => 'category'
         ],
         [
             'des' => 'Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi',
+            'category' => 'category'
         ],
         [
             'des' => 'Penyerahan SK Jabatan Akademik Dosen Kemdikbudristek',
+            'category' => 'category'
         ],
         [
             'des' => 'Sosialisasi Pelaporan Akademik Melalui Aplikasi Neo Feeder',
+            'category' => 'category'
         ],
         [
             'des' => 'Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi',
+            'category' => 'category'
         ],
         [
             'des' => 'Penyerahan SK Jabatan Akademik Dosen Kemdikbudristek',
+            'category' => 'category'
         ],
         [
             'des' => 'Sosialisasi Pelaporan Akademik Melalui Aplikasi Neo Feeder',
+            'category' => 'category'
         ],
         [
             'des' => 'Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi',
+            'category' => 'category'
         ],
         [
             'des' => 'Penyerahan SK Jabatan Akademik Dosen Kemdikbudristek',
+            'category' => 'category'
         ],
         [
             'des' => 'Sosialisasi Pelaporan Akademik Melalui Aplikasi Neo Feeder',
+            'category' => 'category'
         ],
         [
             'des' => 'Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi',
+            'category' => 'category'
         ],
         [
             'des' => 'Penyerahan SK Jabatan Akademik Dosen Kemdikbudristek',
+            'category' => 'category'
         ],
         [
             'des' => 'Sosialisasi Pelaporan Akademik Melalui Aplikasi Neo Feeder',
+            'category' => 'category'
         ],
         [
             'des' => 'Pendampingan JAD Untuk Penilai JAD Internal dan Operator JAD Perguruan Tinggi',
+            'category' => 'category'
         ],
         [
             'des' => 'Penyerahan SK Jabatan Akademik Dosen Kemdikbudristek',
+            'category' => 'category'
         ],
         [
             'des' => 'Sosialisasi Pelaporan Akademik Melalui Aplikasi Neo Feeder',
+            'category' => 'category'
         ]
     ];
     public function run()
@@ -137,7 +173,7 @@ class DatabaseSeeder extends Seeder
 
         foreach ($this->authors as $author) {
             Info_category::create([
-                'category' => fake()->text(20),
+                'category' => $author['category'],
                 'description' => $author['des'],
             ]);
         }
