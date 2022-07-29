@@ -206,7 +206,7 @@ const Index = ({ title }) => {
                 </div>
             </Tamplate>
             {/* Informasi */}
-            <Tamplate title="Informasi kami" color={true} link='info'>
+            <Tamplate title="Informasi kami" color={true} link="info">
                 <div className="md:w-[100%] w-[85%] py-7">
                     <div className="flex justify-center flex-wrap gap-7 md:p-[0px_10px]">
                         {informasi.map((data, i) => (

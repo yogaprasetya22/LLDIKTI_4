@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "@inertiajs/inertia-react";
 
-const Chard = ({ data }) => {
+const Chard = ({ data, animation }) => {
+    console.log(animation);
     return (
         <>
             <figure>
