@@ -1,5 +1,4 @@
 import Layout from "@/Layouts/Layout";
-import { Link } from "@inertiajs/inertia-react";
 import bgheader from "@/img/bg-header.png";
 import BookGif from "@/img/gif/112-book-morph-outline.gif";
 import SuratGif from "@/img/gif/56-document-outline.gif";
@@ -17,6 +16,7 @@ import React from "react";
 import Tamplate from "@/Components/page/Tamplate";
 import Chard from "@/Components/page/Chard";
 import AnimationCard from "@/Components/page/AnimationCard";
+import { Link } from "@inertiajs/inertia-react";
 
 const Index = ({ title }) => {
     return (
