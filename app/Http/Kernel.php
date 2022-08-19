@@ -3,6 +3,7 @@
 namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use Illuminate\Support\Facades\Route;
 
 class Kernel extends HttpKernel
 {
@@ -38,6 +39,8 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\HandleInertiaRequests::class,
+            \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
+            \Barryvdh\Cors\HandleCors::class,
         ],
 
         'api' => [
@@ -67,4 +70,13 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'cors' => \App\Http\Middleware\Cors::class,
     ];
+
+    protected function mapApiRoutes()
+    {
+        Route::prefix('api')
+            ->middleware('api')
+            ->middleware('cors')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/api.php'));
+    }
 }
