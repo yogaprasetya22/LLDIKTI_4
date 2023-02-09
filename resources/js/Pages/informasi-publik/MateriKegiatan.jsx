@@ -16,7 +16,7 @@ const MateriKegiatan = (props) => {
                     </span>
                 </h1>
             </Heading>
-            <article className="mb-20">
+            <article className="my-10">
                 <TamplatePdf data={DataMateriKegiatan} />
             </article>
         </Layout>

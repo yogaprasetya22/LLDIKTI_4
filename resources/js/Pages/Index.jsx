@@ -1,5 +1,4 @@
 import Layout from "@/Layouts/Layout";
-import { Link } from "@inertiajs/inertia-react";
 import bgheader from "@/img/bg-header.png";
 import BookGif from "@/img/gif/112-book-morph-outline.gif";
 import SuratGif from "@/img/gif/56-document-outline.gif";
@@ -17,6 +16,7 @@ import React from "react";
 import Tamplate from "@/Components/page/Tamplate";
 import Chard from "@/Components/page/Chard";
 import AnimationCard from "@/Components/page/AnimationCard";
+import { Link } from "@inertiajs/inertia-react";
 
 const Index = ({ title }) => {
     return (
@@ -59,7 +59,7 @@ const Index = ({ title }) => {
                                     className="flex text-[16px] leading-[16px] font-extrabold text-blue-100 border-[3px] p-3 rounded-md  dark:border-[#393939] border-[#2654a4] bg-[#2654a4] dark:hover:bg-[#393939] transition-all justify-center items-center"
                                     data-mdb-ripple="true"
                                     data-mdb-ripple-color="light"
-                                    href="/layanan-kami"
+                                    href="layanan/layanan-kami"
                                     role="button"
                                 >
                                     Layanan Kami
@@ -83,7 +83,7 @@ const Index = ({ title }) => {
                                         <img
                                             src={IconLLDIKTI}
                                             alt=""
-                                            className="w-[16px]"
+                                            className="w-[16px] "
                                         />
                                     </span>
                                 </Link>
@@ -101,7 +101,7 @@ const Index = ({ title }) => {
                                 key={i}
                                 className=" p-[8px] rounded-md flex flex-col dark:text-white text-black text-sm"
                             >
-                                <span className="text-center font-bold text-3xl">
+                                <span className="text-center font-bold text-3xl select-none">
                                     {data.total}
                                 </span>
                                 <span className="text-[14px] dark:text-[#eaeaea] text-[#000] text-center">
@@ -145,7 +145,7 @@ const Index = ({ title }) => {
                                 >
                                     <Link
                                         href="#"
-                                        className="text-black font-semibold"
+                                        className="text-black font-semibold select-none link link-hover"
                                     >
                                         {data.title}
                                     </Link>
@@ -206,7 +206,7 @@ const Index = ({ title }) => {
                 </div>
             </Tamplate>
             {/* Informasi */}
-            <Tamplate title="Informasi kami" color={true} link='info'>
+            <Tamplate title="Informasi kami" color={true} link="info">
                 <div className="md:w-[100%] w-[85%] py-7">
                     <div className="flex justify-center flex-wrap gap-7 md:p-[0px_10px]">
                         {informasi.map((data, i) => (

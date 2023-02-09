@@ -21,7 +21,10 @@ const AnimationCard = ({ data, link }) => {
                     alt=""
                 />
                 <span className="font-bold text-black mt-3">{data.title}</span>
-                <Link href={link} className="font-bold text-[#2654a4] mt-3">
+                <Link
+                    href={link}
+                    className="font-bold text-[#2654a4] mt-3 select-none link link-hover"
+                >
                     Kunjungi Layanan{" "}
                     <span className="pl-1">
                         <FontAwesomeIcon

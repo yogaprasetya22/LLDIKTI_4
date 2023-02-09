@@ -27,18 +27,7 @@ const PengajuanLayanan = (props) => {
                     <span className="text-[#2654a4]">Seputar LLDIKTI 4</span>
                 </h1>
             </Heading>
-            <article className="mb-10">
-                {" "}
-                <div className="flex w-full justify-center items-center md:p-[20px_70px] p-[25px] mt-[2.5rem]">
-                    <span
-                        className="text-black dark:text-white text-[26px]"
-                        style={{ fontWeight: "700", lineHeight: "141.02%" }}
-                    >
-                        <div className="flex items-center leading-[150%]">
-                            Luring
-                        </div>
-                    </span>
-                </div>
+            <article className="my-10">
                 {/* 1 */}
                 <div className="flex items-start w-full flex-col container hs-dropdown">
                     <div className="p-2 ">

@@ -38,10 +38,12 @@ const PRistekdikti = (props) => {
                     </span>
                 </h1>
             </Heading>
-            <TamplatePdf data={dataPR} />
-            <div className="flex justify-center items-center">
-                <Paginator meta={props?.lldikti?.meta} />
-            </div>
+            <article className="my-10">
+                <TamplatePdf data={dataPR} />
+                <div className="flex justify-center items-center">
+                    <Paginator meta={props?.lldikti?.meta} />
+                </div>
+            </article>
         </Layout>
     );
 };

@@ -14,11 +14,11 @@ const Footer = () => {
                         <span className=" text-center text-white text-[16px] pb-2 font-extrabold">
                             Tentang
                         </span>
-                        <Link className="w-[13rem] text-gray-300 link link-hover">
+                        <span className="w-[13rem] text-gray-300">
                             LLDIKTI Wilayah 4 memiliki tugas melaksanakan
                             fasilitasi peningkatan mutu penyelenggaraan
                             pendidikan tinggi di provinsi Jawa Barat.
-                        </Link>
+                        </span>
                     </div>
                     <div className="w-[12rem]">
                         <span className="text-center text-white text-[16px] pb-2 font-extrabold">
@@ -26,31 +26,26 @@ const Footer = () => {
                         </span>
                         <span className="text-white flex flex-col gap-1">
                             Telp
-                            <Link
-                                href=""
-                                className=" text-gray-300 link link-hover"
-                            >
+                            <span href="" className=" text-gray-300">
                                 +022 7275630
-                            </Link>
+                            </span>
                         </span>
                         <span className="text-white flex flex-col gap-1">
                             Email
-                            <Link
-                                href=""
-                                className=" text-gray-300  link link-hover"
-                            >
+                            <span href="" className=" text-gray-300 ">
                                 informasi@lldikti4.or.id
-                            </Link>
+                            </span>
                         </span>
-                        <span className="text-white flex flex-col gap-1 w-[13rem]">
+                        <span className="text-white flex flex-col gap-1 w-[13rem] lg:pr-3">
                             Alamat
-                            <Link
-                                href=""
+                            <a
+                                href="https://www.google.com/maps/dir//LLDIKTI+Wilayah+IV+Jl.+Phh.+Mustofa+No.38+Cikutra+Kec.+Cibeunying+Kidul,+Kota+Bandung,+Jawa+Barat+40124/@-6.8988842,107.6371464,17.83z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e68e7bdf22c8919:0xacef29aa22f49986!2m2!1d107.6377182!2d-6.8992448"
                                 className=" text-gray-300  link link-hover"
+                                target="_blank"
                             >
                                 Alamat Jl. PH.H. Mustofa No.38, Cikutra, Kec.
                                 Cibeunying Kidul, Kota Bandung, Jawa Barat 40124
-                            </Link>
+                            </a>
                         </span>
                     </div>
                     <div className="w-full">
@@ -71,9 +66,13 @@ const Footer = () => {
                                         fill="#fff"
                                     />
                                 </svg>
-                                <Link className="link link-hover text-gray-300 ">
+                                <a
+                                    href="http://gurubesar.lldikti4.or.id/"
+                                    className="link link-hover text-gray-300 "
+                                    target={"_blank"}
+                                >
                                     Direktori Gurubesar
-                                </Link>
+                                </a>
                             </li>
                             <li className="flex items-center gap-2">
                                 <svg
@@ -88,9 +87,34 @@ const Footer = () => {
                                         fill="#fff"
                                     />
                                 </svg>
-                                <Link className="link link-hover text-gray-300 ">
+                                <a
+                                    href="http://doktor.lldikti4.or.id/"
+                                    className="link link-hover text-gray-300 "
+                                    target={"_blank"}
+                                >
+                                    Data Kelembagaan
+                                </a>
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <svg
+                                    width="4"
+                                    height="10"
+                                    viewBox="0 .8 7 7"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M3.5 7C2.5375 7 1.71111 6.6583 1.02083 5.9749C0.340278 5.28173 0 4.45188 0 3.48536C0 2.52859 0.340278 1.70851 1.02083 1.0251C1.71111 0.341701 2.5375 0 3.5 0C4.43333 0 5.25 0.341701 5.95 1.0251C6.65 1.70851 7 2.52859 7 3.48536C7 4.12971 6.83472 4.72036 6.50417 5.25732C6.18333 5.78452 5.76042 6.2092 5.23542 6.53138C4.71042 6.84379 4.13194 7 3.5 7Z"
+                                        fill="#fff"
+                                    />
+                                </svg>
+                                <a
+                                    href="https://direktori.lldikti4.or.id/"
+                                    className="link link-hover text-gray-300 "
+                                    target={"_blank"}
+                                >
                                     Direktori Doktor
-                                </Link>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -112,9 +136,13 @@ const Footer = () => {
                                         fill="#fff"
                                     />
                                 </svg>
-                                <Link className="link link-hover text-gray-300 ">
-                                    Data kelembagaan
-                                </Link>
+                                <a
+                                    href="https://kegiatan.lldikti4.or.id/"
+                                    className="link link-hover text-gray-300 "
+                                    target={"_blank"}
+                                >
+                                    Informasi kegiatan LLDIKTI Wilayah IV
+                                </a>
                             </li>
                             <li className="flex items-center gap-2">
                                 <svg
@@ -129,26 +157,13 @@ const Footer = () => {
                                         fill="#fff"
                                     />
                                 </svg>
-                                <Link className="link link-hover text-gray-300 ">
-                                    Informasi kegiantan LLDIKTI Wilayah IV
-                                </Link>
-                            </li>
-                            <li className="flex items-center gap-2">
-                                <svg
-                                    width="4"
-                                    height="10"
-                                    viewBox="0 .8 7 7"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
+                                <a
+                                    href="http://budi.ristekdikti.go.id/web/"
+                                    className="link link-hover text-gray-300 "
+                                    target={"_blank"}
                                 >
-                                    <path
-                                        d="M3.5 7C2.5375 7 1.71111 6.6583 1.02083 5.9749C0.340278 5.28173 0 4.45188 0 3.48536C0 2.52859 0.340278 1.70851 1.02083 1.0251C1.71111 0.341701 2.5375 0 3.5 0C4.43333 0 5.25 0.341701 5.95 1.0251C6.65 1.70851 7 2.52859 7 3.48536C7 4.12971 6.83472 4.72036 6.50417 5.25732C6.18333 5.78452 5.76042 6.2092 5.23542 6.53138C4.71042 6.84379 4.13194 7 3.5 7Z"
-                                        fill="#fff"
-                                    />
-                                </svg>
-                                <Link className="link link-hover text-gray-300 ">
                                     Beasiswa dosen
-                                </Link>
+                                </a>
                             </li>
                             <li className="flex items-center gap-2">
                                 <svg
@@ -163,9 +178,13 @@ const Footer = () => {
                                         fill="#fff"
                                     />
                                 </svg>
-                                <Link className="link link-hover text-gray-300 ">
+                                <a
+                                    href="https://pddikti.kemdikbud.go.id/"
+                                    className="link link-hover text-gray-300 "
+                                    target={"_blank"}
+                                >
                                     Pangkalan Data PT (PD-DIKTI)
-                                </Link>
+                                </a>
                             </li>
                             <li className=" w-[18rem] relative">
                                 <svg
@@ -180,11 +199,15 @@ const Footer = () => {
                                         fill="#fff"
                                     />
                                 </svg>
-                                <Link className="link link-hover text-gray-300 absolute pl-[13px] -top-[1px]">
+                                <a
+                                    href="https://silemkerma.kemdikbud.go.id/"
+                                    className="link link-hover text-gray-300 absolute pl-[13px] -top-[1px]"
+                                    target={"_blank"}
+                                >
                                     Ijin Pendirian Perguruan Tinggi Swasta,
                                     Program Studi dan Ahli Kelola atau Perubahan
                                     Perguruan Tinggi Swasta
-                                </Link>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -193,7 +216,10 @@ const Footer = () => {
                             Meida Sosial
                         </span>
                         <div className="grid grid-flow-col gap-4">
-                            <Link href="#">
+                            <a
+                                href="https://twitter.com/lldiktiwilayah4?s=09"
+                                target={"_blank"}
+                            >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="24"
@@ -203,8 +229,11 @@ const Footer = () => {
                                 >
                                     <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
                                 </svg>
-                            </Link>
-                            <Link>
+                            </a>
+                            <a
+                                href="https://youtube.com/c/LLDIKTIWILAYAH4"
+                                target={"_blank"}
+                            >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="24"
@@ -214,8 +243,11 @@ const Footer = () => {
                                 >
                                     <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
                                 </svg>
-                            </Link>
-                            <Link>
+                            </a>
+                            <a
+                                href="https://m.facebook.com/LLDIKTIWILAYAH4/?tsid=0.24115179413463506&source=result"
+                                target={"_blank"}
+                            >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="24"
@@ -225,8 +257,8 @@ const Footer = () => {
                                 >
                                     <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
                                 </svg>
-                            </Link>
-                            <Link>
+                            </a>
+                            <a href="https://instagram.com/lldiktiwilayah4?utm_medium=copy_link" target={'_blank'}>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 448 512"
@@ -237,7 +269,7 @@ const Footer = () => {
                                 >
                                     <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
                                 </svg>
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </footer>

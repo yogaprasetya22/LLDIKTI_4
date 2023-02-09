@@ -1,4 +1,5 @@
 import { ThemeContext } from "@/Layouts/ThemeProvider";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { useContext } from "react";
 
@@ -12,13 +13,18 @@ export const DarkModeToggle = (props) => {
     };
 
     return (
-        <button
+        <motion.button
             onClick={toggle}
             id="theme-toggle"
             type="button"
             className=" transition duration-150 ease-in p-2 rounded-md  focus:outline-none focus:ring-offset-gray-800  border-white border-[1px] dark:bg-white bg-base-100"
             aria-controls="mobile-menu"
             aria-expanded="false"
+            whileHover={{
+                scale: 1.2,
+                transition: { duration: 1 },
+            }}
+            whileTap={{ scale: 0.9 }}
         >
             {!isDarkMode ? (
                 <svg
@@ -102,6 +108,6 @@ export const DarkModeToggle = (props) => {
                     <g></g>
                 </svg>
             )}
-        </button>
+        </motion.button>
     );
 };

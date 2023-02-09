@@ -30,7 +30,7 @@ const BLW4 = (props) => {
                     </span>
                 </h1>
             </Heading>
-            <article>
+            <article className="my-10">
                 <div className="flex items-center w-full flex-col py-10">
                     <div className="w-[100%] px-5">
                         <div className="flex justify-center flex-wrap gap-7 md:p-[0px_10px] ">
@@ -47,7 +47,7 @@ const BLW4 = (props) => {
                                         />
                                     </figure>
                                     <div className="p-[10px_15px_5px] text-center">
-                                        <p className="text-[16px] text-gray-600 dark:text-white font-bold pb-2">
+                                        <p className="text-[16px] text-gray-600 font-bold pb-2">
                                             {data.des}
                                         </p>
                                     </div>

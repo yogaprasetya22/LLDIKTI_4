@@ -18,7 +18,7 @@ const ProfilKLLDIKTI4 = (props) => {
                     </span>
                 </h1>
             </Heading>
-            <article>
+            <article className="my-10">
                 <div className="w-full container">
                     <div className="flex flex-col justify-center items-center">
                         <img
@@ -26,10 +26,10 @@ const ProfilKLLDIKTI4 = (props) => {
                             alt="Dr. M. Samsuri, S.Pd., M.T.
 Kepala LLDIKTI Wilayah IV Jawa Barat dan Banten"
                         />
-                        <span className="text-black md:text-[24px] text-[18px] font-semibold">
+                        <span className="text-black dark:text-white md:text-[24px] text-[18px] font-semibold">
                             Dr. M. Samsuri, S.Pd., M.T.
                         </span>
-                        <span className="text-black md:text-[20px] text-[16px] font-semibold text-center">
+                        <span className="text-black dark:text-white md:text-[20px] text-[16px] font-semibold text-center">
                             Kepala LLDIKTI Wilayah IV Jawa Barat dan Banten
                         </span>
                     </div>
@@ -75,7 +75,7 @@ Kepala LLDIKTI Wilayah IV Jawa Barat dan Banten"
                             Pendidikan, Kebudayaan, Riset dan Teknologi hingga
                             saat ini.
                         </Paragraph>
-                        <div className="flex flex-col text-gray-800">
+                        <div className="flex flex-col text-gray-800 dark:text-white">
                             <p className="py-2 text-[18px] font-semibold">
                                 Pendidikan
                             </p>
@@ -92,7 +92,7 @@ Kepala LLDIKTI Wilayah IV Jawa Barat dan Banten"
                                 Lampung
                             </span>
                         </div>
-                        <div className="flex flex-col text-gray-800 mb-10">
+                        <div className="flex flex-col text-gray-800 dark:text-white mb-10">
                             <p className="py-2 text-[18px] font-semibold">
                                 Pengalaman
                             </p>
